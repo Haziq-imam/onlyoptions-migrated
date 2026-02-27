@@ -1,33 +1,37 @@
 import { FiArrowRight } from 'react-icons/fi';
 import signalLooklikeImg from '../../../assets/pages images/signal-looklike.png';
+import StandardSection from '../../ui/Layout/StandardSection';
+import SectionHeader from '../../ui/Layout/SectionHeader';
 
 const SignalShowcaseSection = () => (
-    <section className="py-24 px-6 md:px-12 bg-white/[0.01]">
-        <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div className="space-y-6">
-                    <p className="text-[rgb(32,109,254)] text-[10px] font-black uppercase tracking-[0.3em]">Signal Format</p>
-                    <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">What a Signal <span className="text-[rgb(32,109,254)]">Looks Like</span></h2>
-                    <p className="text-gray-400 text-lg leading-relaxed">Every signal we send follows the same complete format. Here is an example of what arrives on your phone.</p>
-                    <a href="/how-it-works" className="inline-flex items-center gap-2 text-[rgb(32,109,254)] text-sm font-black uppercase tracking-widest hover:gap-3 transition-all">
-                        Learn how to read and execute every field <FiArrowRight className="w-4 h-4" />
+    <StandardSection className="py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            <div className="space-y-8">
+                <SectionHeader
+                    label="Signal Format"
+                    title={<>What a Signal <span className="text-brand-500">Looks Like</span></>}
+                    description="Every signal we send follows the same complete format. Here is an example of what arrives on your phone."
+                />
+                <div className="pt-4">
+                    <a href="/how-it-works" className="inline-flex items-center gap-2 text-brand-500 text-[10px] font-black uppercase tracking-widest hover:gap-4 transition-all group/link">
+                        Learn how to read and execute every field
+                        <FiArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                     </a>
                 </div>
+            </div>
 
-                <div className="relative group">
-                    <div className="absolute inset-0 bg-[rgb(32,109,254)]/10 blur-[80px] rounded-3xl opacity-60 transition-opacity duration-700 group-hover:opacity-100" />
-                    <div className="relative rounded-3xl overflow-hidden border border-[rgb(32,109,254)]/20 shadow-[0_0_60px_rgba(32,109,254,0.12)] transition-all duration-700 ease-out group-hover:-translate-y-2 group-hover:shadow-[0_20px_80px_rgba(32,109,254,0.25)]">
-                        <img
-                            src={signalLooklikeImg}
-                            alt="OnlyOptions signal format example"
-                            className="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-                    </div>
+            <div className="relative flex justify-center lg:justify-end">
+                <div className="absolute inset-0 bg-brand-500/5 blur-[80px] rounded-3xl opacity-30" />
+                <div className="relative max-w-lg group">
+                    <img
+                        src={signalLooklikeImg}
+                        alt="OnlyOptions signal format example"
+                        className="w-full h-auto max-h-[500px] object-contain transition-transform duration-1000 ease-out group-hover:scale-105 drop-shadow-2xl"
+                    />
                 </div>
             </div>
         </div>
-    </section>
+    </StandardSection>
 );
 
 export default SignalShowcaseSection;

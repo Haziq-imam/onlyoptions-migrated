@@ -37,27 +37,27 @@ const ValueTable = () => {
                     <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">Institutional quality execution for the retail options trader. We set the standard for transparency and precision.</p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <div className="space-y-4">
                         {homeFeatures.map((item, i) => (
-                            <div key={i} className="group p-8 rounded-3xl bg-gray-950/50 border border-white/5 hover:border-brand-500/30 transition-all institutional-shimmer overflow-hidden">
-                                <div className="flex items-start gap-6">
-                                    <div className="w-12 h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                            <div key={i} className="group p-6 md:p-8 rounded-3xl bg-gray-950/50 border border-white/5 hover:border-brand-500/30 transition-all institutional-shimmer overflow-hidden">
+                                <div className="flex items-start gap-4 md:gap-6">
+                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                                         {item.icon}
                                     </div>
                                     <div className="space-y-2">
-                                        <h4 className="text-xl font-black text-white tracking-tight">{item.title}</h4>
-                                        <p className="text-gray-500 text-sm leading-relaxed font-medium">{item.details}</p>
+                                        <h4 className="text-lg md:text-xl font-black text-white tracking-tight">{item.title}</h4>
+                                        <p className="text-gray-500 text-xs md:text-sm leading-relaxed font-medium">{item.details}</p>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <div className="relative lg:pt-0 pt-12">
-                        <div className="sticky top-40 bg-gray-950 border border-brand-500/20 rounded-[2.5rem] p-12 overflow-hidden noise-bg">
+                    <div className="relative pt-8 lg:pt-0">
+                        <div className="lg:sticky lg:top-40 bg-gray-950 border border-brand-500/20 rounded-[2.5rem] p-8 md:p-12 overflow-hidden noise-bg">
                             <div className="absolute -top-12 -right-12 w-64 h-64 bg-brand-500/10 blur-3xl rounded-full"></div>
-                            <h3 className="text-3xl font-black text-white mb-8 tracking-tighter">The OnlyOptions <br /> <span className="text-brand-500">Commitment</span></h3>
+                            <h3 className="text-2xl md:text-3xl font-black text-white mb-8 tracking-tighter">The OnlyOptions <br /> <span className="text-brand-500">Commitment</span></h3>
                             <ul className="space-y-6">
                                 {[
                                     { t: "No Automation", d: "Every signal is hand-picked by human analysts." },

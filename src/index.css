@@ -27,9 +27,11 @@
     background-image:
       radial-gradient(ellipse 80% 40% at 50% -10%, rgba(32, 109, 254, 0.12) 0%, transparent 70%);
     min-height: 100vh;
-    color: white;
+    color: #e5e7eb; /* Better base visibility than pure white which can wash out or fallback unpredictably */
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     position: relative;
+    -webkit-font-smoothing: antialiased; /* Sharper font rendering */
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body::before {

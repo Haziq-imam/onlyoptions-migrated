@@ -170,7 +170,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/free-trial" element={<FreeTrial />} />
-        <Route path="/options-trading-101" element={<OptionsTrading101 />} />
+        <Route path="/education/options-trading-101" element={<OptionsTrading101 />} />
         <Route path="/what-are-call-options" element={<WhatAreCallOptions />} />
         <Route path="/what-are-put-options" element={<WhatArePutOptions />} />
         <Route path="/options-expiration-dates-explained" element={<OptionsExpirationDatesExplained />} />
@@ -215,7 +215,7 @@ function App() {
         <Route path="/how-to-get-approved-for-options-trading" element={<HowToGetApprovedForOptionsTrading />} />
         <Route path="/pattern-day-trader-rule-options" element={<PatternDayTraderRuleOptions />} />
         <Route path="/cash-account-vs-margin-account-options" element={<CashAccountVsMarginAccountOptions />} />
-        <Route path="/0dte-options-strategy-complete-guide" element={<Page0dteOptionsStrategyCompleteGuide />} />
+        <Route path="/strategies/0dte-options-strategy" element={<Page0dteOptionsStrategyCompleteGuide />} />
         <Route path="/same-day-options-trading" element={<SameDayOptionsTrading />} />
         <Route path="/spy-0dte-strategy" element={<Spy0dteStrategy />} />
         <Route path="/qqq-0dte-trading" element={<Qqq0dteTrading />} />
@@ -245,7 +245,7 @@ function App() {
         <Route path="/ratio-spread-options" element={<RatioSpreadOptions />} />
         <Route path="/covered-call-strategy" element={<CoveredCallStrategy />} />
         <Route path="/protective-put-strategy" element={<ProtectivePutStrategy />} />
-        <Route path="/spy-options-signals" element={<SpyOptionsSignals />} />
+        <Route path="/signals/spy-options-signals" element={<SpyOptionsSignals />} />
         <Route path="/spy-options-trading-guide" element={<SpyOptionsTradingGuide />} />
         <Route path="/qqq-options-signals" element={<QqqOptionsSignals />} />
         <Route path="/qqq-options-trading-strategy" element={<QqqOptionsTradingStrategy />} />
@@ -291,7 +291,7 @@ function App() {
         <Route path="/most-accurate-options-signals-2026" element={<MostAccurateOptionsSignals2026 />} />
         <Route path="/options-profit-calculator" element={<OptionsProfitCalculator />} />
         <Route path="/options-breakeven-calculator" element={<OptionsBreakevenCalculator />} />
-        <Route path="/position-size-calculator" element={<PositionSizeCalculator />} />
+        <Route path="/tools/position-size-calculator" element={<PositionSizeCalculator />} />
         <Route path="/options-greeks-calculator" element={<OptionsGreeksCalculator />} />
         <Route path="/implied-volatility-calculator" element={<ImpliedVolatilityCalculator />} />
         <Route path="/max-pain-calculator" element={<MaxPainCalculator />} />

@@ -1,5 +1,7 @@
 import { FiArrowRight } from 'react-icons/fi';
 import { Card } from '../../ui/Card/Card';
+import StandardSection from '../../ui/Layout/StandardSection';
+import SectionHeader from '../../ui/Layout/SectionHeader';
 
 const testimonials = [
     {
@@ -17,38 +19,37 @@ const testimonials = [
 ];
 
 const TestimonialsHomeSection = () => (
-    <section className="py-24 px-6 md:px-12 bg-white/[0.01]">
-        <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-                <p className="text-[rgb(32,109,254)] text-[10px] font-black uppercase tracking-[0.3em] mb-4">Social Proof</p>
-                <h2 className="text-4xl md:text-5xl font-black text-white">Member <span className="text-[rgb(32,109,254)]">Testimonials</span></h2>
-                <p className="text-gray-500 text-xs font-black uppercase tracking-widest mt-2">Verified Trading Community</p>
-            </div>
+    <StandardSection className="py-32">
+        <SectionHeader
+            label="Social Proof"
+            title={<>Member <span className="text-brand-500">Testimonials</span></>}
+            description="Verified Trading Community"
+            align="center"
+        />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {testimonials.map((t, i) => (
-                    <Card key={i} variant="glass" className="p-8 border-white/5 hover:border-[rgb(32,109,254)]/20 transition-all flex flex-col">
-                        <div className="flex gap-1 mb-5">
-                            {[...Array(5)].map((_, j) => (
-                                <div key={j} className="w-2 h-2 rounded-full bg-[rgb(32,109,254)]/50" />
-                            ))}
-                        </div>
-                        <p className="text-gray-300 text-sm leading-relaxed flex-1">"{t.quote}"</p>
-                        <div className="pt-6 mt-6 border-t border-white/5">
-                            <p className="font-black text-white text-sm">{t.name}, <span className="text-gray-500 font-medium text-xs">{t.location}</span></p>
-                            <p className="text-gray-600 text-xs mt-1">{t.role}</p>
-                        </div>
-                    </Card>
-                ))}
-            </div>
-
-            <div className="text-center mt-10">
-                <a href="/testimonials" className="inline-flex items-center gap-2 text-[rgb(32,109,254)] text-xs font-black uppercase tracking-widest hover:gap-3 transition-all">
-                    Read more member results <FiArrowRight className="w-3 h-3" />
-                </a>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((t, i) => (
+                <Card key={i} variant="glass" className="p-6 md:p-8 border-white/5 hover:border-brand-500/20 transition-all flex flex-col group">
+                    <div className="flex gap-1.5 mb-6">
+                        {[...Array(5)].map((_, j) => (
+                            <div key={j} className="w-1.5 h-1.5 rounded-full bg-brand-500/40 group-hover:bg-brand-500 transition-colors" />
+                        ))}
+                    </div>
+                    <p className="text-gray-300 text-sm leading-relaxed flex-1 italic font-medium">"{t.quote}"</p>
+                    <div className="pt-6 mt-8 border-t border-white/5">
+                        <p className="font-black text-white text-sm">{t.name}, <span className="text-gray-500 font-medium text-xs font-sans">{t.location}</span></p>
+                        <p className="text-gray-400 text-[10px] uppercase font-black tracking-widest mt-2">{t.role}</p>
+                    </div>
+                </Card>
+            ))}
         </div>
-    </section>
+
+        <div className="text-center mt-12">
+            <a href="/testimonials" className="inline-flex items-center gap-2 text-brand-500 text-[10px] font-black uppercase tracking-widest hover:gap-3 transition-all">
+                Read more member results <FiArrowRight className="w-4 h-4" />
+            </a>
+        </div>
+    </StandardSection>
 );
 
 export default TestimonialsHomeSection;

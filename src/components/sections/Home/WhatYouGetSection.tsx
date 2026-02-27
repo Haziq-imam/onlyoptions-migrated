@@ -1,42 +1,58 @@
-import { FiTrendingUp, FiDatabase, FiFileText, FiLogOut, FiBook, FiMessageSquare, FiHeadphones } from 'react-icons/fi';
+import { FiTrendingUp, FiDatabase, FiFileText, FiLogOut, FiBook, FiSmartphone } from 'react-icons/fi';
+import mockupImg from '../../../assets/pages images/Modern Lotto and Stocks App-3.png';
+import StandardSection from '../../ui/Layout/StandardSection';
+import SectionHeader from '../../ui/Layout/SectionHeader';
 
 const features = [
-    { icon: <FiTrendingUp className="w-5 h-5 text-[rgb(32,109,254)]" />, title: '2–4 Options Signals Per Day', desc: 'Live alerts covering SPY, QQQ, NVDA, AAPL, TSLA, MSFT, AMZN, GOOGL, META, and other high-liquidity tickers. Every signal is a fully specified options trade.' },
-    { icon: <FiSmartphone className="w-5 h-5 text-[rgb(32,109,254)]" />, title: 'iOS & Android App Access', desc: 'Real-time push notifications the moment each signal is sent. View open positions, closed trade history, and analyst notes directly inside the app.' },
-    { icon: <FiDatabase className="w-5 h-5 text-[rgb(32,109,254)]" />, title: 'Performance Dashboard Access', desc: 'Every closed signal is logged with the date, ticker, entry, exit, and percentage return. Wins and losses both published — full transparency, no selective reporting.' },
-    { icon: <FiFileText className="w-5 h-5 text-[rgb(32,109,254)]" />, title: 'Complete Signal Format', desc: 'Each signal includes: ticker, call or put, strike price, expiration date, entry price range, profit target, stop-loss level, and written rationale.' },
-    { icon: <FiLogOut className="w-5 h-5 text-[rgb(32,109,254)]" />, title: 'Exit Alerts', desc: 'We send a notification every time we close a position. You always know when and why a trade is being exited — whether at target, stop-loss, or early.' },
-    { icon: <FiBook className="w-5 h-5 text-[rgb(32,109,254)]" />, title: 'Education Library', desc: 'Guides covering options fundamentals, risk management, position sizing, how to read signals, and strategy breakdowns. Inside the app and on the website.' },
-    { icon: <FiMessageSquare className="w-5 h-5 text-[rgb(32,109,254)]" />, title: 'SMS Signals (Pro Plan)', desc: 'Pro subscribers receive every signal by text message in addition to push notification. Ideal for traders who cannot always check the app during market hours.' },
-    { icon: <FiHeadphones className="w-5 h-5 text-[rgb(32,109,254)]" />, title: 'Priority Support (Pro Plan)', desc: 'Pro plan members receive email support responses within 1 hour during market hours (9 AM – 4:30 PM ET, Monday–Friday).' },
+    { icon: <FiTrendingUp className="w-4 h-4 text-brand-400" />, title: '2–4 Options Signals Per Day', desc: 'Live alerts covering SPY, QQQ, NVDA, AAPL, and more high-liquidity tickers.' },
+    { icon: <FiSmartphone className="w-4 h-4 text-brand-400" />, title: 'iOS & Android App Access', desc: 'Real-time push notifications the moment each signal is sent.' },
+    { icon: <FiDatabase className="w-4 h-4 text-brand-400" />, title: 'Performance Dashboard', desc: 'Every closed signal logged with transparency — wins and losses both published.' },
+    { icon: <FiFileText className="w-4 h-4 text-brand-400" />, title: 'Complete Signal Format', desc: 'Includes: ticker, strike, expiry, entry range, target, stop-loss, and rationale.' },
+    { icon: <FiLogOut className="w-4 h-4 text-brand-400" />, title: 'Exit Alerts', desc: 'Instructional alerts for every position exit, ensuring you never miss a close.' },
+    { icon: <FiBook className="w-4 h-4 text-brand-400" />, title: 'Education Library', desc: 'Guides covering fundamentals, risk management, and strategy breakdowns.' },
 ];
 
-import { FiSmartphone } from 'react-icons/fi';
-
 const WhatYouGetSection = () => (
-    <section className="py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-            <div className="mb-16">
-                <p className="text-[rgb(32,109,254)] text-[10px] font-black uppercase tracking-[0.3em] mb-4">What's Included</p>
-                <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">What You Get With <span className="text-[rgb(32,109,254)]">OnlyOptions</span></h2>
-                <p className="text-gray-400 text-lg max-w-2xl">Every plan includes the tools and information you need to trade options signals confidently.</p>
+    <StandardSection className="py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-10">
+                <SectionHeader
+                    label="The Package"
+                    title={<>What You Get With <span className="text-brand-500">OnlyOptions</span></>}
+                    description="Every plan includes the institutional-grade tools and real-time information you need to trade options signals with a professional edge."
+                />
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {features.map((f, i) => (
+                        <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-brand-500/20 transition-all group">
+                            <div className="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center shrink-0 group-hover:bg-brand-500/20 transition-colors">
+                                {f.icon}
+                            </div>
+                            <div>
+                                <h4 className="font-black text-white text-xs mb-1.5 uppercase tracking-tight">{f.title}</h4>
+                                <p className="text-gray-500 text-[11px] leading-relaxed line-clamp-2">{f.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {features.map((f, i) => (
-                    <div key={i} className="flex items-start gap-5 p-7 rounded-2xl bg-white/[0.02] border border-white/6 hover:border-[rgb(32,109,254)]/25 transition-all group">
-                        <div className="w-10 h-10 rounded-xl bg-[rgb(32,109,254)]/10 flex items-center justify-center shrink-0 group-hover:bg-[rgb(32,109,254)]/20 transition-colors">
-                            {f.icon}
-                        </div>
-                        <div>
-                            <h4 className="font-black text-white text-sm mb-1.5">{f.title}</h4>
-                            <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
-                        </div>
-                    </div>
-                ))}
+            <div className="relative flex justify-center lg:justify-end">
+                <div className="absolute inset-0 bg-brand-500/5 blur-[80px] rounded-3xl opacity-30" />
+                <div className="relative max-w-sm group">
+                    <img
+                        src={mockupImg}
+                        alt="OnlyOptions Mobile Experience"
+                        className="w-full      h-auto max-h-[550px] object-contain opacity-90 transition-all duration-700 group-hover:scale-105 drop-shadow-2xl"
+                    />
+                </div>
+                {/* Floating Badge */}
+                <div className="absolute -top-4 -right-4 bg-brand-500 text-white text-[10px] font-black uppercase tracking-widest px-6 py-3 rounded-2xl shadow-2xl transition-all duration-700 group-hover:scale-110 group-hover:-rotate-3">
+
+                </div>
             </div>
         </div>
-    </section>
+    </StandardSection>
 );
 
 export default WhatYouGetSection;

@@ -87,7 +87,7 @@ const Signup = () => {
               <div className="text-center text-xs text-gray-500 mt-6 flex items-center justify-center gap-4">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  Secure SSL Encryption
+                  Secured by Stripe
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Zap className="w-3.5 h-3.5" />

@@ -1,5 +1,8 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import StandardSection from '../../ui/Layout/StandardSection';
+import SectionHeader from '../../ui/Layout/SectionHeader';
+import { Card } from '../../ui/Card/Card';
 
 const faqs = [
     {
@@ -40,7 +43,7 @@ const faqs = [
     },
     {
         question: "Is OnlyOptions a registered investment adviser?",
-        answer: "No. OnlyOptions LLC is not registered as an investment adviser under the Investment Advisers Act of 1940. Our signal service is educational in nature. Signals represent the professional analytical opinions of our team and are not personalized investment advice tailored to your individual financial situation, tax status, or investment objectives. We do not manage client funds or execute trades on your behalf. All trading decisions are made independently by each subscriber. Options trading involves substantial risk of loss. Please read our full Risk Disclaimer before subscribing."
+        answer: "No. OnlyOptions LLC is not registered as an investment adviser under the Investment Advisers Act of 1940. Our signal service is educational in nature. Signals represent the professional analytical opinions of our team and are not personalized investment advice tailored to your financial situation, tax status, or investment objectives. We do not manage client funds or execute trades on your behalf. All trading decisions are made independently by each subscriber. Options trading involves substantial risk of loss. Please read our full Risk Disclaimer before subscribing."
     }
 ];
 
@@ -48,38 +51,47 @@ const FAQSection = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-24 px-6 md:px-12 bg-black/20">
-            <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-black mb-4">Frequently Asked Questions</h2>
-                    <p className="text-gray-400">Everything you need to know about the OnlyOptions signal service.</p>
-                </div>
+        <StandardSection className="py-24" containerSize="4xl">
+            <SectionHeader
+                label="Support"
+                title={<>Frequently Asked <span className="text-brand-500">Questions</span></>}
+                description="Everything you need to know about the OnlyOptions signal service."
+                align="center"
+                className="mb-16"
+            />
 
-                <div className="space-y-4">
-                    {faqs.map((faq, index) => (
-                        <div
-                            key={index}
-                            className={`border rounded-2xl transition-all ${openIndex === index ? 'bg-white/5 border-brand-500/30' : 'border-white/5 bg-transparent hover:bg-white/[0.02]'}`}
+            <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                    <Card
+                        key={index}
+                        variant="glass"
+                        hover={false}
+                        className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'bg-white/5 border-brand-500/30' : 'border-white/5 bg-transparent hover:bg-white/[0.02]'}`}
+                    >
+                        <button
+                            className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none"
+                            onClick={() => setOpenIndex(openIndex === index ? null : index)}
                         >
-                            <button
-                                className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
-                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                            >
-                                <span className="font-bold text-lg pr-8">{faq.question}</span>
-                                {openIndex === index ? <ChevronUp className="w-5 h-5 text-brand-400" /> : <ChevronDown className="w-5 h-5 text-gray-500" />}
-                            </button>
-                            <div
-                                className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] pb-5' : 'max-h-0'}`}
-                            >
-                                <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                            <span className="font-black text-white text-base md:text-lg pr-8 leading-tight">{faq.question}</span>
+                            {openIndex === index ? (
+                                <ChevronUp className="w-5 h-5 text-brand-400 shrink-0" />
+                            ) : (
+                                <ChevronDown className="w-5 h-5 text-gray-500 shrink-0" />
+                            )}
+                        </button>
+                        <div
+                            className={`px-8 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[800px] pb-8 opacity-100' : 'max-h-0 opacity-0'}`}
+                        >
+                            <div className="pt-2 border-t border-white/5">
+                                <p className="text-gray-400 leading-relaxed text-sm md:text-base mt-6">
                                     {faq.answer}
                                 </p>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </Card>
+                ))}
             </div>
-        </section>
+        </StandardSection>
     );
 };
 

@@ -47,7 +47,7 @@ const PerformanceRecordSection = () => (
                             ))}
                         </TableBody>
                     </Table>
-                    <div className="p-4 md:p-6 bg-white/[0.01] border-t border-white/5 text-[10px] md:text-xs text-gray-600 font-medium leading-relaxed">
+                    <div className="p-4 md:p-6 bg-white/[0.01] border-t border-white/5 text-[10px] md:text-xs text-gray-400 font-medium leading-relaxed">
                         Performance calculated from mid-prices at signal entry and exit times. Past performance does not guarantee future results. Individual results vary based on execution timing, broker, position sizing, and market conditions.
                     </div>
                 </div>

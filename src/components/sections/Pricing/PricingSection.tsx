@@ -35,8 +35,8 @@ const PricingSection: React.FC<PricingSectionProps> = ({ heading, subheading, ti
                         <Card
                             key={index}
                             className={`relative h-full flex flex-col p-8 transition-all ${tier.isPopular
-                                    ? 'border-brand-500 shadow-[0_0_30px_rgba(126,34,206,0.3)] lg:scale-105 z-10 bg-gray-900'
-                                    : 'border-white/10 hover:border-white/20'
+                                ? 'border-brand-500 shadow-[0_0_30px_rgba(126,34,206,0.3)] lg:scale-105 z-10 bg-gray-900'
+                                : 'border-white/10 hover:border-white/20'
                                 }`}
                         >
                             {tier.isPopular && (
@@ -70,7 +70,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ heading, subheading, ti
                                     <Button
                                         variant={tier.isPopular ? 'primary' : 'secondary'}
                                         size="lg"
-                                        className="w-full"
+                                        className="w-full h-auto min-h-[3.5rem] py-4 rounded-xl font-black text-base"
                                     >
                                         Select Plan
                                     </Button>

@@ -2,7 +2,7 @@ import HeroSection from '../../../components/sections/Hero/HeroSection';
 import CTASection from '../../../components/sections/CTA/CTASection';
 import { Card, CardTitle } from '../../../components/ui/Card/Card';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '../../../components/ui/Table/Table';
-import { ArrowUpRight, BarChart3, TrendingUp, PieChart, History, Calendar } from 'lucide-react';
+import { ArrowUpRight, BarChart3, TrendingUp, PieChart, History, Calendar, ImageIcon } from 'lucide-react';
 
 const Performance = () => {
   const stats = [
@@ -13,11 +13,11 @@ const Performance = () => {
   ];
 
   const recentTrades = [
-    { ticker: "SPY", type: "0DTE CALL", entry: "$1.20", exit: "$2.10", return: "+75%", date: "Feb 24, 2026" },
-    { ticker: "NVDA", type: "WEEKLY CALL", entry: "$4.50", exit: "$5.80", return: "+28.8%", date: "Feb 23, 2026" },
-    { ticker: "QQQ", type: "0DTE PUT", entry: "$0.95", exit: "$1.40", return: "+47.3%", date: "Feb 22, 2026" },
-    { ticker: "TSLA", type: "WEEKLY PUT", entry: "$3.20", exit: "$2.90", return: "-9.4%", date: "Feb 20, 2026" },
-    { ticker: "AMD", type: "0DTE CALL", entry: "$1.10", exit: "$1.95", return: "+77.2%", date: "Feb 19, 2026" }
+    { ticker: "SPY", type: "0DTE CALL", entry: "$1.20", exit: "$2.10", return: "+75%", date: "Feb 24, 2026", hasScreenshot: true },
+    { ticker: "NVDA", type: "WEEKLY CALL", entry: "$4.50", exit: "$5.80", return: "+28.8%", date: "Feb 23, 2026", hasScreenshot: true },
+    { ticker: "QQQ", type: "0DTE PUT", entry: "$0.95", exit: "$1.40", return: "+47.3%", date: "Feb 22, 2026", hasScreenshot: true },
+    { ticker: "TSLA", type: "WEEKLY PUT", entry: "$3.20", exit: "$2.90", return: "-9.4%", date: "Feb 20, 2026", hasScreenshot: false },
+    { ticker: "AMD", type: "0DTE CALL", entry: "$1.10", exit: "$1.95", return: "+77.2%", date: "Feb 19, 2026", hasScreenshot: true }
   ];
 
   return (
@@ -71,14 +71,23 @@ const Performance = () => {
                       <TableHead className="pb-4 font-medium text-right">Return</TableHead>
                     </TableRow>
                   </TableHeader>
-                  <TableBody className="divide-y divide-white/5">
+                  <TableBody>
                     {recentTrades.map((trade, idx) => (
                       <TableRow key={idx} className="group hover:bg-white/5">
-                        <TableCell className="py-5 font-bold">{trade.ticker}</TableCell>
-                        <TableCell className="py-5 text-gray-400 text-sm whitespace-nowrap">{trade.type}</TableCell>
-                        <TableCell className="py-5 text-gray-400">{trade.entry}</TableCell>
-                        <TableCell className="py-5 text-gray-400">{trade.exit}</TableCell>
-                        <TableCell className={`py-5 text-right font-bold ${trade.return.startsWith('+') ? 'text-green-400' : 'text-red-400'}`}>
+                        <TableCell label="Asset" className="py-5 font-bold">
+                          <div className="flex items-center gap-2">
+                            {trade.ticker}
+                            {trade.hasScreenshot && (
+                              <span title="View Entry/Exit Screenshot">
+                                <ImageIcon className="w-4 h-4 text-gray-600 hover:text-brand-400 cursor-pointer transition-colors" />
+                              </span>
+                            )}
+                          </div>
+                        </TableCell>
+                        <TableCell label="Type" className="py-5 text-gray-400 text-sm">{trade.type}</TableCell>
+                        <TableCell label="Entry" className="py-5 text-gray-400">{trade.entry}</TableCell>
+                        <TableCell label="Exit" className="py-5 text-gray-400">{trade.exit}</TableCell>
+                        <TableCell label="Return" className={`py-5 text-right font-bold ${trade.return.startsWith('+') ? 'text-green-400' : 'text-red-400'}`}>
                           {trade.return}
                         </TableCell>
                       </TableRow>
@@ -131,6 +140,28 @@ const Performance = () => {
                 </div>
               </Card>
 
+              <Card className="border-brand-800/10">
+                <div className="flex items-center gap-3 mb-6">
+                  <BarChart3 className="w-6 h-6 text-brand-400" />
+                  <CardTitle className="text-xl">Monthly P&L</CardTitle>
+                </div>
+                <div className="flex items-end justify-between h-32 gap-2 mt-4">
+                  {/* Mock Bar Chart */}
+                  <div className="w-1/6 bg-brand-500/20 hover:bg-brand-500/40 transition-colors rounded-t-sm h-[40%] flex items-end justify-center pb-2 text-xs font-bold text-gray-500" title="Sept">S</div>
+                  <div className="w-1/6 bg-brand-500/30 hover:bg-brand-500/50 transition-colors rounded-t-sm h-[60%] flex items-end justify-center pb-2 text-xs font-bold text-gray-500" title="Oct">O</div>
+                  <div className="w-1/6 bg-brand-500/50 hover:bg-brand-500/70 transition-colors rounded-t-sm h-[80%] flex items-end justify-center pb-2 text-xs font-bold text-gray-400" title="Nov">N</div>
+                  <div className="w-1/6 bg-red-500/30 hover:bg-red-500/50 transition-colors rounded-t-sm h-[30%] flex items-end justify-center pb-2 text-xs font-bold text-gray-500" title="Dec">D</div>
+                  <div className="w-1/6 bg-brand-500/70 hover:bg-brand-500 transition-colors rounded-t-sm h-[90%] flex items-end justify-center pb-2 text-xs font-bold text-white relative group" title="Jan">
+                    J
+                    <div className="absolute -top-8 bg-black border border-white/10 px-2 py-1 rounded text-xs hidden group-hover:block whitespace-nowrap">+$8,400</div>
+                  </div>
+                  <div className="w-1/6 bg-brand-500 hover:bg-brand-400 transition-colors rounded-t-sm h-[100%] border-t-2 border-brand-300 flex items-end justify-center pb-2 text-xs font-bold text-white relative group" title="Feb">
+                    F
+                    <div className="absolute -top-8 bg-brand-500 border border-brand-400 px-2 py-1 rounded text-xs hidden group-hover:block whitespace-nowrap text-white">+$12,150</div>
+                  </div>
+                </div>
+              </Card>
+
               <Card className="bg-gradient-to-br from-brand-900/40 to-black border-brand-500/20">
                 <h4 className="text-lg font-bold mb-4">Want these results?</h4>
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
@@ -145,7 +176,7 @@ const Performance = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       <CTASection
         title="Dominate the Markets Together"
@@ -153,7 +184,7 @@ const Performance = () => {
         primaryCtaText="Start Risk-Free Trial"
         primaryCtaLink="/signup"
       />
-    </div>
+    </div >
   );
 };
 
