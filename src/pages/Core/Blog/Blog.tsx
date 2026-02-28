@@ -1,123 +1,77 @@
-import HeroSection from '../../../components/ui/Hero/HeroSection';
-import { Card } from '../../../components/ui/Card/Card';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import StandardSection from '../../../components/ui/Layout/StandardSection';
 import StandardCTA from '../../../components/ui/CTA/StandardCTA';
-import mockupImg from '../../../assets/pages images/Mobile Trading Signals App-5.png';
+
+import BlogHero from './sections/BlogHero';
+import CategoryFilter from './sections/CategoryFilter';
+import BlogGrid from './sections/BlogGrid';
+import { blogPosts } from './data/blogData';
 
 const Blog = () => {
-  const posts = [
-    {
-      title: "How to Master 0DTE Options Trading in 2026",
-      excerpt: "Zero Days to Expiration options are the fastest growing segment of the market. Learn our proprietary strategy for consistent gains.",
-      date: "Feb 24, 2026",
-      author: "Alex Vortex",
-      category: "Strategy",
-      link: "/0dte-options-strategy-complete-guide"
-    },
-    {
-      title: "The Importance of Delta Neutral Trading",
-      excerpt: "Why staying delta neutral can protect your portfolio during extreme market volatility and sudden gap-downs.",
-      date: "Feb 22, 2026",
-      author: "Marcus Chen",
-      category: "Education",
-      link: "/blog/importance-of-delta-neutral-trading"
-    },
-    {
-      title: "Top 5 Mistakes Beginner Options Traders Make",
-      excerpt: "Avoid these common pitfalls that wipe out 90% of retail trading accounts in their first three months.",
-      date: "Feb 18, 2026",
-      author: "Sarah Thompson",
-      category: "Beginners",
-      link: "/options-signals-for-beginners"
-    },
-    {
-      title: "Understanding Implied Volatility (IV) Crush",
-      excerpt: "Trading through earnings can be lucrative, but IV crush is the silent killer. Here is how to navigate it safely.",
-      date: "Feb 15, 2026",
-      author: "Alex Vortex",
-      category: "Advanced",
-      link: "/blog/understanding-iv-crush"
-    },
-    {
-      title: "Why Discord is the Best Platform for Trading Alerts",
-      excerpt: "Comparing Telegram, SMS, and Discord for high-frequency trading alerts. Why low latency matters most.",
-      date: "Feb 10, 2026",
-      author: "OnlyOptions Team",
-      category: "Tools",
-      link: "/options-discord-servers-list"
-    },
-    {
-      title: "SPY vs QQQ: Which ETF is Best for Day Trading?",
-      excerpt: "A deep dive comparison of liquidity, spread, and ADR for the two most popular indices in the world.",
-      date: "Feb 05, 2026",
-      author: "Marcus Chen",
-      category: "Market Analysis",
-      link: "/spy-options-signals"
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredPosts = useMemo(() => {
+    if (activeCategory === "All") return blogPosts;
+    return blogPosts.filter(post => post.category === activeCategory);
+  }, [activeCategory]);
+
+  const schemaBlog = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "OnlyOptions Market Insights",
+    "description": "Daily options trading analysis, 0DTE strategies, and market education from OnlyOptions analysts.",
+    "url": "https://onlyoptions.us/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "OnlyOptions.us"
     }
-  ];
+  };
 
   return (
-    <div className="bg-black">
-      <HeroSection
-        title={<>Market Insights & <br /><span className="text-brand-500">Education</span></>}
-        subtitle="Stay ahead of the curve with our latest analysis, strategy deep-dives, and community announcements."
-        primaryCtaText="Subscribe to Newsletter"
-        primaryCtaLink="/signup"
-        image={mockupImg}
-        badgeText="The Journal"
-      />
+    <div className="bg-black min-h-screen">
+      <Helmet>
+        <title>Options Trading Blog | Market Insights & Strategies | OnlyOptions.us</title>
+        <meta name="description" content="Stay ahead of the market with OnlyOptions.us blog. Featuring 0DTE strategy guides, market analysis, and professional options trading education from our FINRA-licensed team." />
+        <script type="application/ld+json">{JSON.stringify(schemaBlog)}</script>
+      </Helmet>
+
+      <BlogHero />
 
       <StandardSection variant="institutional" dotGrid spacing="lg" divider="bottom">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {posts.map((post, index) => (
-              <a href={post.link} key={index} className="group">
-                <Card variant="glass" className="h-full flex flex-col border-white/5 p-8 transition-all hover:bg-white/[0.04]">
-                  <div className="flex-1">
-                    <div className="text-[10px] font-black text-brand-500 uppercase tracking-widest mb-6 inline-block bg-brand-500/5 px-4 py-1.5 rounded-full border border-brand-500/10">
-                      {post.category}
-                    </div>
-                    <h3 className="text-xl font-black text-white mb-4 leading-tight group-hover:text-brand-400 transition-colors uppercase tracking-tight">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed font-medium">
-                      {post.excerpt}
-                    </p>
-                  </div>
+          <CategoryFilter
+            activeCategory={activeCategory}
+            onCategoryChange={setActiveCategory}
+          />
 
-                  <div className="mt-12 pt-8 border-t border-white/5 flex items-center justify-between">
-                    <div className="flex items-center gap-6 text-[10px] text-gray-600 font-black uppercase tracking-widest">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-3 h-3 text-brand-500/40" />
-                        {post.date}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <User className="w-3 h-3 text-brand-500/40" />
-                        {post.author}
-                      </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-2xl bg-white/5 flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-black transition-all border border-white/5">
-                      <ArrowRight className="w-5 h-5" />
-                    </div>
-                  </div>
-                </Card>
-              </a>
-            ))}
-          </div>
+          <BlogGrid posts={filteredPosts} />
 
-          <div className="mt-20 text-center">
-            <button className="px-10 py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:bg-white/10 hover:text-white transition-all">
-              Load More Articles
-            </button>
-          </div>
+          {filteredPosts.length > 5 && (
+            <div className="mt-24 text-center">
+              <button className="px-10 py-5 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:bg-brand-500 hover:text-black hover:border-brand-500 transition-all duration-300 shadow-xl hover:shadow-brand-500/20">
+                Load More Articles
+              </button>
+            </div>
+          )}
         </div>
       </StandardSection>
 
       <StandardCTA
         title="Get These Insights via Live Alerts"
-        subtitle="Join our Discord and stop reading old news—trade the live price action with our team."
+        subtitle="Join our Discord and stop reading old news—trade the live price action with our professional team of analysts."
+        buttonText="Join Discord Now"
       />
+
+      <div className="bg-black pb-24 text-center">
+        <div className="flex justify-center flex-wrap gap-8 text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+          <span>1,200+ Active Readers</span>
+          <span className="w-1 h-1 rounded-full bg-white/10 self-center" />
+          <span>Daily Analysis</span>
+          <span className="w-1 h-1 rounded-full bg-white/10 self-center" />
+          <span>Proven Strategies</span>
+        </div>
+      </div>
     </div>
   );
 };
