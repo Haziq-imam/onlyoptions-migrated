@@ -50,8 +50,8 @@ const RoiIllustrationSection = () => {
                     * Illustration only. Based on 70.3% win rate and +87% average winner / -30% average loser from our published historical record. Actual results will vary based on which signals you take, your execution prices, position sizing, and market conditions. Past performance does not guarantee future results. Options trading involves substantial risk of loss.
                 </p>
                 <div className="flex justify-center mt-12">
-                    <Button href="/tools/roi-calculator" variant="secondary" className="px-8 h-12 rounded-xl text-xs font-black uppercase tracking-widest border-white/10 hover:bg-white/5 transition-all">
-                        [ Internal Link ] → Use our free ROI Calculator to model your own scenario
+                    <Button href="/roi-calculator-options" variant="secondary" className="px-8 h-12 rounded-xl text-xs font-black uppercase tracking-widest border-white/10 hover:bg-white/5 transition-all">
+                        Use our free ROI Calculator
                     </Button>
                 </div>
             </div>

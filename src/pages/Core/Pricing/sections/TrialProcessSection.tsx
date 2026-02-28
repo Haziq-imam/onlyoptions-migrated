@@ -38,7 +38,7 @@ const TrialProcessSection = () => {
 
                 <div className="flex justify-center mt-16">
                     <Button href="/free-trial" variant="primary" className="px-12 h-16 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl">
-                        [ Internal Link ] → Go to Free Trial signup page
+                        Start Free Trial
                     </Button>
                 </div>
             </div>

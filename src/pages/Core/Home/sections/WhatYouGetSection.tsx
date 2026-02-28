@@ -44,7 +44,7 @@ const WhatYouGetSection = () => (
                             </div>
                             <div>
                                 <h4 className="font-black text-white text-xs mb-2 uppercase tracking-tight">{f.title}</h4>
-                                <p className="text-gray-500 text-[11px] leading-relaxed line-clamp-2">{f.desc}</p>
+                                <p className="text-gray-500 text-[11px] leading-relaxed">{f.desc}</p>
                             </div>
                         </div>
                     ))}

@@ -44,7 +44,7 @@ const BillingDetailsSection = () => {
                 </Card>
 
                 <div className="flex justify-center mt-12">
-                    <a href="/refund-policy" className="text-brand-500 font-black uppercase text-[10px] tracking-widest hover:text-brand-400">[ Internal Link ] → Read full Refund Policy</a>
+                    <a href="/refund-policy" className="text-brand-500 font-black uppercase text-[10px] tracking-widest hover:text-brand-400">Read full Refund Policy</a>
                 </div>
             </div>
         </StandardSection>

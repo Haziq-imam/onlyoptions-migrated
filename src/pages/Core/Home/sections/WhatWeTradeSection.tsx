@@ -55,11 +55,11 @@ const WhatWeTradeSection = () => (
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-widest text-gray-500 border-t border-white/5 pt-12">
-                <a href="/spy-options-signals" className="hover:text-brand-500 transition-colors">SPY signals</a>
+                <a href="/signals/spy-options-signals" className="hover:text-brand-500 transition-colors">SPY signals</a>
                 <span className="hidden md:block opacity-30">|</span>
                 <a href="/qqq-options-signals" className="hover:text-brand-500 transition-colors">QQQ signals</a>
                 <span className="hidden md:block opacity-30">|</span>
-                <a href="/0dte-options-strategy-complete-guide" className="hover:text-brand-500 transition-colors">0DTE guide</a>
+                <a href="/strategies/0dte-options-strategy" className="hover:text-brand-500 transition-colors">0DTE guide</a>
                 <span className="hidden md:block opacity-30">|</span>
                 <a href="/best-brokers-for-options-trading" className="hover:text-brand-500 transition-colors">Best brokers</a>
             </div>

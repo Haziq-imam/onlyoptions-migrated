@@ -25,12 +25,13 @@ const Layout = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Pricing', path: '/pricing' },
         { name: 'Performance', path: '/performance' },
-        { name: 'Results', path: '/testimonials' },
         { name: 'Guide', path: '/how-it-works' },
+        { name: 'Reviews', path: '/testimonials' },
+        { name: 'FAQ', path: '/faq' },
+        { name: 'Contact', path: '/contact' },
         { name: 'Blog', path: '/blog' },
     ];
 
@@ -39,10 +40,9 @@ const Layout = () => {
             {/* Unique Floating Header */}
             <div className="fixed top-6 inset-x-0 z-50 px-6 md:px-12">
                 <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-3 px-6 flex items-center justify-between shadow-2xl relative z-50">
-                    <div className="flex items-center gap-3">
-                        <img src={Logo} alt="OnlyOptions" className="h-8 w-auto" />
-                        <span className="text-xl font-black tracking-tight text-white hidden sm:block">OnlyOptions</span>
-                    </div>
+                    <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <img src={Logo} alt="OnlyOptions" className="h-10 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                    </a>
 
                     <nav className="hidden lg:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-gray-400">
                         {navLinks.map((link) => (
@@ -51,6 +51,7 @@ const Layout = () => {
                     </nav>
 
                     <div className="flex items-center gap-4">
+                        <a href="/signup" className="text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-brand-400 transition-colors hidden md:block border border-white/10 px-4 py-2 rounded-xl">Sign Up</a>
                         <a href="/login" className="text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-brand-400 transition-colors hidden md:block">Log In</a>
                         <Button href="/free-trial" size="sm" className="px-6 rounded-xl font-black text-[10px] uppercase tracking-wider relative overflow-hidden group">
                             <span className="relative z-10">Free Trial</span>
@@ -80,6 +81,13 @@ const Layout = () => {
                                 </a>
                             ))}
                             <a
+                                href="/signup"
+                                className="text-white hover:text-brand-400 transition-colors md:hidden py-1 border-b border-white/5"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Sign Up
+                            </a>
+                            <a
                                 href="/login"
                                 className="text-white hover:text-brand-400 transition-colors md:hidden py-1 border-b border-white/5"
                                 onClick={() => setIsMenuOpen(false)}
@@ -98,10 +106,9 @@ const Layout = () => {
             <footer className="border-t border-white/5 py-20 px-6 md:px-12 bg-gray-950/50 noise-bg">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
                     <div className="space-y-6 max-w-sm">
-                        <div className="flex items-center gap-3">
-                            <img src={Logo} alt="OnlyOptions" className="h-8 w-auto opacity-80" />
-                            <span className="text-xl font-black tracking-tight text-white">OnlyOptions</span>
-                        </div>
+                        <a href="/" className="flex items-center gap-3 hover:opacity-100 transition-opacity">
+                            <img src={Logo} alt="OnlyOptions" className="h-10 w-auto opacity-80 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                        </a>
                         <p className="text-gray-500 text-sm leading-relaxed">
                             Premium options trading signals delivered instantly to your device. Institutional quality research for the retail trader.
                         </p>
@@ -127,12 +134,11 @@ const Layout = () => {
                             </ul>
                         </div>
                         <div className="space-y-4">
-                            <h5 className="font-bold text-white uppercase tracking-widest text-xs">Company</h5>
+                            <h5 className="font-bold text-white uppercase tracking-widest text-xs">Support</h5>
                             <ul className="space-y-2 text-gray-500 font-medium">
-                                <li><a href="/contact" className="hover:text-white transition-colors">Contact Support</a></li>
-                                <li><a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a></li>
-                                <li><a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                                <li><a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a></li>
+                                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+                                <li><a href="/login" className="hover:text-white transition-colors">Log In</a></li>
+                                <li><a href="/signup" className="hover:text-white transition-colors">Sign Up</a></li>
                             </ul>
                         </div>
                     </div>
