@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import Logo from '../../assets/Logo.png';
+import Logo from '../../assets/logo.png';
 import Button from '../ui/Button/Button';
 import { Menu, X } from 'lucide-react';
 
