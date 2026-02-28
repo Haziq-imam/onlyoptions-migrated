@@ -1,4 +1,4 @@
-import StandardCTA from '../../ui/CTA/StandardCTA';
+import StandardCTA from '../../../../components/ui/CTA/StandardCTA';
 
 const FinalCTASection = () => (
     <StandardCTA />

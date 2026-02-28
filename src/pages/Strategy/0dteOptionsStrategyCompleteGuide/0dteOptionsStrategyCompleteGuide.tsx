@@ -1,127 +1,140 @@
-import HeroSection from '../../../components/sections/Hero/HeroSection';
-import CTASection from '../../../components/sections/CTA/CTASection';
+import HeroSection from '../../../components/ui/Hero/HeroSection';
 import { Card } from '../../../components/ui/Card/Card';
 import { BookOpen, Target, ShieldAlert, Zap, TrendingUp, Search } from 'lucide-react';
+import StandardSection from '../../../components/ui/Layout/StandardSection';
+import SectionHeader from '../../../components/ui/Layout/SectionHeader';
+import StandardCTA from '../../../components/ui/CTA/StandardCTA';
+import mockupImg from '../../../assets/pages images/signal-looklike.png';
 
 const Page0dteOptionsStrategyCompleteGuide = () => {
     return (
-        <div className="pb-20">
+        <div className="bg-black">
             <HeroSection
-                title="0DTE Options Strategy: The Complete 2026 Guide"
+                title={<>0DTE Options Strategy: <br /><span className="text-brand-500">The Complete 2026 Guide</span></>}
                 subtitle="Master the most explosive instrument in the stock market. Learn how to trade Zero Days to Expiration with precision and institutional risk management."
                 primaryCtaText="Join Our 0DTE Alerts"
                 primaryCtaLink="/signup"
+                image={mockupImg}
+                badgeText="Strategy Depth"
             />
 
-            <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto">
-                <div className="prose prose-invert prose-brand max-w-none">
-                    <div className="flex items-center gap-3 text-brand-400 font-bold uppercase tracking-widest text-sm mb-6">
-                        <BookOpen className="w-5 h-5" />
-                        Educational Depth
-                    </div>
+            <StandardSection variant="institutional" dotGrid spacing="lg" divider="bottom">
+                <div className="max-w-4xl mx-auto">
+                    <SectionHeader
+                        title="What exactly is a 0DTE Option?"
+                        description="Zero Days to Expiration (0DTE) contracts expire on the same day they are traded. They offer extreme leverage but require precise execution."
+                    />
 
-                    <h2 className="text-4xl font-extrabold mb-8">What exactly is a 0DTE Option?</h2>
-                    <p className="text-gray-400 text-xl leading-relaxed mb-10">
-                        0DTE stands for <span className="text-white font-semibold">Zero Days to Expiration</span>. These are options contracts that expire on the very same day they are traded. Historically available only once a week, major ETFs like SPY and QQQ now offer 0DTE expirations every single trading day.
-                    </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                        <Card className="bg-brand-900/10 border-brand-500/20 p-8">
-                            <div className="flex items-center gap-3 mb-4">
-                                <Zap className="w-6 h-6 text-brand-400" />
-                                <h3 className="text-xl font-bold">The Power of 0DTE</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        <Card variant="glass" className="p-8 border-brand-500/10 bg-brand-500/5">
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="p-3 rounded-xl bg-brand-500/10 text-brand-400">
+                                    <Zap className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-black text-white uppercase tracking-tight">The Power</h3>
                             </div>
-                            <ul className="space-y-3 text-gray-400 text-sm">
-                                <li className="flex gap-2">
-                                    <div className="mt-1 flex-shrink-0 text-brand-400">●</div>
-                                    High leverage (small capital, large potential returns)
-                                </li>
-                                <li className="flex gap-2">
-                                    <div className="mt-1 flex-shrink-0 text-brand-400">●</div>
-                                    Rapid P&L realization (get out in minutes/hours)
-                                </li>
-                                <li className="flex gap-2">
-                                    <div className="mt-1 flex-shrink-0 text-brand-400">●</div>
-                                    No overnight gap risk
-                                </li>
+                            <ul className="space-y-4">
+                                {[
+                                    "High leverage (small capital, large potential returns)",
+                                    "Rapid P&L realization (minutes to hours)",
+                                    "No overnight gap risk or exposure"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-sm text-gray-400">
+                                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0" />
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </Card>
 
-                        <Card className="bg-red-950/10 border-red-500/20 p-8">
-                            <div className="flex items-center gap-3 mb-4">
-                                <ShieldAlert className="w-6 h-6 text-red-400" />
-                                <h3 className="text-xl font-bold text-red-100">The Risks</h3>
+                        <Card variant="glass" className="p-8 border-red-500/10 bg-red-500/5">
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="p-3 rounded-xl bg-red-500/10 text-red-400">
+                                    <ShieldAlert className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-black text-white uppercase tracking-tight">The Risks</h3>
                             </div>
-                            <ul className="space-y-3 text-gray-400 text-sm">
-                                <li className="flex gap-2">
-                                    <div className="mt-1 flex-shrink-0 text-red-500">●</div>
-                                    Extreme Time Decay (Theta)
-                                </li>
-                                <li className="flex gap-2">
-                                    <div className="mt-1 flex-shrink-0 text-red-500">●</div>
-                                    100% loss potential if strike isn't met
-                                </li>
-                                <li className="flex gap-2">
-                                    <div className="mt-1 flex-shrink-0 text-red-500">●</div>
-                                    High volatility and emotional stress
-                                </li>
+                            <ul className="space-y-4">
+                                {[
+                                    "Extreme Time Decay (Theta) acceleration",
+                                    "100% loss potential if strike isn't met",
+                                    "High volatility and emotional stress"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 text-sm text-gray-400">
+                                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </Card>
                     </div>
+                </div>
+            </StandardSection>
 
-                    <h2 className="text-3xl font-bold mb-6">Our 3-Pillar 0DTE Strategy</h2>
-                    <div className="space-y-12 mb-20">
-                        <div className="flex flex-col md:flex-row gap-8 items-start">
-                            <div className="w-16 h-16 rounded-2xl bg-brand-500/20 flex items-center justify-center text-brand-400 shrink-0">
-                                <Search className="w-8 h-8" />
-                            </div>
-                            <div>
-                                <h4 className="text-2xl font-bold mb-3">1. Technical Level Identification</h4>
-                                <p className="text-gray-400">We don't guess. We use institutional order flow and volume profile analysis to identify "Key Pivot Levels" where SPY is likely to experience high volatility or rejection. We only enter when price interacts with these zones.</p>
-                            </div>
-                        </div>
+            <StandardSection spacing="lg" divider="bottom">
+                <div className="max-w-5xl mx-auto">
+                    <SectionHeader
+                        title="The 3-Pillar 0DTE Framework"
+                        description="Our proprietary system for navigating high-velocity price action with institutional discipline."
+                        align="center"
+                    />
 
-                        <div className="flex flex-col md:flex-row gap-8 items-start">
-                            <div className="w-16 h-16 rounded-2xl bg-teal-500/20 flex items-center justify-center text-teal-400 shrink-0">
-                                <Target className="w-8 h-8" />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                        {[
+                            {
+                                icon: <Search className="w-6 h-6" />,
+                                title: "Pivot Analysis",
+                                desc: "We use institutional order flow and volume profiles to identify precise rejection and breakout zones.",
+                                color: "brand"
+                            },
+                            {
+                                icon: <Target className="w-6 h-6" />,
+                                title: "Delta Selection",
+                                desc: "Standardizing on 15-30 Delta contracts to balance gamma explosiveness with probability.",
+                                color: "teal"
+                            },
+                            {
+                                icon: <TrendingUp className="w-6 h-6" />,
+                                title: "Exit Protocols",
+                                desc: "Automated scaling at +20%, +50%, and +100% while neutralizing risk at break-even.",
+                                color: "blue"
+                            }
+                        ].map((pillar, i) => (
+                            <div key={i} className="space-y-6">
+                                <div className={`w-14 h-14 rounded-2xl bg-${pillar.color}-500/10 flex items-center justify-center text-${pillar.color}-400 border border-${pillar.color}-500/20`}>
+                                    {pillar.icon}
+                                </div>
+                                <h4 className="text-lg font-black text-white uppercase tracking-tight">{pillar.title}</h4>
+                                <p className="text-gray-500 text-sm leading-relaxed">{pillar.desc}</p>
                             </div>
-                            <div>
-                                <h4 className="text-2xl font-bold mb-3">2. Delta Selection (Risk vs Reward)</h4>
-                                <p className="text-gray-400">We typically target 15-30 Delta options. This provides the best "bang for your buck" balance—enough gamma to explode on a move, but not so deep OTM that the probability of success is near zero.</p>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row gap-8 items-start">
-                            <div className="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-                                <TrendingUp className="w-8 h-8" />
-                            </div>
-                            <div>
-                                <h4 className="text-2xl font-bold mb-3">3. Precise Exit Management</h4>
-                                <p className="text-gray-400">0DTE profits can vanish in seconds. We scale out of positions at +20%, +50%, and +100% while moving stops to break-even to protect capital. We NEVER hold a 0DTE to the closing bell unless it's a "lotto" position.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
+                </div>
+            </StandardSection>
 
-                    <Card className="p-10 border-white/5 bg-gray-950 shadow-2xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-4 opacity-5">
-                            <BookOpen className="w-32 h-32" />
+            <StandardSection variant="muted" spacing="lg" divider="bottom">
+                <div className="max-w-4xl mx-auto">
+                    <Card variant="glass" className="p-12 border-white/5 bg-white/[0.01] relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-8 opacity-5">
+                            <BookOpen className="w-40 h-40 text-brand-500" />
                         </div>
-                        <h4 className="text-2xl font-bold mb-4">Summary for Beginners</h4>
-                        <p className="text-gray-400 leading-relaxed">
-                            Trading 0DTE requires extreme discipline. If you are new, start with 1 contract and focus on the technical setup rather than the dollar amount. The goal is to catch the momentum of a move and exit quickly.
-                        </p>
-                        <div className="mt-6 p-4 bg-brand-500/10 rounded-xl border border-brand-500/20 text-brand-300 font-medium text-sm">
-                            💡 Pro Tip: Never risk more than 1-2% of your total account on a single 0DTE trade.
+                        <div className="relative z-10 max-w-2xl">
+                            <h4 className="text-2xl font-black text-white uppercase tracking-tight mb-6">Summary for Scalpers</h4>
+                            <p className="text-gray-400 leading-relaxed mb-8 italic">
+                                "Trading 0DTE requires extreme discipline. If you are new, start with 1 contract and focus on the technical setup rather than the dollar amount. The goal is to catch the momentum of a move and exit quickly."
+                            </p>
+                            <div className="flex items-center gap-4 p-4 rounded-xl bg-brand-500/5 border border-brand-500/10 text-brand-400 text-xs font-black uppercase tracking-widest">
+                                <Zap className="w-4 h-4" />
+                                Pro Tip: Never risk more than 1% of equity on a single 0DTE position.
+                            </div>
                         </div>
                     </Card>
                 </div>
-            </section>
+            </StandardSection>
 
-            <CTASection
+            <StandardCTA
                 title="Stop Guessing, Start Executing"
-                subtitle="Our analysts identify THESE exact 0DTE setups every single morning in Discord."
-                primaryCtaText="Access 0DTE Alerts"
-                primaryCtaLink="/signup"
+                subtitle="Join our Discord and trade these exact setups live with our analysts every morning."
             />
         </div>
     );

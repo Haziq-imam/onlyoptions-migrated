@@ -1,7 +1,10 @@
-import HeroSection from '../../../components/sections/Hero/HeroSection';
-import CTASection from '../../../components/sections/CTA/CTASection';
-import { Card, CardTitle, CardContent } from '../../../components/ui/Card/Card';
+import HeroSection from '../../../components/ui/Hero/HeroSection';
+import StandardSection from '../../../components/ui/Layout/StandardSection';
+import SectionHeader from '../../../components/ui/Layout/SectionHeader';
+import StandardCTA from '../../../components/ui/CTA/StandardCTA';
+import { Card } from '../../../components/ui/Card/Card';
 import { CheckCircle2, Bell, TrendingUp, Info } from 'lucide-react';
+import appMockup from '../../../assets/pages images/Mobile Trading Signals App-12.png';
 
 const HowItWorks = () => {
   const steps = [
@@ -26,68 +29,97 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-black">
       <HeroSection
-        title="Predictable Profits, Simple Process"
+        title={<>Predictable Profits, <br /><span className="text-brand-500">Simple Process</span></>}
         subtitle="We've streamlined options trading into a three-step process designed for consistency and risk management."
         primaryCtaText="Start Free Trial"
         primaryCtaLink="/signup"
+        image={appMockup}
+        badgeText="The Workflow"
       />
 
-      <section className="py-20 px-6 md:px-12 bg-black/20">
+      <StandardSection variant="institutional" dotGrid spacing="lg" divider="bottom">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
-              <Card key={index} className="relative overflow-hidden group border-brand-800/20">
+              <Card key={index} variant="glass" className="relative overflow-hidden group border-white/5 p-8">
                 <div className="absolute top-4 right-6 text-6xl font-black text-white/5 group-hover:text-brand-500/10 transition-colors">
                   {step.number}
                 </div>
-                <div className="mb-6">{step.icon}</div>
-                <CardTitle className="mb-4 text-2xl">{step.title}</CardTitle>
-                <CardContent className="text-gray-400 leading-relaxed">
+                <div className="mb-8">{step.icon}</div>
+                <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tight">{step.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
                   {step.description}
-                </CardContent>
+                </p>
               </Card>
             ))}
           </div>
         </div>
-      </section>
+      </StandardSection>
 
-      <section className="py-20 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto bg-brand-900/10 border border-brand-500/20 rounded-3xl p-8 md:p-12">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center text-brand-400">
-              <Info className="w-6 h-6" />
+      <StandardSection spacing="lg" divider="bottom">
+        <div className="max-w-4xl mx-auto space-y-12">
+          <SectionHeader
+            title="Signal Format Explained"
+            description="Every alert we send contains these 8 critical data points to ensure you trade with confidence."
+            align="center"
+          />
+
+          <Card variant="glass" className="p-8 md:p-12 border-brand-500/20 bg-brand-500/5 relative overflow-hidden group">
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-brand-500/10 blur-[100px] rounded-full" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Ticker</span>
+                  <span className="text-white font-black">SPY (S&P 500 ETF)</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Type</span>
+                  <span className="text-brand-500 font-black">CALL / PUT</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Strike</span>
+                  <span className="text-white font-black">$450</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Expiry</span>
+                  <span className="text-white font-black text-right">0DTE (Same Day) <br /> <span className="text-[10px] text-gray-500">or Weekly</span></span>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Entry Range</span>
+                  <span className="text-teal-400 font-black">$1.20 - $1.40</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Stop-Loss</span>
+                  <span className="text-red-400 font-black">$0.80 (-30%)</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Targets</span>
+                  <span className="text-green-400 font-black">$1.80, $2.50, $4.0+</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                  <span className="text-gray-500 text-[10px] font-black uppercase tracking-widest">Rationale</span>
+                  <span className="text-white font-black italic text-xs">Technical Analysis</span>
+                </div>
+              </div>
             </div>
-            <h2 className="text-3xl font-bold">Signal Format Explained</h2>
-          </div>
 
-          <div className="bg-gray-950/50 rounded-2xl p-6 border border-white/5 font-mono text-sm md:text-base leading-relaxed">
-            <div className="flex flex-col gap-3">
-              <p><span className="text-brand-400 font-bold">Ticker:</span> SPY (S&P 500 ETF)</p>
-              <p><span className="text-brand-400 font-bold">Type:</span> CALL / PUT</p>
-              <p><span className="text-brand-400 font-bold">Strike:</span> $450</p>
-              <p><span className="text-brand-400 font-bold">Expiry:</span> 0DTE (Same Day) or Weekly</p>
-              <hr className="border-white/5 my-2" />
-              <p><span className="text-teal-400 font-bold">Entry:</span> $1.20 - $1.40</p>
-              <p><span className="text-red-400 font-bold">Stop-Loss:</span> $0.80 (-30%)</p>
-              <p><span className="text-green-400 font-bold">Targets:</span> $1.80, $2.50, $4.00+</p>
+            <div className="mt-10 pt-8 border-t border-white/5 flex items-center gap-4 text-gray-500 italic text-xs">
+              <Info className="w-4 h-4 text-brand-500 shrink-0" />
+              Every signal includes real-time updates on when to scale out or close the position completely.
             </div>
-          </div>
-
-          <p className="mt-8 text-gray-400 italic">
-            *Every signal includes real-time updates on when to scale out or close the position completely.
-          </p>
+          </Card>
         </div>
-      </section>
+      </StandardSection>
 
-      <CTASection
+      <StandardCTA
         title="Ready to Scale Your Portfolio?"
-        subtitle="Join the Discord and start receiving high-probability signals today."
-        primaryCtaText="Join Now"
-        primaryCtaLink="/signup"
-        secondaryCtaText="View Performance"
-        secondaryCtaLink="/performance"
+        subtitle="Join the Discord community today and stop trading in the dark."
       />
     </div>
   );

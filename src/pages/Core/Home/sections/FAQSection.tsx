@@ -1,8 +1,8 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
-import StandardSection from '../../ui/Layout/StandardSection';
-import SectionHeader from '../../ui/Layout/SectionHeader';
-import { Card } from '../../ui/Card/Card';
+import StandardSection from '../../../../components/ui/Layout/StandardSection';
+import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
+import { Card } from '../../../../components/ui/Card/Card';
 
 const faqs = [
     {
@@ -47,11 +47,39 @@ const faqs = [
     }
 ];
 
-const FAQSection = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <StandardSection className="py-24" containerSize="4xl">
+        <Card variant="glass" className="overflow-hidden border-white/5 transition-all duration-300">
+            <button
+                className="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                <span className="font-black text-white flex items-center gap-3">
+                    <span className="text-brand-500/50 text-[10px] tracking-tighter">Q.</span>
+                    {question}
+                </span>
+                {isOpen ? (
+                    <ChevronUp className="w-5 h-5 text-brand-400 flex-shrink-0" />
+                ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                )}
+            </button>
+            <div
+                className={`px-8 text-gray-400 text-sm leading-relaxed transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[800px] pb-8 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+            >
+                <div className="ml-7 border-l border-white/5 pl-6 whitespace-pre-line">
+                    {answer}
+                </div>
+            </div>
+        </Card>
+    );
+};
+
+const FAQSection = () => {
+    return (
+        <StandardSection variant="default" divider="top" spacing="lg" containerSize="4xl">
             <SectionHeader
                 label="Support"
                 title={<>Frequently Asked <span className="text-brand-500">Questions</span></>}
@@ -62,33 +90,7 @@ const FAQSection = () => {
 
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                    <Card
-                        key={index}
-                        variant="glass"
-                        hover={false}
-                        className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'bg-white/5 border-brand-500/30' : 'border-white/5 bg-transparent hover:bg-white/[0.02]'}`}
-                    >
-                        <button
-                            className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none"
-                            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                        >
-                            <span className="font-black text-white text-base md:text-lg pr-8 leading-tight">{faq.question}</span>
-                            {openIndex === index ? (
-                                <ChevronUp className="w-5 h-5 text-brand-400 shrink-0" />
-                            ) : (
-                                <ChevronDown className="w-5 h-5 text-gray-500 shrink-0" />
-                            )}
-                        </button>
-                        <div
-                            className={`px-8 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[800px] pb-8 opacity-100' : 'max-h-0 opacity-0'}`}
-                        >
-                            <div className="pt-2 border-t border-white/5">
-                                <p className="text-gray-400 leading-relaxed text-sm md:text-base mt-6">
-                                    {faq.answer}
-                                </p>
-                            </div>
-                        </div>
-                    </Card>
+                    <FaqItem key={index} question={faq.question} answer={faq.answer} />
                 ))}
             </div>
         </StandardSection>

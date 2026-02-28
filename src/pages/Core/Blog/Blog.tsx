@@ -1,7 +1,9 @@
-import HeroSection from '../../../components/sections/Hero/HeroSection';
-import CTASection from '../../../components/sections/CTA/CTASection';
-import { Card, CardTitle, CardContent } from '../../../components/ui/Card/Card';
+import HeroSection from '../../../components/ui/Hero/HeroSection';
+import { Card } from '../../../components/ui/Card/Card';
 import { Calendar, User, ArrowRight } from 'lucide-react';
+import StandardSection from '../../../components/ui/Layout/StandardSection';
+import StandardCTA from '../../../components/ui/CTA/StandardCTA';
+import mockupImg from '../../../assets/pages images/Mobile Trading Signals App-5.png';
 
 const Blog = () => {
   const posts = [
@@ -56,45 +58,47 @@ const Blog = () => {
   ];
 
   return (
-    <div className="pb-20">
+    <div className="bg-black">
       <HeroSection
-        title="Market Insights & Education"
+        title={<>Market Insights & <br /><span className="text-brand-500">Education</span></>}
         subtitle="Stay ahead of the curve with our latest analysis, strategy deep-dives, and community announcements."
         primaryCtaText="Subscribe to Newsletter"
         primaryCtaLink="/signup"
+        image={mockupImg}
+        badgeText="The Journal"
       />
 
-      <section className="py-20 px-6 md:px-12">
+      <StandardSection variant="institutional" dotGrid spacing="lg" divider="bottom">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {posts.map((post, index) => (
               <a href={post.link} key={index} className="group">
-                <Card className="h-full flex flex-col border-brand-800/10 hover:border-brand-500/30 transition-all hover:bg-white/[0.02]">
+                <Card variant="glass" className="h-full flex flex-col border-white/5 p-8 transition-all hover:bg-white/[0.04]">
                   <div className="flex-1">
-                    <div className="text-xs font-bold text-brand-400 uppercase tracking-widest mb-4 inline-block bg-brand-500/10 px-3 py-1 rounded-full">
+                    <div className="text-[10px] font-black text-brand-500 uppercase tracking-widest mb-6 inline-block bg-brand-500/5 px-4 py-1.5 rounded-full border border-brand-500/10">
                       {post.category}
                     </div>
-                    <CardTitle className="text-2xl mb-4 leading-tight group-hover:text-brand-300 transition-colors">
+                    <h3 className="text-xl font-black text-white mb-4 leading-tight group-hover:text-brand-400 transition-colors uppercase tracking-tight">
                       {post.title}
-                    </CardTitle>
-                    <CardContent className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 font-medium">
                       {post.excerpt}
-                    </CardContent>
+                    </p>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-xs text-gray-500 font-medium">
-                      <div className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5" />
+                  <div className="mt-12 pt-8 border-t border-white/5 flex items-center justify-between">
+                    <div className="flex items-center gap-6 text-[10px] text-gray-600 font-black uppercase tracking-widest">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-3 h-3 text-brand-500/40" />
                         {post.date}
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <User className="w-3.5 h-3.5" />
+                      <div className="flex items-center gap-2">
+                        <User className="w-3 h-3 text-brand-500/40" />
                         {post.author}
                       </div>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-brand-400 group-hover:bg-brand-500 group-hover:text-gray-950 transition-all">
-                      <ArrowRight className="w-4 h-4" />
+                    <div className="w-10 h-10 rounded-2xl bg-white/5 flex items-center justify-center text-brand-500 group-hover:bg-brand-500 group-hover:text-black transition-all border border-white/5">
+                      <ArrowRight className="w-5 h-5" />
                     </div>
                   </div>
                 </Card>
@@ -102,19 +106,17 @@ const Blog = () => {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <button className="px-8 py-3 border border-white/10 rounded-full text-gray-400 font-bold hover:bg-white/5 transition-all">
+          <div className="mt-20 text-center">
+            <button className="px-10 py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:bg-white/10 hover:text-white transition-all">
               Load More Articles
             </button>
           </div>
         </div>
-      </section>
+      </StandardSection>
 
-      <CTASection
+      <StandardCTA
         title="Get These Insights via Live Alerts"
         subtitle="Join our Discord and stop reading old news—trade the live price action with our team."
-        primaryCtaText="Start Free Trial"
-        primaryCtaLink="/signup"
       />
     </div>
   );

@@ -1,134 +1,149 @@
-import HeroSection from '../../../components/sections/Hero/HeroSection';
-import { Card, CardTitle, CardContent } from '../../../components/ui/Card/Card';
+import HeroSection from '../../../components/ui/Hero/HeroSection';
+import { Card } from '../../../components/ui/Card/Card';
 import { Mail, MessageCircle, Clock, Send } from 'lucide-react';
 import React from 'react';
+import StandardSection from '../../../components/ui/Layout/StandardSection';
+import SectionHeader from '../../../components/ui/Layout/SectionHeader';
+import StandardCTA from '../../../components/ui/CTA/StandardCTA';
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Dummy submit handler
     alert("Message sent successfully! Our team will respond shortly.");
   };
 
   return (
-    <div className="pb-20">
+    <div className="bg-black">
       <HeroSection
-        title="Get in Touch"
-        subtitle="Need help with your account or have questions before joining? We're here to help."
+        title={<>Get in <br /><span className="text-brand-500">Touch</span></>}
+        subtitle="Need help with your account or have questions before joining? Our team is dedicated to your success."
         primaryCtaText="Join Discord"
         primaryCtaLink="/signup"
+        badgeText="Support"
       />
 
-      <section className="px-6 md:px-12 -mt-10">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+      <StandardSection spacing="lg" divider="bottom">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
           {/* Contact Info Cards */}
-          <div className="lg:w-1/3 space-y-6">
-            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+          <div className="lg:w-1/3 space-y-12">
+            <SectionHeader
+              title="Information"
+              align="left"
+            />
 
-            <Card className="p-6 border-brand-800/10 flex items-start gap-4 hover:border-brand-500/30 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 shrink-0">
-                <Mail className="w-6 h-6" />
-              </div>
-              <div>
-                <CardTitle className="text-lg">Email Support</CardTitle>
-                <CardContent className="text-gray-400 mt-2 p-0 text-sm leading-relaxed">
-                  <a href="mailto:support@onlyoptions.us" className="text-white font-bold hover:text-brand-400 transition-colors">
+            <div className="space-y-6">
+              <Card variant="glass" className="p-8 border-white/5 flex items-start gap-6 group hover:bg-white/[0.02] transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-brand-500/10 flex items-center justify-center text-brand-400 shrink-0 border border-brand-500/20">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-white font-black text-sm uppercase tracking-widest mb-1">Email Support</h4>
+                  <a href="mailto:support@onlyoptions.us" className="text-brand-500 font-extrabold hover:text-brand-400 transition-colors text-lg">
                     support@onlyoptions.us
                   </a>
-                  <p className="mt-1">For billing and general inquiries.</p>
-                </CardContent>
-              </div>
-            </Card>
+                  <p className="mt-2 text-gray-500 text-xs">For billing and general inquiries.</p>
+                </div>
+              </Card>
 
-            <Card className="p-6 border-brand-800/10 flex items-start gap-4 hover:border-brand-500/30 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[#5865F2]/10 flex items-center justify-center text-[#5865F2] shrink-0">
-                <MessageCircle className="w-6 h-6" />
-              </div>
-              <div>
-                <CardTitle className="text-lg">Discord Community</CardTitle>
-                <CardContent className="text-gray-400 mt-2 p-0 text-sm leading-relaxed">
-                  <a href="/signup" className="text-white font-bold hover:text-[#5865F2] transition-colors">
-                    discord.gg/onlyoptions
+              <Card variant="glass" className="p-8 border-white/5 flex items-start gap-6 group hover:bg-white/[0.02] transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-[#5865F2]/10 flex items-center justify-center text-[#5865F2] shrink-0 border border-[#5865F2]/20">
+                  <MessageCircle className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-white font-black text-sm uppercase tracking-widest mb-1">Discord Community</h4>
+                  <a href="/signup" className="text-[#5865F2] font-extrabold hover:text-[#5865F2]/80 transition-colors text-lg">
+                    Open Ticket
                   </a>
-                  <p className="mt-1">Fastest response for active members.</p>
-                </CardContent>
-              </div>
-            </Card>
+                  <p className="mt-2 text-gray-500 text-xs">Fastest response for active members.</p>
+                </div>
+              </Card>
 
-            <Card className="p-6 border-brand-800/10 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 shrink-0">
-                <Clock className="w-6 h-6" />
-              </div>
-              <div>
-                <CardTitle className="text-lg">Response Time</CardTitle>
-                <CardContent className="text-gray-400 mt-2 p-0 text-sm leading-relaxed">
-                  <p className="text-white font-bold">Under 12 Hours</p>
-                  <p className="mt-1">Support hours: 9 AM - 6 PM EST</p>
-                </CardContent>
-              </div>
-            </Card>
+              <Card variant="glass" className="p-8 border-white/5 flex items-start gap-6">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-gray-400 shrink-0 border border-white/5">
+                  <Clock className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-white font-black text-sm uppercase tracking-widest mb-1">Response Time</h4>
+                  <p className="text-white font-extrabold text-lg">Under 12 Hours</p>
+                  <p className="mt-2 text-gray-500 text-xs">Support hours: 9 AM - 6 PM EST</p>
+                </div>
+              </Card>
+            </div>
           </div>
 
           {/* Support Ticket Form */}
           <div className="lg:w-2/3">
-            <Card className="p-8 md:p-12 border-brand-800/20 bg-gray-900/30">
-              <h2 className="text-2xl font-bold mb-2">Send a Message</h2>
-              <p className="text-gray-400 mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+            <Card variant="glass" className="p-10 md:p-16 border-white/5 bg-white/[0.01] relative overflow-hidden">
+              <div className="absolute -top-32 -right-32 w-80 h-80 bg-brand-500/5 blur-[120px] rounded-full" />
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-300 uppercase tracking-widest">First Name</label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all font-medium"
-                      placeholder="John"
-                    />
+              <div className="relative z-10">
+                <SectionHeader
+                  title="Send a Message"
+                  description="Fill out the form below and we'll get back to you as soon as possible."
+                  align="left"
+                  className="mb-12"
+                />
+
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">First Name</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-500 transition-all font-bold placeholder:text-gray-700"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Email Address</label>
+                      <input
+                        type="email"
+                        required
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-500 transition-all font-bold placeholder:text-gray-700"
+                        placeholder="john@example.com"
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-300 uppercase tracking-widest">Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all font-medium"
-                      placeholder="john@example.com"
-                    />
+
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Inquiry Topic</label>
+                    <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-500 transition-all font-bold appearance-none cursor-pointer">
+                      <option value="billing" className="bg-black">Billing Inquiry</option>
+                      <option value="technical" className="bg-black">Technical Support</option>
+                      <option value="general" className="bg-black">General Question</option>
+                      <option value="partnership" className="bg-black">Partnership / Affiliate</option>
+                    </select>
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-300 uppercase tracking-widest">Topic</label>
-                  <select className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all font-medium appearance-none">
-                    <option value="billing">Billing Inquiry</option>
-                    <option value="technical">Technical Support</option>
-                    <option value="general">General Question</option>
-                    <option value="partnership">Partnership / Affiliate</option>
-                  </select>
-                </div>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Message</label>
+                    <textarea
+                      required
+                      rows={6}
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-500 transition-all font-bold resize-none placeholder:text-gray-700"
+                      placeholder="How can we help you today?"
+                    ></textarea>
+                  </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-300 uppercase tracking-widest">Message</label>
-                  <textarea
-                    required
-                    rows={5}
-                    className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all font-medium resize-none"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 px-8 rounded-xl w-full flex items-center justify-center gap-2 transition-all shadow-lg"
-                >
-                  <Send className="w-5 h-5" />
-                  Submit Ticket
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    className="bg-brand-500 hover:bg-brand-400 text-black font-black py-5 px-10 rounded-2xl w-full flex items-center justify-center gap-3 transition-all uppercase tracking-widest text-xs"
+                  >
+                    <Send className="w-4 h-4" />
+                    Submit Support Ticket
+                  </button>
+                </form>
+              </div>
             </Card>
           </div>
         </div>
-      </section>
+      </StandardSection>
+
+      <StandardCTA
+        title="Dominate the Markets Together"
+        subtitle="Join 1,247+ professional traders receiving live alerts every market day."
+      />
     </div>
   );
 };

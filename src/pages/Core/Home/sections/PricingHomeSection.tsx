@@ -1,8 +1,8 @@
 import { FiCheck, FiArrowRight } from 'react-icons/fi';
-import Button from '../../ui/Button/Button';
-import { Card } from '../../ui/Card/Card';
-import StandardSection from '../../ui/Layout/StandardSection';
-import SectionHeader from '../../ui/Layout/SectionHeader';
+import Button from '../../../../components/ui/Button/Button';
+import { Card } from '../../../../components/ui/Card/Card';
+import StandardSection from '../../../../components/ui/Layout/StandardSection';
+import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 
 const basicFeatures = [
     '2–4 daily options signals',
@@ -23,7 +23,7 @@ const proFeatures = [
 ];
 
 const PricingHomeSection = () => (
-    <StandardSection className="py-32">
+    <StandardSection variant="default" divider="top" spacing="lg">
         <SectionHeader
             label="Pricing"
             title={<>Simple, <span className="text-brand-500">Transparent</span> Pricing</>}

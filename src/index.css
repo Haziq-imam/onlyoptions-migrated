@@ -149,4 +149,19 @@
         100% 100%,
         20px 100%, 0 calc(100% - 20px));
   }
+
+  /* Dot Grid Background */
+  .dot-grid-bg {
+    background-image: radial-gradient(rgba(32, 109, 254, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Section Dividers */
+  .section-divider-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .section-divider-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
 }

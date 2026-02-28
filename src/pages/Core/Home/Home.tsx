@@ -1,16 +1,16 @@
 import { Helmet } from 'react-helmet-async';
-import HeroSection from '../../../components/sections/Home/HeroSection';
-import StatsBarSection from '../../../components/sections/Home/StatsBarSection';
-import HowItWorksSection from '../../../components/sections/Home/HowItWorksSection';
-import WhatYouGetSection from '../../../components/sections/Home/WhatYouGetSection';
-import SignalShowcaseSection from '../../../components/sections/Home/SignalShowcaseSection';
-import PerformanceRecordSection from '../../../components/sections/Home/PerformanceRecordSection';
-import WhatWeTradeSection from '../../../components/sections/Home/WhatWeTradeSection';
-import PricingHomeSection from '../../../components/sections/Home/PricingHomeSection';
-import AppSection from '../../../components/sections/Home/AppSection';
-import TestimonialsHomeSection from '../../../components/sections/Home/TestimonialsHomeSection';
-import FAQSection from '../../../components/sections/Home/FAQSection';
-import FinalCTASection from '../../../components/sections/Home/FinalCTASection';
+import HeroSection from './sections/HeroSection';
+import StatsBarSection from './sections/StatsBarSection';
+import HowItWorksSection from './sections/HowItWorksSection';
+import WhatYouGetSection from './sections/WhatYouGetSection';
+import SignalShowcaseSection from './sections/SignalShowcaseSection';
+import PerformanceRecordSection from './sections/PerformanceRecordSection';
+import WhatWeTradeSection from './sections/WhatWeTradeSection';
+import PricingHomeSection from './sections/PricingHomeSection';
+import AppSection from './sections/AppSection';
+import TestimonialsHomeSection from './sections/TestimonialsHomeSection';
+import FAQSection from './sections/FAQSection';
+import FinalCTASection from './sections/FinalCTASection';
 
 const Home = () => {
     return (
