@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
@@ -14,31 +15,37 @@ import Login from './pages/Core/Login/Login';
 import Blog from './pages/Core/Blog/Blog';
 import FreeTrial from './pages/Core/FreeTrial/FreeTrial';
 
-
-import ComingSoon from './pages/ComingSoon';
+import Sitemap from './pages/Legal/Sitemap';
+import DynamicPages from './pages/DynamicPages';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/performance" element={<Performance />} />
-        <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/free-trial" element={<FreeTrial />} />
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+        <div className="w-12 h-12 border-4 border-brand-500/20 border-t-brand-500 rounded-full animate-spin" />
+      </div>
+    }>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/performance" element={<Performance />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/free-trial" element={<FreeTrial />} />
+          <Route path="/sitemap" element={<Sitemap />} />
 
-
-        {/* 404 Error fallback */}
-        <Route path="*" element={<ComingSoon title="Page Not Found" category="Error" />} />
-      </Route>
-    </Routes>
+          {/* Smart catch-all for placeholder pages */}
+          <Route path="*" element={<DynamicPages />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 

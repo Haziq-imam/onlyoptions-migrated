@@ -39,7 +39,7 @@ const HeroSection = () => (
 
                 <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-12">
                     <Button href="/free-trial" size="lg" className="w-full sm:w-auto px-10 h-16 rounded-2xl font-black text-lg shadow-[0_0_50px_rgba(32,109,254,0.25)] hover:shadow-[0_0_60px_rgba(32,109,254,0.4)] transition-all">
-                        Start 7-Day Free Trial
+                        7-Day Free Trial
                     </Button>
                     <AppStoreButtons variant="glass" />
                 </div>

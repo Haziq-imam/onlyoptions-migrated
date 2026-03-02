@@ -1,24 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-50: #eff5ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #206dfe;
-  --color-brand-600: #1a58d0;
-  --color-brand-700: #1443a2;
-  --color-brand-800: #0e2e74;
-  --color-brand-900: #081d4a;
-  --color-brand-950: #040f26;
 
+
+  --color-brand-50: #E5F0FF;
+  --color-brand-100: #CCE0FF;
+  --color-brand-200: #99C2FF;
+  --color-brand-300: #66A3FF;
+  --color-brand-400: #3385FF;
+  --color-brand-500: #0066FF;
+  --color-brand-600: #0052CC;
+  --color-brand-700: #003D99;
+  --color-brand-800: #002966;
+  --color-brand-900: #001433;
+  --color-brand-950: #000A1A;
   --color-accent-blue: #206dfe;
   --color-accent-light: #60a5fa;
 
   --color-base-dark: #020408;
   --color-base-card: #050a14;
   --color-base-border: #0e1f3c;
+
+  /* Premium Gradients */
+  --bg-brand-gradient: linear-gradient(135deg, #0066FF 0%, #3385FF 100%);
+  --bg-purple-gradient: linear-gradient(135deg, #A855F7 0%, #D946EF 100%);
 }
 
 @layer base {
@@ -27,10 +32,12 @@
     background-image:
       radial-gradient(ellipse 80% 40% at 50% -10%, rgba(32, 109, 254, 0.12) 0%, transparent 70%);
     min-height: 100vh;
-    color: #e5e7eb; /* Better base visibility than pure white which can wash out or fallback unpredictably */
+    color: #e5e7eb;
+    /* Better base visibility than pure white which can wash out or fallback unpredictably */
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     position: relative;
-    -webkit-font-smoothing: antialiased; /* Sharper font rendering */
+    -webkit-font-smoothing: antialiased;
+    /* Sharper font rendering */
     -moz-osx-font-smoothing: grayscale;
   }
 
@@ -160,8 +167,23 @@
   .section-divider-top {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
-  
+
   .section-divider-bottom {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Gradient Utility Classes */
+  .bg-brand-gradient {
+    background: var(--bg-brand-gradient);
+  }
+
+  .bg-purple-gradient {
+    background: var(--bg-purple-gradient);
+  }
+
+  .text-brand-gradient {
+    background: var(--bg-brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

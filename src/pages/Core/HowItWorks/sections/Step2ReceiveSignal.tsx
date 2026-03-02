@@ -125,7 +125,7 @@ const Step2ReceiveSignal = () => {
                                 </TableRow>
                                 <TableRow>
                                     <TableCell label="Time (ET)" className="text-white font-bold whitespace-nowrap">2:00–3:00 PM</TableCell>
-                                    <TableCell label="Signal Type" className="text-purple-400 font-bold">0DTE Primary</TableCell>
+                                    <TableCell label="Signal Type"><span className="px-3 py-1 bg-purple-gradient text-white text-[10px] font-black uppercase tracking-tighter rounded-full shadow-lg shadow-purple-500/20">0DTE Primary</span></TableCell>
                                     <TableCell label="What to Expect" className="text-gray-400">Fed data and intraday setups trigger most 0DTE alerts.</TableCell>
                                 </TableRow>
                                 <TableRow>

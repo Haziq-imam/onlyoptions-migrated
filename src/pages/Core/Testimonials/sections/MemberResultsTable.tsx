@@ -34,7 +34,7 @@ const MemberResultsTable = () => {
                         </TableRow>
                         <TableRow>
                             <TableCell label="Member" className="text-white font-bold">Natasha P. — IL</TableCell>
-                            <TableCell label="Plan" className="text-purple-400 font-bold">Pro</TableCell>
+                            <TableCell label="Plan"><span className="px-3 py-1 bg-purple-gradient text-white text-[10px] font-black uppercase tracking-tighter rounded-full shadow-lg shadow-purple-500/20">Pro</span></TableCell>
                             <TableCell label="Months" className="text-gray-400">22</TableCell>
                             <TableCell label="Trades Tracked" className="text-gray-400">312</TableCell>
                             <TableCell label="Personal Win Rate" className="text-white font-bold">71.1%</TableCell>
@@ -42,7 +42,7 @@ const MemberResultsTable = () => {
                         </TableRow>
                         <TableRow>
                             <TableCell label="Member" className="text-white font-bold">Linda C. — CO</TableCell>
-                            <TableCell label="Plan" className="text-purple-400 font-bold">Pro</TableCell>
+                            <TableCell label="Plan"><span className="px-3 py-1 bg-purple-gradient text-white text-[10px] font-black uppercase tracking-tighter rounded-full shadow-lg shadow-purple-500/20">Pro</span></TableCell>
                             <TableCell label="Months" className="text-gray-400">21</TableCell>
                             <TableCell label="Trades Tracked" className="text-gray-400">271</TableCell>
                             <TableCell label="Personal Win Rate" className="text-white font-bold">69.8%</TableCell>
@@ -74,7 +74,7 @@ const MemberResultsTable = () => {
                         </TableRow>
                         <TableRow>
                             <TableCell label="Member" className="text-white font-bold">Priya N. — CA</TableCell>
-                            <TableCell label="Plan" className="text-purple-400 font-bold">Pro</TableCell>
+                            <TableCell label="Plan"><span className="px-3 py-1 bg-purple-gradient text-white text-[10px] font-black uppercase tracking-tighter rounded-full shadow-lg shadow-purple-500/20">Pro</span></TableCell>
                             <TableCell label="Months" className="text-gray-400">15</TableCell>
                             <TableCell label="Trades Tracked" className="text-gray-400">183</TableCell>
                             <TableCell label="Personal Win Rate" className="text-white font-bold">71.6%</TableCell>
