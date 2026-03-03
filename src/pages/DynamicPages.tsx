@@ -6,6 +6,19 @@ const DynamicPages = () => {
     const location = useLocation();
     const currentPath = location.pathname;
 
+    // List of paths that have dedicated page components and should NOT be handled by DynamicPages
+    const excludedPaths = [
+        '/sitemap',
+        '/terms-of-service',
+        '/privacy-policy',
+        '/risk-disclaimer',
+        '/refund-policy'
+    ];
+
+    if (excludedPaths.includes(currentPath)) {
+        return null; // Let the specific Route handle it
+    }
+
     // Search for the path in sitemapData
     let foundLink = null;
     let foundCategory = "Educational";

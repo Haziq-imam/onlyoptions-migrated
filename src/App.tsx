@@ -16,6 +16,10 @@ import Blog from './pages/Core/Blog/Blog';
 import FreeTrial from './pages/Core/FreeTrial/FreeTrial';
 
 import Sitemap from './pages/Legal/Sitemap';
+import TermsOfService from './pages/Legal/TermsOfService';
+import PrivacyPolicy from './pages/Legal/PrivacyPolicy';
+import RiskDisclaimer from './pages/Legal/RiskDisclaimer';
+import RefundPolicy from './pages/Legal/RefundPolicy';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -40,6 +44,10 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/free-trial" element={<FreeTrial />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/risk-disclaimer" element={<RiskDisclaimer />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />
