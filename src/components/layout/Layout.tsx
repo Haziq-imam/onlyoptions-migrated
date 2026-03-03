@@ -31,6 +31,7 @@ const Layout = () => {
         { name: 'How It Works', path: '/how-it-works' },
         { name: 'Reviews', path: '/testimonials' },
         { name: 'FAQ', path: '/faq' },
+        { name: 'About', path: '/about' },
         { name: 'Blog', path: '/blog' },
     ];
 
