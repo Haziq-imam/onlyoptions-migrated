@@ -20,6 +20,7 @@ import TermsOfService from './pages/Legal/TermsOfService';
 import PrivacyPolicy from './pages/Legal/PrivacyPolicy';
 import RiskDisclaimer from './pages/Legal/RiskDisclaimer';
 import RefundPolicy from './pages/Legal/RefundPolicy';
+import AffiliateProgram from './pages/Legal/AffiliateProgram';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/risk-disclaimer" element={<RiskDisclaimer />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/affiliate-program" element={<AffiliateProgram />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />

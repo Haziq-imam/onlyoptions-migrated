@@ -41,7 +41,7 @@ const Layout = () => {
             <div className="fixed top-6 inset-x-0 z-50 px-6 md:px-12">
                 <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-3 px-6 flex items-center justify-between shadow-2xl relative z-50 border border-white/5">
                     <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                        <img src={Logo} alt="OnlyOptions" className="h-9 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                        <img src={Logo} alt="OnlyOptions" className="h-14 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
                     </a>
 
                     <nav className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
@@ -94,15 +94,15 @@ const Layout = () => {
                 <Outlet />
             </main>
 
-            <footer className="border-t border-white/5 py-32 px-6 md:px-12 bg-gray-950/80 relative overflow-hidden">
+            <footer className="border-t border-white/5 py-12 px-6 md:px-12 bg-gray-950/80 relative overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent opacity-20" />
 
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-12">
                         {/* Brand & Mission */}
                         <div className="lg:col-span-4 space-y-8">
                             <a href="/" className="flex items-center gap-3 hover:opacity-100 transition-opacity">
-                                <img src={Logo} alt="OnlyOptions" className="h-10 w-auto opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                                <img src={Logo} alt="OnlyOptions" className="h-12 w-auto opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
                             </a>
                             <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
                                 Empowering retail traders with institutional-grade options analysis and real-time signals. Your edge in the derivatives market starts here.
@@ -137,6 +137,7 @@ const Layout = () => {
                                     <li><a href="/pricing" className="hover:text-brand-400 transition-colors">Pricing Plans</a></li>
                                     <li><a href="/how-it-works" className="hover:text-brand-400 transition-colors">How It Works</a></li>
                                     <li><a href="/testimonials" className="hover:text-brand-400 transition-colors">Success Stories</a></li>
+                                    <li><a href="/affiliate-program" className="hover:text-brand-400 transition-colors">Affiliate Program</a></li>
                                 </ul>
                             </div>
                             <div className="space-y-6">
@@ -162,7 +163,7 @@ const Layout = () => {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
                         <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-gray-600">
                             <span>© 2026 OnlyOptions.us</span>
                             <span className="hidden md:inline w-1 h-1 rounded-full bg-gray-800" />
@@ -187,7 +188,7 @@ const Layout = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 text-center">
+                    <div className="mt-8 text-center">
                         <p className="text-[9px] font-bold text-gray-700 uppercase tracking-[0.3em] max-w-2xl mx-auto leading-loose">
                             Disclaimer: High risk. Past performance does not guarantee future results. Only trade with capital you can afford to lose. We are an educational research provider.
                         </p>

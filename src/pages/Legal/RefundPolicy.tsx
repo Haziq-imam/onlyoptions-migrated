@@ -15,6 +15,7 @@ import {
     FiRotateCcw
 } from 'react-icons/fi';
 import { cn } from '../../components/ui/Card/Card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../components/ui/Table/Table';
 
 const sections = [
     { id: 'introduction', title: 'Introduction', num: '00' },
@@ -356,27 +357,27 @@ const RefundPolicy: React.FC = () => {
                                     <h2 className="text-2xl font-black text-white tracking-tight uppercase">5. Cancellation vs. Refund</h2>
                                 </div>
                                 <div className="overflow-hidden rounded-[2.5rem] border border-white/5 fintech-glass">
-                                    <table className="w-full text-left border-collapse">
-                                        <thead>
-                                            <tr className="bg-brand-500/20 border-b border-white/10">
-                                                <th className="px-8 py-6 text-xs font-black text-brand-500 uppercase tracking-widest">Action</th>
-                                                <th className="px-8 py-6 text-xs font-black text-brand-500 uppercase tracking-widest">When to Use</th>
-                                                <th className="px-8 py-6 text-xs font-black text-brand-500 uppercase tracking-widest">What Happens</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="text-xs">
-                                            <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
-                                                <td className="px-8 py-6 font-black text-white uppercase">Cancellation</td>
-                                                <td className="px-8 py-6 text-gray-400 font-medium">Any time (including after 7 days)</td>
-                                                <td className="px-8 py-6 text-gray-400 font-medium">Billing stops. No refund. Access until end of period.</td>
-                                            </tr>
-                                            <tr className="hover:bg-white/[0.02] transition-colors">
-                                                <td className="px-8 py-6 font-black text-brand-500 uppercase italic">Refund Request</td>
-                                                <td className="px-8 py-6 text-gray-400 font-medium font-black italic">Within 7 days of first payment only</td>
-                                                <td className="px-8 py-6 text-gray-400 font-medium font-black italic">Full refund. Billing stops. Access revoked immediately.</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <Table>
+                                        <TableHeader>
+                                            <TableRow className="bg-brand-500/20 border-b border-white/10">
+                                                <TableHead className="text-brand-500">Action</TableHead>
+                                                <TableHead className="text-brand-500">When to Use</TableHead>
+                                                <TableHead className="text-brand-500">What Happens</TableHead>
+                                            </TableRow>
+                                        </TableHeader>
+                                        <TableBody>
+                                            <TableRow className="hover:bg-white/[0.02]">
+                                                <TableCell label="Action" className="font-black text-white uppercase">Cancellation</TableCell>
+                                                <TableCell label="When to Use" className="text-gray-400 font-medium">Any time (including after 7 days)</TableCell>
+                                                <TableCell label="What Happens" className="text-gray-400 font-medium">Billing stops. No refund. Access until end of period.</TableCell>
+                                            </TableRow>
+                                            <TableRow className="hover:bg-white/[0.02]">
+                                                <TableCell label="Action" className="font-black text-brand-500 uppercase italic">Refund Request</TableCell>
+                                                <TableCell label="When to Use" className="text-gray-400 font-medium font-black italic">Within 7 days of first payment only</TableCell>
+                                                <TableCell label="What Happens" className="text-gray-400 font-medium font-black italic">Full refund. Billing stops. Access revoked immediately.</TableCell>
+                                            </TableRow>
+                                        </TableBody>
+                                    </Table>
                                 </div>
                             </section>
 
