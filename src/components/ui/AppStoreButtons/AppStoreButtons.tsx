@@ -1,4 +1,5 @@
-import { Apple, Play } from 'lucide-react';
+import AppleIcon from '../../../assets/Apple_logo_black.svg';
+import PlayIcon from '../../../assets/google-play-store-icon.svg';
 
 interface AppStoreButtonsProps {
     variant?: 'glass' | 'solid';
@@ -12,17 +13,20 @@ const AppStoreButtons = ({ variant = 'solid', className = "" }: AppStoreButtonsP
 
     const style = variant === 'solid' ? solidStyle : glassStyle;
 
+    // For glass variant (dark mode), we might want to invert the icons if they are black.
+    const iconClass = variant === 'glass' ? "w-6 h-6 shrink-0 invert brightness-0" : "w-6 h-6 shrink-0";
+
     return (
         <div className={`flex flex-wrap gap-4 ${className}`}>
             <a href="#" className={`${baseStyle} ${style}`}>
-                <Apple className="w-6 h-6 shrink-0" />
+                <img src={AppleIcon} alt="Apple App Store" className={iconClass} />
                 <div className="text-left">
                     <p className="text-[10px] uppercase font-bold leading-none opacity-60">Download on</p>
                     <p className="text-base font-black leading-tight">App Store</p>
                 </div>
             </a>
             <a href="#" className={`${baseStyle} ${style}`}>
-                <Play className="w-6 h-6 shrink-0" />
+                <img src={PlayIcon} alt="Google Play Store" className={iconClass} />
                 <div className="text-left">
                     <p className="text-[10px] uppercase font-bold leading-none opacity-60">Get it on</p>
                     <p className="text-base font-black leading-tight">Google Play</p>
