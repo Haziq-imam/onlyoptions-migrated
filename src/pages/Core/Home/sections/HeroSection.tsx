@@ -70,7 +70,7 @@ const HeroSection = () => (
                     />
 
                     {/* Floating signal card */}
-                    <div className="absolute -bottom-6 -left-10 hidden xl:block">
+                    <div className="absolute -bottom-10 -left-40 hidden xl:block">
                         <div className="bg-black/90 backdrop-blur-2xl border border-brand-500/20 rounded-3xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] w-64 text-left translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
                             <div className="flex items-center gap-2 mb-3">
                                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />

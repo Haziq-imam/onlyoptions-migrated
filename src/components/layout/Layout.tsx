@@ -24,6 +24,19 @@ const Layout = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // Prevent body scroll when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
+
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Pricing', path: '/pricing' },
@@ -38,10 +51,10 @@ const Layout = () => {
     return (
         <div className="min-h-screen flex flex-col font-sans selection:bg-brand-500/30 bg-gray-950">
             {/* Unique Floating Header */}
-            <div className="fixed top-6 inset-x-0 z-50 px-6 md:px-12">
-                <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-3 px-6 flex items-center justify-between shadow-2xl relative z-50 border border-white/5">
-                    <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                        <img src={Logo} alt="OnlyOptions" className="h-14 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+            <div className="fixed top-4 md:top-6 inset-x-0 z-50 px-4 md:px-12">
+                <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-3 px-4 md:px-6 flex items-center justify-between shadow-2xl relative z-50 border border-white/5">
+                    <a href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity shrink-0">
+                        <img src={Logo} alt="OnlyOptions" className="h-8 md:h-12 w-auto object-contain shrink-0 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
                     </a>
 
                     <nav className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
@@ -50,13 +63,13 @@ const Layout = () => {
                         ))}
                     </nav>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 md:gap-4 shrink-0">
                         <a href="/login" className="text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-brand-400 transition-colors hidden md:block">Log In</a>
-                        <Button href="/free-trial" size="sm" className="px-6 rounded-xl font-black text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow">
+                        <Button href="/free-trial" size="sm" className="px-4 md:px-6 py-2 md:py-auto rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow">
                             <span className="relative z-10">Free Trial</span>
                         </Button>
                         <button
-                            className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
+                            className="lg:hidden p-1.5 md:p-2 text-gray-400 hover:text-white transition-colors"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
                             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -66,13 +79,13 @@ const Layout = () => {
 
                 {/* Mobile Menu Overlay */}
                 <div className={`lg:hidden fixed inset-x-6 top-[100px] z-40 transition-all duration-300 transform ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-                    <div className="fintech-glass rounded-2xl p-6 shadow-2xl border border-white/10">
+                    <div className="fintech-glass rounded-2xl p-6 shadow-2xl border border-white/10 max-h-[calc(100vh-120px)] overflow-y-auto overflow-x-hidden custom-scrollbar">
                         <nav className="flex flex-col gap-6 text-[11px] font-black uppercase tracking-[0.3em] text-gray-400">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.path}
                                     href={link.path}
-                                    className="hover:text-brand-400 transition-colors py-1 border-b border-white/5"
+                                    className="hover:text-brand-400 transition-colors py-2 border-b border-white/5"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {link.name}
@@ -80,7 +93,7 @@ const Layout = () => {
                             ))}
                             <a
                                 href="/login"
-                                className="text-white hover:text-brand-400 transition-colors md:hidden py-1 border-b border-white/5"
+                                className="text-white hover:text-brand-400 transition-colors md:hidden py-2 border-b border-white/5"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Log In
