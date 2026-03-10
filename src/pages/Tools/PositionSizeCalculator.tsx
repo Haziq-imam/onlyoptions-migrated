@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import StandardSection from "../../components/ui/Layout/StandardSection";
@@ -39,6 +39,47 @@ const linksData = [
     { title: "Win rate calculator", path: "/win-rate-calculator" },
     { title: "FAQ", path: "/faq" }
 ];
+
+const AutoScaler = ({ children, align = 'right', className = '' }: { children: React.ReactNode, align?: 'left' | 'center' | 'right', className?: string }) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const textRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const resize = () => {
+            if (containerRef.current && textRef.current) {
+                textRef.current.style.transform = 'scale(1)';
+                const containerWidth = containerRef.current.clientWidth;
+                const textWidth = textRef.current.scrollWidth;
+
+                if (textWidth > containerWidth && containerWidth > 0) {
+                    const scale = containerWidth / textWidth;
+                    textRef.current.style.transform = `scale(${scale})`;
+                }
+            }
+        };
+
+        resize();
+        window.addEventListener('resize', resize);
+        const observer = window.ResizeObserver ? new ResizeObserver(resize) : null;
+        if (observer && containerRef.current) observer.observe(containerRef.current);
+
+        return () => {
+            window.removeEventListener('resize', resize);
+            if (observer) observer.disconnect();
+        };
+    }, [children]);
+
+    const alignClass = align === 'center' ? 'justify-center' : align === 'left' ? 'justify-start' : 'justify-end';
+    const originClass = align === 'center' ? 'center center' : align === 'left' ? 'left center' : 'right center';
+
+    return (
+        <div ref={containerRef} className={`w-full overflow-hidden flex ${alignClass} ${className}`}>
+            <div ref={textRef} style={{ transformOrigin: originClass, whiteSpace: 'nowrap', transition: 'transform 0.1s' }} className="max-w-max">
+                {children}
+            </div>
+        </div>
+    );
+};
 
 const InteractiveCalculator = () => {
     const [accountSize, setAccountSize] = useState<number>(10000);
@@ -92,8 +133,8 @@ const InteractiveCalculator = () => {
     };
 
     return (
-        <Card variant="institutional" hover={false} className="max-w-4xl mx-auto p-6 md:p-10 mb-20 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <Card variant="institutional" hover={false} className="max-w-4xl mx-auto p-4 md:p-10 mb-20 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
                 <div className="space-y-8">
                     <div>
                         <h3 className="text-xl font-black text-white mb-6 uppercase tracking-widest flex items-center gap-2">
@@ -113,9 +154,9 @@ const InteractiveCalculator = () => {
                                     placeholder="e.g., 10000"
                                 />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex flex-wrap gap-2">
                                 {[5000, 10000, 25000].map(val => (
-                                    <button key={val} onClick={() => handleAccountChange(val)} className="text-[10px] bg-white/5 hover:bg-white/10 text-gray-400 px-3 py-1.5 rounded-lg transition-colors border border-white/5 font-bold">
+                                    <button key={val} onClick={() => handleAccountChange(val)} className="select-none text-[10px] bg-white/5 hover:bg-white/10 text-gray-400 px-3 py-1.5 rounded-lg transition-colors border border-white/5 font-bold whitespace-nowrap overflow-hidden text-ellipsis">
                                         ${val / 1000}K
                                     </button>
                                 ))}
@@ -167,12 +208,12 @@ const InteractiveCalculator = () => {
                         </div>
                     </div>
 
-                    <button onClick={clearAll} className="text-xs font-bold text-gray-500 hover:text-white uppercase tracking-widest transition-colors flex items-center gap-2">
+                    <button onClick={clearAll} className="select-none text-xs font-bold text-gray-500 hover:text-white uppercase tracking-widest transition-colors flex items-center gap-2">
                         Recalculate <FiAlertCircle />
                     </button>
                 </div>
 
-                <div className="bg-gray-900/50 border border-white/5 rounded-2xl p-8 flex flex-col justify-center relative overflow-hidden">
+                <div className="bg-gray-900/50 border border-white/5 rounded-2xl p-6 md:p-8 flex flex-col justify-center relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500/10 blur-[100px] rounded-full pointer-events-none" />
 
                     <h3 className="text-xl font-black text-white mb-8 uppercase tracking-[0.2em] text-center relative z-10">Results</h3>
@@ -183,18 +224,24 @@ const InteractiveCalculator = () => {
                             {error}
                         </div>
                     ) : (parsedEntry > 0 && parsedStop >= 0) ? (
-                        <div className="space-y-6 relative z-10">
-                            <div className="flex justify-between items-center pb-4 border-b border-white/5">
-                                <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Max Risk Per Trade</span>
-                                <span className="text-xl font-black text-white">${maxRisk.toFixed(2)}</span>
+                        <div className="space-y-6 relative z-10 w-full overflow-hidden">
+                            <div className="flex justify-between items-center pb-4 border-b border-white/5 gap-4">
+                                <span className="text-sm font-bold text-gray-400 uppercase tracking-widest shrink-0">Max Risk Per Trade</span>
+                                <AutoScaler align="right">
+                                    <span className="text-xl md:text-2xl font-black text-white select-all">${maxRisk.toFixed(2)}</span>
+                                </AutoScaler>
                             </div>
-                            <div className="flex justify-between items-center pb-4 border-b border-white/5">
-                                <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Risk Per Contract</span>
-                                <span className="text-xl font-black text-white">${riskPerContract.toFixed(2)}</span>
+                            <div className="flex justify-between items-center pb-4 border-b border-white/5 gap-4">
+                                <span className="text-sm font-bold text-gray-400 uppercase tracking-widest shrink-0">Risk Per Contract</span>
+                                <AutoScaler align="right">
+                                    <span className="text-xl md:text-2xl font-black text-white select-all">${riskPerContract.toFixed(2)}</span>
+                                </AutoScaler>
                             </div>
-                            <div className="bg-brand-500/10 border border-brand-500/20 rounded-2xl p-6 text-center mt-6">
+                            <div className="bg-brand-500/10 border border-brand-500/20 rounded-2xl p-4 md:p-6 text-center mt-6 overflow-hidden">
                                 <p className="text-xs font-bold text-brand-400 uppercase tracking-[0.2em] mb-2">Max Contracts to Trade</p>
-                                <p className="text-6xl font-black text-white drop-shadow-[0_0_15px_rgba(32,109,254,0.3)]">{maxContracts}</p>
+                                <AutoScaler align="center" className="pb-2">
+                                    <p className="text-5xl md:text-6xl font-black text-white drop-shadow-[0_0_15px_rgba(32,109,254,0.3)] select-all">{maxContracts}</p>
+                                </AutoScaler>
                                 {maxContracts === 0 && <p className="text-xs text-gray-500 mt-2">Risk is too high or account too small.</p>}
                             </div>
                         </div>
@@ -429,7 +476,7 @@ export default function PositionSizeCalculator() {
 
                     {/* FINAL CTA */}
                     <div className="mt-16 text-center">
-                        <p className="text-gray-400 text-sm font-bold uppercase tracking-widest mb-6">Position Size Calculator — protect your capital, trade professionally. 📊</p>
+                        <p className="text-gray-400 text-sm font-bold uppercase tracking-widest mb-6">Position Size Calculator - protect your capital, trade professionally</p>
                         <Button href="/free-trial" size="lg" className="px-10 h-14 rounded-xl font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.2)]">
                             Get Professional Options Signals
                         </Button>
