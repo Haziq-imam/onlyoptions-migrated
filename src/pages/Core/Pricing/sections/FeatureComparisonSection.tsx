@@ -45,7 +45,7 @@ const FeatureComparisonSection = () => {
                                 { f: "Cancel anytime", b: true, p: true, a: true }
                             ].map((row, i) => (
                                 <TableRow key={i} className="hover:bg-white/[0.01]">
-                                    <TableCell className="text-gray-300 font-bold">{row.f}</TableCell>
+                                    <TableCell label="Feature" className="text-gray-300 font-bold">{row.f}</TableCell>
                                     <TableCell label="Basic" className="text-center">
                                         {typeof row.b === 'boolean' ? (row.b ? "✅" : "❌") : <span className="text-gray-400">{row.b}</span>}
                                     </TableCell>

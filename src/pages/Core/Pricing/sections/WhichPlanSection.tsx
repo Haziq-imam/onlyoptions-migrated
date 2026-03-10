@@ -39,8 +39,8 @@ const WhichPlanSection = () => {
                                 }
                             ].map((item, i) => (
                                 <TableRow key={i}>
-                                    <TableCell className="text-brand-400 font-black text-xs uppercase tracking-widest">{item.tier}</TableCell>
-                                    <TableCell className="text-gray-400 text-xs leading-relaxed">{item.desc}</TableCell>
+                                    <TableCell label="Plan" className="text-brand-400 font-black text-xs uppercase tracking-widest">{item.tier}</TableCell>
+                                    <TableCell label="Recommendation" className="text-gray-400 text-xs leading-relaxed">{item.desc}</TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>

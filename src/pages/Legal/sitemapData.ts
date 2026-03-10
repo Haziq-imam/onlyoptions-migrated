@@ -206,7 +206,7 @@ export const sitemapData = [
                 title: "Interactive Tools",
                 links: [
                     { name: "Profit Calculator", path: "/options-profit-calculator" },
-                    { name: "Breakeven Calculator", path: "/options-breakeven-calculator" },
+                    { name: "Breakeven Calculator", path: "/breakeven-calculator" },
                     { name: "Position Size Tool", path: "/position-size-calculator" },
                     { name: "Greeks Calculator", path: "/options-greeks-calculator" },
                     { name: "IV Calculator", path: "/implied-volatility-calculator" },
@@ -214,6 +214,7 @@ export const sitemapData = [
                     { name: "Spread Analyzer", path: "/options-spread-calculator" },
                     { name: "ROI Calculator", path: "/roi-calculator" },
                     { name: "Win Rate Calculator", path: "/win-rate-calculator" },
+                    { name: "Risk-reward Calculator", path: "/risk-reward-calculator" },
                 ]
             }
         ]

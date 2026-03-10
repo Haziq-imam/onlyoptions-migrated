@@ -5,6 +5,7 @@ import StandardSection from "../../components/ui/Layout/StandardSection";
 import SectionHeader from "../../components/ui/Layout/SectionHeader";
 import { Card } from "../../components/ui/Card/Card";
 import Button from "../../components/ui/Button/Button";
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "../../components/ui/Table/Table";
 import { FiAlertCircle, FiCheckCircle, FiInfo, FiTrendingUp, FiShield, FiDollarSign } from "react-icons/fi";
 
 const faqData = [
@@ -328,30 +329,30 @@ export default function PositionSizeCalculator() {
                         <p className="text-gray-400 mb-8 text-lg leading-relaxed">
                             Even with a 70% win rate, you will experience losing streaks. The 2% rule ensures you can survive 10, 20, or even 30 consecutive losses without destroying your account.
                         </p>
-                        <div className="overflow-x-auto rounded-2xl border border-white/10 mb-8">
-                            <table className="w-full text-left border-collapse min-w-[600px]">
-                                <thead>
-                                    <tr className="bg-white/5 text-xs uppercase tracking-widest text-gray-400">
-                                        <th className="p-5 font-black">Consecutive Losses</th>
-                                        <th className="p-5 font-black text-brand-400">2% Risk Per Trade</th>
-                                        <th className="p-5 font-black text-red-400">10% Risk Per Trade</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-sm border-t border-white/10">
+                        <Card variant="glass" className="p-0 border border-white/10 overflow-hidden mb-8">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Consecutive Losses</TableHead>
+                                        <TableHead className="text-brand-400">2% Risk Per Trade</TableHead>
+                                        <TableHead className="text-red-400">10% Risk Per Trade</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
                                     {[
                                         { loss: "5 losses", risk2: "Down 9.6%", risk10: "Down 41%" },
                                         { loss: "10 losses", risk2: "Down 18%", risk10: "Down 65%" },
                                         { loss: "20 losses", risk2: "Down 33%", risk10: "Down 88%" },
                                     ].map((row, i) => (
-                                        <tr key={i} className="border-t border-white/5 hover:bg-white/[0.02]">
-                                            <td className="p-5 font-bold text-white">{row.loss}</td>
-                                            <td className="p-5 text-gray-300 font-semibold">{row.risk2}</td>
-                                            <td className="p-5 text-gray-300 font-semibold">{row.risk10}</td>
-                                        </tr>
+                                        <TableRow key={i}>
+                                            <TableCell label="Losses" className="font-bold text-white">{row.loss}</TableCell>
+                                            <TableCell label="2% Risk" className="text-gray-300 font-semibold">{row.risk2}</TableCell>
+                                            <TableCell label="10% Risk" className="text-red-400 font-semibold">{row.risk10}</TableCell>
+                                        </TableRow>
                                     ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                </TableBody>
+                            </Table>
+                        </Card>
                         <p className="text-gray-400 text-sm leading-relaxed p-6 bg-brand-500/5 rounded-2xl border border-brand-500/10">
                             <strong className="text-brand-400 block mb-2">Compounding Works Both Ways</strong>
                             Small position sizing protects you on the downside while still allowing meaningful compounding on the upside. A 70% win rate with proper sizing builds wealth slowly and safely. Oversized positions create lottery-ticket volatility.
@@ -377,17 +378,17 @@ export default function PositionSizeCalculator() {
                     {/* SIZING FOR DIFFERENT ACCOUNTS */}
                     <section>
                         <SectionHeader title="Position Sizing by Account Size" align="left" className="mb-8" />
-                        <div className="overflow-x-auto rounded-2xl border border-white/10">
-                            <table className="w-full text-left border-collapse min-w-[700px]">
-                                <thead>
-                                    <tr className="bg-white/5 text-xs uppercase tracking-widest text-gray-400">
-                                        <th className="p-5 font-black">Account Size</th>
-                                        <th className="p-5 font-black">2% Risk</th>
-                                        <th className="p-5 font-black text-brand-400">Typical Contracts</th>
-                                        <th className="p-5 font-black">Notes</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-sm border-t border-white/10">
+                        <Card variant="glass" className="p-0 border border-white/10 overflow-hidden">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Account Size</TableHead>
+                                        <TableHead>2% Risk</TableHead>
+                                        <TableHead className="text-brand-400">Typical Contracts</TableHead>
+                                        <TableHead>Notes</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
                                     {[
                                         { acc: "$1,000", risk: "$20", cont: "0-1", notes: "Very limited. Focus on cheap options under $0.50." },
                                         { acc: "$2,000", risk: "$40", cont: "1", notes: "Viable for weekly/monthly signals. Avoid expensive 0DTE." },
@@ -396,16 +397,18 @@ export default function PositionSizeCalculator() {
                                         { acc: "$25,000", risk: "$500", cont: "5-8", notes: "Can trade multiple concurrent signals comfortably." },
                                         { acc: "$50,000+", risk: "$1,000+", cont: "10+", notes: "Professional-level capital. Consider spread strategies." }
                                     ].map((row, i) => (
-                                        <tr key={i} className="border-t border-white/5 hover:bg-white/[0.02]">
-                                            <td className="p-5 font-bold text-white flex items-center gap-2"><FiDollarSign className="w-4 h-4 text-brand-500" />{row.acc}</td>
-                                            <td className="p-5 font-semibold text-gray-300">{row.risk}</td>
-                                            <td className="p-5 font-black text-brand-400">{row.cont}</td>
-                                            <td className="p-5 text-gray-400 text-xs">{row.notes}</td>
-                                        </tr>
+                                        <TableRow key={i}>
+                                            <TableCell label="Account" className="p-5 font-bold text-white flex items-center gap-2 md:gap-2 justify-end md:justify-start">
+                                                <FiDollarSign className="w-4 h-4 text-brand-500" />{row.acc}
+                                            </TableCell>
+                                            <TableCell label="2% Risk" className="font-semibold text-gray-300">{row.risk}</TableCell>
+                                            <TableCell label="Contracts" className="font-black text-brand-400">{row.cont}</TableCell>
+                                            <TableCell label="Notes" className="text-gray-400 text-xs text-right md:text-left">{row.notes}</TableCell>
+                                        </TableRow>
                                     ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                </TableBody>
+                            </Table>
+                        </Card>
                     </section>
 
                     {/* ADVANCED SIZING */}

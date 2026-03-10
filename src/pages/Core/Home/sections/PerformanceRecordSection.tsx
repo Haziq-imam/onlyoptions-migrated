@@ -37,7 +37,7 @@ const PerformanceRecordSection = () => (
                     <TableBody>
                         {data.map((row, i) => (
                             <TableRow key={i} className={`last:border-0 ${row.highlight ? 'bg-brand-500/5' : 'hover:bg-white/[0.02]'}`}>
-                                <TableCell className={row.highlight ? 'font-black text-white' : 'font-bold text-gray-300'}>{row.period}</TableCell>
+                                <TableCell label="Period" className={row.highlight ? 'font-black text-white' : 'font-bold text-gray-300'}>{row.period}</TableCell>
                                 <TableCell label="Signals" className={`text-right ${row.highlight ? 'font-black text-white' : 'font-medium text-gray-400'}`}>{row.signals}</TableCell>
                                 <TableCell label="Win Rate" className={`text-right font-black text-brand-500`}>{row.win}</TableCell>
                                 <TableCell label="Avg Win" className="text-right font-bold text-green-400">{row.avgWin}</TableCell>

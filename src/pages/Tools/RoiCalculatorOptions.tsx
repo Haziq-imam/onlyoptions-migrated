@@ -5,6 +5,7 @@ import StandardSection from "../../components/ui/Layout/StandardSection";
 import SectionHeader from "../../components/ui/Layout/SectionHeader";
 import { Card } from "../../components/ui/Card/Card";
 import Button from "../../components/ui/Button/Button";
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "../../components/ui/Table/Table";
 import { FiAlertCircle, FiTrendingUp, FiCheckCircle, FiPieChart, FiInfo, FiTrendingDown, FiTarget } from "react-icons/fi";
 
 const faqData = [
@@ -331,19 +332,18 @@ export default function RoiCalculatorOptions() {
                         </div>
                     </section>
 
-                    {/* WHAT IS A GOOD ROI */}
                     <section>
                         <SectionHeader title="What is a Good ROI for Options?" align="left" className="mb-8" />
-                        <div className="overflow-x-auto rounded-2xl border border-white/10">
-                            <table className="w-full text-left border-collapse min-w-[600px]">
-                                <thead>
-                                    <tr className="bg-white/5 text-xs uppercase tracking-widest text-gray-400">
-                                        <th className="p-5 font-black">Monthly ROI</th>
-                                        <th className="p-5 font-black text-brand-400">Quality</th>
-                                        <th className="p-5 font-black">Notes</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-sm border-t border-white/10">
+                        <Card variant="glass" className="p-0 border border-white/10 overflow-hidden">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Monthly ROI</TableHead>
+                                        <TableHead className="text-brand-400">Quality</TableHead>
+                                        <TableHead>Notes</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
                                     {[
                                         { roi: "15%+ per month", quality: "Exceptional", notes: "Top 1% of traders. Very difficult to sustain long-term.", color: "text-brand-400" },
                                         { roi: "8-15% per month", quality: "Excellent", notes: "Professional-level performance. Compound to life-changing wealth.", color: "text-green-400" },
@@ -352,31 +352,31 @@ export default function RoiCalculatorOptions() {
                                         { roi: "0-2% per month", quality: "Marginal", notes: "Barely profitable. May not beat buy-and-hold index funds.", color: "text-gray-400" },
                                         { roi: "Negative", quality: "Losing", notes: "Unprofitable. Review strategy and risk management immediately.", color: "text-red-400" }
                                     ].map((row, i) => (
-                                        <tr key={i} className="border-t border-white/5 hover:bg-white/[0.02]">
-                                            <td className={`p-5 font-bold ${row.roi === 'Negative' ? 'text-red-400' : 'text-white'}`}>{row.roi}</td>
-                                            <td className={`p-5 font-bold ${row.color}`}>{row.quality}</td>
-                                            <td className="p-5 text-gray-400">{row.notes}</td>
-                                        </tr>
+                                        <TableRow key={i}>
+                                            <TableCell label="ROI" className={`font-bold ${row.roi === 'Negative' ? 'text-red-400' : 'text-white'}`}>{row.roi}</TableCell>
+                                            <TableCell label="Quality" className={`font-bold ${row.color}`}>{row.quality}</TableCell>
+                                            <TableCell label="Notes" className="text-gray-400">{row.notes}</TableCell>
+                                        </TableRow>
                                     ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                </TableBody>
+                            </Table>
+                        </Card>
                     </section>
 
                     {/* BENCHMARKS */}
                     <section>
                         <SectionHeader title="ROI Benchmarks and Comparisons" align="left" className="mb-8" />
                         <div className="grid md:grid-cols-2 gap-8">
-                            <div className="overflow-x-auto rounded-2xl border border-white/10">
-                                <table className="w-full text-left border-collapse">
-                                    <thead>
-                                        <tr className="bg-white/5 text-xs uppercase tracking-widest text-gray-400">
-                                            <th className="p-5 font-black">Investment Type</th>
-                                            <th className="p-5 font-black text-brand-400">Annual Return</th>
-                                            <th className="p-5 font-black">Monthly Eq.</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="text-sm border-t border-white/10">
+                            <Card variant="glass" className="p-0 border border-white/10 overflow-hidden h-full">
+                                <Table>
+                                    <TableHeader>
+                                        <TableRow>
+                                            <TableHead>Investment Type</TableHead>
+                                            <TableHead className="text-brand-400">Annual Return</TableHead>
+                                            <TableHead>Monthly Eq.</TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
                                         {[
                                             { type: "S&P 500 Index", annual: "~10%", monthly: "0.8%" },
                                             { type: "Savings Account", annual: "~1%", monthly: "0.08%" },
@@ -384,15 +384,15 @@ export default function RoiCalculatorOptions() {
                                             { type: "Aggressive Options", annual: "50-100%", monthly: "4-8%" },
                                             { type: "OnlyOptions Members*", annual: "~72% (avg)", monthly: "~6% (avg)", highlighted: true }
                                         ].map((row, i) => (
-                                            <tr key={i} className={`border-t border-white/5 ${row.highlighted ? 'bg-brand-500/5' : 'hover:bg-white/[0.02]'}`}>
-                                                <td className={`p-5 font-bold ${row.highlighted ? 'text-brand-400' : 'text-white'}`}>{row.type}</td>
-                                                <td className="p-5 font-semibold text-gray-300">{row.annual}</td>
-                                                <td className="p-5 text-gray-400 font-semibold">{row.monthly}</td>
-                                            </tr>
+                                            <TableRow key={i} className={row.highlighted ? 'bg-brand-500/5' : ''}>
+                                                <TableCell label="Type" className={`font-bold ${row.highlighted ? 'text-brand-400' : 'text-white'}`}>{row.type}</TableCell>
+                                                <TableCell label="Annual" className="font-semibold text-gray-300">{row.annual}</TableCell>
+                                                <TableCell label="Monthly" className="text-gray-400 font-semibold">{row.monthly}</TableCell>
+                                            </TableRow>
                                         ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                    </TableBody>
+                                </Table>
+                            </Card>
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col justify-center">
                                 <p className="text-xs text-gray-500 italic mb-6">*Based on self-reported survey of 312 active members (Nov 2025). Results vary significantly by account size, discipline, and experience.</p>
                                 <div className="flex gap-4 items-start">
@@ -413,33 +413,33 @@ export default function RoiCalculatorOptions() {
                         <p className="text-gray-400 mb-8 text-sm leading-relaxed">
                             Unlike annual returns, monthly returns compound 12 times per year. Small monthly gains become massive annual gains:
                         </p>
-                        <div className="overflow-x-auto rounded-2xl border border-white/10">
-                            <table className="w-full text-left border-collapse min-w-[600px]">
-                                <thead>
-                                    <tr className="bg-white/5 text-xs uppercase tracking-widest text-gray-400">
-                                        <th className="p-5 font-black">Monthly ROI</th>
-                                        <th className="p-5 font-black">After 6 Months</th>
-                                        <th className="p-5 font-black text-brand-400">After 12 Months</th>
-                                        <th className="p-5 font-black">After 24 Months</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-sm border-t border-white/10">
+                        <Card variant="glass" className="p-0 border border-white/10 overflow-hidden">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Monthly ROI</TableHead>
+                                        <TableHead>After 6 Months</TableHead>
+                                        <TableHead className="text-brand-400">After 12 Months</TableHead>
+                                        <TableHead>After 24 Months</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
                                     {[
                                         { roi: "3% per month", m6: "+19%", m12: "+43%", m24: "+104%" },
                                         { roi: "5% per month", m6: "+34%", m12: "+80%", m24: "+224%" },
                                         { roi: "8% per month", m6: "+59%", m12: "+151%", m24: "+530%" },
                                         { roi: "10% per month", m6: "+77%", m12: "+214%", m24: "+891%" }
                                     ].map((row, i) => (
-                                        <tr key={i} className="border-t border-white/5 hover:bg-white/[0.02]">
-                                            <td className="p-5 font-black text-white">{row.roi}</td>
-                                            <td className="p-5 font-semibold text-gray-400">{row.m6}</td>
-                                            <td className="p-5 font-bold text-brand-400">{row.m12}</td>
-                                            <td className="p-5 font-semibold text-gray-400">{row.m24}</td>
-                                        </tr>
+                                        <TableRow key={i}>
+                                            <TableCell label="ROI" className="font-black text-white">{row.roi}</TableCell>
+                                            <TableCell label="6 Months" className="font-semibold text-gray-400">{row.m6}</TableCell>
+                                            <TableCell label="12 Months" className="font-bold text-brand-400">{row.m12}</TableCell>
+                                            <TableCell label="24 Months" className="font-semibold text-gray-400">{row.m24}</TableCell>
+                                        </TableRow>
                                     ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                </TableBody>
+                            </Table>
+                        </Card>
                         <p className="mt-6 text-xs text-gray-500 text-center font-bold uppercase tracking-widest">
                             *Starting with $10,000. Example: $10,000 at 8% monthly ROI becomes $25,100 in 12 months and $63,000 in 24 months.
                         </p>
@@ -474,31 +474,31 @@ export default function RoiCalculatorOptions() {
                     <section>
                         <SectionHeader title="Tracking ROI Over Time" align="left" className="mb-8" />
                         <div className="grid md:grid-cols-2 gap-8">
-                            <div className="overflow-x-auto rounded-2xl border border-white/10">
-                                <table className="w-full text-left border-collapse">
-                                    <thead>
-                                        <tr className="bg-white/5 text-xs uppercase tracking-widest text-gray-400">
-                                            <th className="p-4 font-black">Month</th>
-                                            <th className="p-4 font-black">Profit</th>
-                                            <th className="p-4 font-black text-brand-400">ROI %</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="text-sm border-t border-white/10">
+                            <Card variant="glass" className="p-0 border border-white/10 overflow-hidden h-full">
+                                <Table>
+                                    <TableHeader>
+                                        <TableRow>
+                                            <TableHead>Month</TableHead>
+                                            <TableHead>Profit</TableHead>
+                                            <TableHead className="text-brand-400">ROI %</TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
                                         {[
                                             { m: "Jan 2026", p: "+$650", r: "6.5%" },
                                             { m: "Feb 2026", p: "+$750", r: "7.0%" },
                                             { m: "Mar 2026", p: "+$900", r: "7.9%" },
                                             { m: "Q1 Total", p: "+$2,300", r: "23%", total: true }
                                         ].map((row, i) => (
-                                            <tr key={i} className={`border-t border-white/5 ${row.total ? 'bg-brand-500/10' : 'hover:bg-white/[0.02]'}`}>
-                                                <td className={`p-4 font-bold ${row.total ? 'text-brand-400' : 'text-white'}`}>{row.m}</td>
-                                                <td className="p-4 font-semibold text-green-400">{row.p}</td>
-                                                <td className={`p-4 font-black ${row.total ? 'text-brand-400' : 'text-white'}`}>{row.r}</td>
-                                            </tr>
+                                            <TableRow key={i} className={row.total ? 'bg-brand-500/10' : ''}>
+                                                <TableCell label="Month" className={`font-bold ${row.total ? 'text-brand-400' : 'text-white'}`}>{row.m}</TableCell>
+                                                <TableCell label="Profit" className="font-semibold text-green-400">{row.p}</TableCell>
+                                                <TableCell label="ROI %" className={`font-black ${row.total ? 'text-brand-400' : 'text-white'}`}>{row.r}</TableCell>
+                                            </TableRow>
                                         ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                    </TableBody>
+                                </Table>
+                            </Card>
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
                                 <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-xs">What to Look For:</h4>
                                 <ul className="space-y-4">

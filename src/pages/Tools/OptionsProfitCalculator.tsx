@@ -5,6 +5,7 @@ import StandardSection from "../../components/ui/Layout/StandardSection";
 import SectionHeader from "../../components/ui/Layout/SectionHeader";
 import { Card } from "../../components/ui/Card/Card";
 import Button from "../../components/ui/Button/Button";
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "../../components/ui/Table/Table";
 import { FiAlertCircle, FiTrendingUp, FiCheckCircle, FiDollarSign, FiInfo } from "react-icons/fi";
 
 const faqData = [
@@ -330,36 +331,35 @@ export default function OptionsProfitCalculator() {
                         </div>
                     </section>
 
-                    {/* SIZING FOR DIFFERENT ACCOUNTS */}
                     <section>
                         <SectionHeader title="Broker Commissions Impact" align="left" className="mb-8" />
                         <p className="text-gray-400 mb-8 text-sm leading-relaxed">
                             Commissions reduce your profit and increase your loss. For active traders making 50+ trades per month, commission costs add up significantly. Zero-commission brokers (Robinhood, Webull) save money on frequent small trades.
                         </p>
-                        <div className="overflow-x-auto rounded-2xl border border-white/10">
-                            <table className="w-full text-left border-collapse min-w-[600px]">
-                                <thead>
-                                    <tr className="bg-white/5 text-xs uppercase tracking-widest text-gray-400">
-                                        <th className="p-5 font-black">Broker Type</th>
-                                        <th className="p-5 font-black text-brand-400">Per Contract</th>
-                                        <th className="p-5 font-black">Round-Trip Cost (10 contracts)</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-sm border-t border-white/10">
+                        <Card variant="glass" className="p-0 border border-white/10 overflow-hidden">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Broker Type</TableHead>
+                                        <TableHead className="text-brand-400">Per Contract</TableHead>
+                                        <TableHead>Round-Trip Cost (10 contracts)</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
                                     {[
                                         { broker: "Zero-Commission", cost: "$0", rt: "$0" },
                                         { broker: "Low-Cost", cost: "$0.50-$0.65", rt: "$10-$13" },
                                         { broker: "Traditional", cost: "$1.00-$1.50", rt: "$20-$30" }
                                     ].map((row, i) => (
-                                        <tr key={i} className="border-t border-white/5 hover:bg-white/[0.02]">
-                                            <td className="p-5 font-bold text-white">{row.broker}</td>
-                                            <td className="p-5 font-semibold text-brand-400">{row.cost}</td>
-                                            <td className="p-5 text-gray-400 font-semibold">{row.rt}</td>
-                                        </tr>
+                                        <TableRow key={i}>
+                                            <TableCell label="Broker" className="font-bold text-white">{row.broker}</TableCell>
+                                            <TableCell label="Cost/Contract" className="font-semibold text-brand-400">{row.cost}</TableCell>
+                                            <TableCell label="Round-Trip" className="text-gray-400 font-semibold">{row.rt}</TableCell>
+                                        </TableRow>
                                     ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                </TableBody>
+                            </Table>
+                        </Card>
                     </section>
 
                     {/* REAL WORLD SCENARIOS */}

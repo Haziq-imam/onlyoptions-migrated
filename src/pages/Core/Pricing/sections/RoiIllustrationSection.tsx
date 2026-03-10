@@ -38,7 +38,7 @@ const RoiIllustrationSection = () => {
                                 { label: "Net after subscription", val1: "+$480 approx.", val2: "+$1,020 approx.", highlight: true }
                             ].map((row, i) => (
                                 <TableRow key={i} className={row.highlight ? "bg-brand-500/5" : ""}>
-                                    <TableCell className="text-gray-300 font-bold">{row.label}</TableCell>
+                                    <TableCell label="Scenario" className="text-gray-300 font-bold">{row.label}</TableCell>
                                     <TableCell label="$5k Account" className={`text-right ${row.highlight ? 'text-green-400 font-black' : 'text-gray-400'}`}>{row.val1}</TableCell>
                                     <TableCell label="$10k Account" className={`text-right ${row.highlight ? 'text-green-400 font-black' : 'text-gray-400'}`}>{row.val2}</TableCell>
                                 </TableRow>

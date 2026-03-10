@@ -35,8 +35,8 @@ const BillingDetailsSection = () => {
                                 { t: "Price changes", d: "We will notify you by email at least 30 days before any price change. Your current price is guaranteed until notification." }
                             ].map((row, i) => (
                                 <TableRow key={i}>
-                                    <TableCell className="text-gray-300 font-black uppercase text-[10px] tracking-widest">{row.t}</TableCell>
-                                    <TableCell className="text-gray-400 text-xs leading-relaxed">{row.d}</TableCell>
+                                    <TableCell label="Topic" className="text-gray-300 font-black uppercase text-[10px] tracking-widest">{row.t}</TableCell>
+                                    <TableCell label="Details" className="text-gray-400 text-xs leading-relaxed">{row.d}</TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
