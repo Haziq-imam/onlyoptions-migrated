@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { sitemapData } from './Legal/sitemapData';
 import ComingSoon from './ComingSoon';
+import NotFound from './NotFound';
 
 const DynamicPages = () => {
     const location = useLocation();
@@ -39,8 +40,8 @@ const DynamicPages = () => {
         return <ComingSoon title={foundLink.name} category={foundCategory} />;
     }
 
-    // Default to a 404-style Coming Soon
-    return <ComingSoon title="Page Under Development" category="Coming Soon" />;
+    // Default to a 404-style page
+    return <NotFound />;
 };
 
 export default DynamicPages;

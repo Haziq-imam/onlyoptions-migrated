@@ -21,6 +21,7 @@ import PrivacyPolicy from './pages/Legal/PrivacyPolicy';
 import RiskDisclaimer from './pages/Legal/RiskDisclaimer';
 import RefundPolicy from './pages/Legal/RefundPolicy';
 import AffiliateProgram from './pages/Legal/AffiliateProgram';
+import PositionSizeCalculator from './pages/Tools/PositionSizeCalculator';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
           <Route path="/risk-disclaimer" element={<RiskDisclaimer />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/affiliate-program" element={<AffiliateProgram />} />
+          <Route path="/position-size-calculator" element={<PositionSizeCalculator />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />

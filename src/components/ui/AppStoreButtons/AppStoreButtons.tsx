@@ -7,7 +7,7 @@ interface AppStoreButtonsProps {
 }
 
 const AppStoreButtons = ({ variant = 'solid', className = "" }: AppStoreButtonsProps) => {
-    const baseStyle = "flex items-center gap-3 px-6 py-3 rounded-2xl transition-all border";
+    const baseStyle = "flex items-center gap-3 px-6 py-3 rounded-2xl transition-all border whitespace-nowrap";
     const solidStyle = "bg-white text-gray-950 border-white hover:bg-gray-200";
     const glassStyle = "bg-white/5 text-white border-white/10 hover:bg-white/10 backdrop-blur-sm";
 

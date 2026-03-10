@@ -64,8 +64,8 @@ const Layout = () => {
                     </nav>
 
                     <div className="flex items-center gap-2 md:gap-4 shrink-0">
-                        <a href="/login" className="text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-brand-400 transition-colors hidden md:block">Log In</a>
-                        <Button href="/free-trial" size="sm" className="px-4 md:px-6 py-2 md:py-auto rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow">
+                        <a href="/login" className="text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-brand-400 transition-colors hidden md:block whitespace-nowrap">Log In</a>
+                        <Button href="/free-trial" size="sm" className="px-4 md:px-6 py-2 rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow">
                             <span className="relative z-10">Free Trial</span>
                         </Button>
                         <button
