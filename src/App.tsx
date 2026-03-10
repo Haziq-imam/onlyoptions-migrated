@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+  import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/utils/ScrollToTop';
@@ -24,6 +24,7 @@ import RefundPolicy from './pages/Legal/RefundPolicy';
 import AffiliateProgram from './pages/Legal/AffiliateProgram';
 import PositionSizeCalculator from './pages/Tools/PositionSizeCalculator';
 import OptionsProfitCalculator from './pages/Tools/OptionsProfitCalculator';
+import RoiCalculatorOptions from './pages/Tools/RoiCalculatorOptions';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/affiliate-program" element={<AffiliateProgram />} />
           <Route path="/position-size-calculator" element={<PositionSizeCalculator />} />
           <Route path="/options-profit-calculator" element={<OptionsProfitCalculator />} />
+          <Route path="/roi-calculator" element={<RoiCalculatorOptions />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />

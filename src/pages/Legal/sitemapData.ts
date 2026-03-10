@@ -212,7 +212,8 @@ export const sitemapData = [
                     { name: "IV Calculator", path: "/implied-volatility-calculator" },
                     { name: "Max Pain Finder", path: "/max-pain-calculator" },
                     { name: "Spread Analyzer", path: "/options-spread-calculator" },
-                    { name: "ROI Tracker", path: "/roi-calculator-options" },
+                    { name: "ROI Calculator", path: "/roi-calculator" },
+                    { name: "Win Rate Calculator", path: "/win-rate-calculator" },
                 ]
             }
         ]
