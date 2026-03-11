@@ -26,6 +26,10 @@ import PositionSizeCalculator from './pages/Tools/PositionSizeCalculator';
 import OptionsProfitCalculator from './pages/Tools/OptionsProfitCalculator';
 import RoiCalculatorOptions from './pages/Tools/RoiCalculatorOptions';
 import OptionsBreakevenCalculator from './pages/Tools/OptionsBreakevenCalculator';
+import OptionsSignalsForBeginners from './pages/Education/Signals/OptionsSignalsForBeginners';
+import OptionsSignalsRiskManagement from './pages/Education/Signals/OptionsSignalsRiskManagement';
+import BestBrokersForOptionsTrading from './pages/Education/Platforms/BestBrokersForOptionsTrading';
+import Page0dteOptionsStrategyCompleteGuide from './pages/Strategies/DayTrading/Page0dteOptionsStrategyCompleteGuide';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -60,6 +64,10 @@ function App() {
           <Route path="/options-profit-calculator" element={<OptionsProfitCalculator />} />
           <Route path="/roi-calculator" element={<RoiCalculatorOptions />} />
           <Route path="/breakeven-calculator" element={<OptionsBreakevenCalculator />} />
+          <Route path="/options-signals-for-beginners" element={<OptionsSignalsForBeginners />} />
+          <Route path="/options-signals-risk-management" element={<OptionsSignalsRiskManagement />} />
+          <Route path="/best-brokers-for-options-trading" element={<BestBrokersForOptionsTrading />} />
+          <Route path="/0dte-options-strategy-complete-guide" element={<Page0dteOptionsStrategyCompleteGuide />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />

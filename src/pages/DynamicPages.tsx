@@ -13,7 +13,13 @@ const DynamicPages = () => {
         '/terms-of-service',
         '/privacy-policy',
         '/risk-disclaimer',
-        '/refund-policy'
+        '/refund-policy',
+        '/options-signals-for-beginners',
+        '/options-signals-risk-management',
+        '/best-brokers-for-options-trading',
+        '/0dte-options-strategy-complete-guide',
+        '/roi-calculator',
+        '/breakeven-calculator'
     ];
 
     if (excludedPaths.includes(currentPath)) {
