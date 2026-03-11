@@ -41,7 +41,7 @@ const linksData = [
 
 const BestBrokersForOptionsTrading = () => {
     return (
-        <div className="bg-black min-h-screen text-white pt-20">
+        <div className="bg-black min-h-screen text-white pt-16 md:pt-20">
             <Helmet>
                 <title>Best Brokers for Options Trading 2026 | Detailed Comparison</title>
                 <meta name="description" content="Compare the best options trading brokers: Robinhood, Webull, Thinkorswim, E*TRADE, Fidelity, Schwab. Commissions, platforms, approval speed, and more. Updated 2026." />
@@ -55,10 +55,10 @@ const BestBrokersForOptionsTrading = () => {
                     title={<>Best Brokers for <span className="text-brand-500">Options Trading</span></>}
                     description="2026 Complete Comparison Guide"
                     align="center"
-                    className="mb-20"
+                    className="mb-10 md:mb-20"
                 />
 
-                <Card variant="glass" className="p-8 md:p-12 mb-20 border-white/5 bg-gray-950/40">
+                <Card variant="glass" className="p-6 md:p-12 mb-10 md:mb-20 border-white/5 bg-gray-950/40">
                     <h3 className="text-2xl font-black mb-6 tracking-tight text-white uppercase italic">Choosing the Right Broker for Options Trading</h3>
                     <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
                         <p>
@@ -71,7 +71,7 @@ const BestBrokersForOptionsTrading = () => {
                 </Card>
 
                 {/* Quick Comparison Table */}
-                <SectionHeader label="Summary" title="Quick Comparison Table" align="center" className="mb-12" />
+                <SectionHeader label="Summary" title="Quick Comparison Table" align="center" className="mb-8 md:mb-12" />
                 <Card variant="institutional" className="p-0 overflow-hidden border-white/5 mb-20">
                     <Table>
                         <TableHeader>
@@ -107,11 +107,11 @@ const BestBrokersForOptionsTrading = () => {
 
             {/* Detailed Reviews */}
             <StandardSection variant="muted" divider="top" spacing="lg">
-                <SectionHeader label="Analysis" title="Detailed Broker Reviews" align="center" className="mb-20" />
-                <div className="space-y-32">
+                <SectionHeader label="Analysis" title="Detailed Broker Reviews" align="center" className="mb-10 md:mb-20" />
+                <div className="space-y-12 md:space-y-24">
                     
                     {/* 1. Robinhood */}
-                    <div id="robinhood" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div id="robinhood" className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         <div className="space-y-8">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase text-white tracking-tight">1. ROBINHOOD — Best for Absolute Beginners</h2>
@@ -175,7 +175,7 @@ const BestBrokersForOptionsTrading = () => {
                     </div>
 
                     {/* 2. Webull */}
-                    <div id="webull" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div id="webull" className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         <div className="space-y-8">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase text-white tracking-tight">2. WEBULL — Best for Active Traders (Zero Commissions)</h2>
@@ -238,7 +238,7 @@ const BestBrokersForOptionsTrading = () => {
                     </div>
 
                     {/* 3. Thinkorswim */}
-                    <div id="thinkorswim" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div id="thinkorswim" className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         <div className="space-y-8">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase text-white tracking-tight">3. THINKORSWIM (TD Ameritrade) — Best for Advanced Traders</h2>
@@ -301,7 +301,7 @@ const BestBrokersForOptionsTrading = () => {
                     </div>
 
                     {/* 4. E*TRADE */}
-                    <div id="etrade" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div id="etrade" className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         <div className="space-y-8">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase text-white tracking-tight">4. E*TRADE — Best All-Around Broker</h2>
@@ -363,7 +363,7 @@ const BestBrokersForOptionsTrading = () => {
                     </div>
 
                     {/* 5. Fidelity */}
-                    <div id="fidelity" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div id="fidelity" className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         <div className="space-y-8">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase text-white tracking-tight">5. FIDELITY — Best for Long-Term Investors</h2>
@@ -425,7 +425,7 @@ const BestBrokersForOptionsTrading = () => {
                     </div>
 
                     {/* 6. Schwab */}
-                    <div id="schwab" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div id="schwab" className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         <div className="space-y-8">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase text-white tracking-tight">6. CHARLES SCHWAB — Best for High-Net-Worth Traders</h2>
@@ -490,9 +490,9 @@ const BestBrokersForOptionsTrading = () => {
 
             {/* How to Choose */}
             <StandardSection variant="muted" divider="top" spacing="lg">
-                <SectionHeader label="Strategy" title="How to Choose Your Broker" align="center" className="mb-20" />
+                <SectionHeader label="Strategy" title="How to Choose Your Broker" align="center" className="mb-10 md:mb-20" />
                 <div className="max-w-4xl mx-auto">
-                    <Card variant="institutional" className="p-12 border-white/5 bg-gray-950/60">
+                    <Card variant="institutional" className="p-6 md:p-12 border-white/5 bg-gray-950/60">
                         <h4 className="text-white font-black mb-12 uppercase tracking-[0.2em] text-center italic">Decision Tree</h4>
                         <div className="space-y-8">
                             {[
@@ -517,9 +517,9 @@ const BestBrokersForOptionsTrading = () => {
 
             {/* Commission Calculator */}
             <StandardSection variant="default" divider="top" spacing="lg">
-                <SectionHeader label="Cost Analysis" title="Commission Calculator" align="center" className="mb-20" />
+                <SectionHeader label="Cost Analysis" title="Commission Calculator" align="center" className="mb-10 md:mb-20" />
                 <div className="max-w-4xl mx-auto space-y-12">
-                    <Card variant="glass" className="p-8 md:p-12 border-white/5 bg-gray-950/40">
+                    <Card variant="glass" className="p-6 md:p-12 border-white/5 bg-gray-950/40">
                          <h4 className="text-white font-black mb-8 uppercase tracking-widest text-sm italic text-center">Example: 50 Trades Per Month</h4>
                          <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] text-center mb-8">Average trade: 2 contracts per trade = 100 contracts/month</p>
                          <Table>

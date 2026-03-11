@@ -17,7 +17,7 @@ const AppStoreButtons = ({ variant = 'solid', className = "" }: AppStoreButtonsP
     const iconClass = variant === 'glass' ? "w-6 h-6 shrink-0 invert brightness-0" : "w-6 h-6 shrink-0";
 
     return (
-        <div className={`flex flex-wrap gap-4 ${className}`}>
+        <div className={`flex flex-wrap justify-center gap-4 ${className}`}>
             <a href="#" className={`${baseStyle} ${style}`}>
                 <img src={AppleIcon} alt="Apple App Store" className={iconClass} />
                 <div className="text-left">

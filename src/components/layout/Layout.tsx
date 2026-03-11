@@ -51,10 +51,10 @@ const Layout = () => {
     return (
         <div className="min-h-screen flex flex-col font-sans selection:bg-brand-500/30 bg-gray-950">
             {/* Unique Floating Header */}
-            <div className="fixed top-4 md:top-6 inset-x-0 z-50 px-4 md:px-12">
-                <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-3 px-4 md:px-6 flex items-center justify-between shadow-2xl relative z-50 border border-white/5">
+            <div className="fixed top-3 md:top-6 inset-x-0 z-50 px-3 md:px-12">
+                <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-2.5 md:py-3 px-4 md:px-6 flex items-center justify-between shadow-2xl relative z-50 border border-white/5">
                     <a href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity shrink-0">
-                        <img src={Logo} alt="OnlyOptions" className="h-8 md:h-12 w-auto object-contain shrink-0 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                        <img src={Logo} alt="OnlyOptions" className="h-10 md:h-12 w-auto object-contain shrink-0 drop-shadow-[0_0_20px_rgba(255,255,255,0.35)] brightness-110" />
                     </a>
 
                     <nav className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
@@ -65,7 +65,7 @@ const Layout = () => {
 
                     <div className="flex items-center gap-2 md:gap-4 shrink-0">
                         <a href="/login" className="text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-brand-400 transition-colors hidden md:block whitespace-nowrap">Log In</a>
-                        <Button href="/free-trial" size="sm" className="px-4 md:px-6 py-2 rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow">
+                        <Button href="/free-trial" size="sm" className="px-4 md:px-6 py-2 rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow whitespace-nowrap">
                             <span className="relative z-10">Free Trial</span>
                         </Button>
                         <button
@@ -78,7 +78,7 @@ const Layout = () => {
                 </header>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`lg:hidden fixed inset-x-6 top-[100px] z-40 transition-all duration-300 transform ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+                <div className={`lg:hidden fixed inset-x-3 top-[76px] md:top-[84px] z-40 transition-all duration-300 transform ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
                     <div className="fintech-glass rounded-2xl p-6 shadow-2xl border border-white/10 max-h-[calc(100vh-120px)] overflow-y-auto overflow-x-hidden custom-scrollbar">
                         <nav className="flex flex-col gap-6 text-[11px] font-black uppercase tracking-[0.3em] text-gray-400">
                             {navLinks.map((link) => (
