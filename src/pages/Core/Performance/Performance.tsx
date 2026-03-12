@@ -11,7 +11,7 @@ const Performance = () => {
       <HeroSection
         title={<>Live Performance <br /> <span className="text-brand-500">Transparency</span></>}
         subtitle="We track every single trade. No hidden losses, no cherry-picked wins. Real results for real traders."
-        primaryCtaText="Start Free Trial"
+        primaryCtaText="Get Access Now"
         primaryCtaLink="/signup"
         image={mockupImg}
         badgeText="Verified Results"

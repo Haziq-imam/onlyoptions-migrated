@@ -28,7 +28,7 @@ const linksData = [
     { title: "Options 101", path: "/options-trading-101" },
     { title: "Getting options approval", path: "/how-to-get-approved-for-options-trading" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Free trial", path: "/free-trial" },
+    { title: "Get access", path: "/free-trial" },
     { title: "Risk management", path: "/options-signals-risk-management" },
     { title: "Position sizing", path: "/position-size-calculator" },
     { title: "Beginners guide", path: "/options-signals-for-beginners" },

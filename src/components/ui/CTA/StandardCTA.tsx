@@ -14,9 +14,9 @@ interface StandardCTAProps {
 }
 
 const StandardCTA: React.FC<StandardCTAProps> = ({
-    title = "Start Your Free Trial Today",
+    title = "Join OnlyOptions Today",
     subtitle = "No credit card. No auto-charge. Full access to live signals from day one.",
-    buttonText = "Start Free Trial — No Credit Card",
+    buttonText = "Get Instant Access — No Credit Card",
     showTrustSignals = true,
     className
 }) => {

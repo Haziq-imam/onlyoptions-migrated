@@ -29,7 +29,7 @@ const linksData = [
     { title: "Risk-reward calculator", path: "/risk-reward-calculator" },
     { title: "Win rate calculator", path: "/win-rate-calculator" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Free trial", path: "/free-trial" },
+    { title: "Get access", path: "/free-trial" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "Risk management", path: "/options-signals-risk-management" },
     { title: "Best brokers", path: "/best-brokers-for-options-trading" },
@@ -103,7 +103,7 @@ const OptionsSignalsForBeginners = () => {
                             If you checked all 6 boxes, you are ready. If not, complete the missing requirements before trading real money. Risking capital without these foundations is high-risk gambling.
                         </p>
                         <a href="/free-trial" className="text-gray-400 text-[10px] font-black uppercase tracking-widest hover:text-brand-500 transition-all underline decoration-white/10 underline-offset-8">
-                            Start Your Free Trial <FiArrowRight className="inline ml-1" />
+                            Get Access Now <FiArrowRight className="inline ml-1" />
                         </a>
                     </Card>
                 </div>
@@ -282,7 +282,7 @@ const OptionsSignalsForBeginners = () => {
                                     <h4 className="text-white font-black mb-8 flex items-center gap-2 uppercase text-[10px] tracking-[0.2em] italic"><FiPlay className="text-brand-400" /> Start Process</h4>
                                     <ol className="space-y-6">
                                         {[
-                                            "Visit onlyoptions.us/free-trial",
+                                            "Visit onlyoptions.us/signup",
                                             "Enter your email address",
                                             "Receive welcome email instantly",
                                             "Set password and log in"
@@ -614,7 +614,7 @@ const OptionsSignalsForBeginners = () => {
                                     { t: "Read Options Trading 101 if you have not already", p: "/options-trading-101" },
                                     { t: "Open a broker account (Robinhood or Webull recommended for beginners)", p: "/best-brokers-for-options-trading" },
                                     { t: "Paper trade for 1-2 weeks using Thinkorswim", p: "" },
-                                    { t: "Start your OnlyOptions 7-day free trial", p: "/free-trial" },
+                                    { t: "Start your OnlyOptions 7-day access period", p: "/free-trial" },
                                     { t: "Execute your first 5 trades with 1 contract each", p: "" },
                                     { t: "Join our community and ask questions", p: "/contact" }
                                 ].map((step, i) => (

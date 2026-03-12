@@ -26,7 +26,7 @@ const WhatYouGetTable = () => {
                 <Table>
                     <TableHeader>
                         <TableRow>
-                            <TableHead>Included in Your Free Trial</TableHead>
+                            <TableHead>Included in Your Access Period</TableHead>
                             <TableHead>What This Means</TableHead>
                         </TableRow>
                     </TableHeader>

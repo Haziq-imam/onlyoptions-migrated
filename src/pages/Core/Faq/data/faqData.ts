@@ -150,11 +150,11 @@ export const faqData: FAQCategory[] = [
         items: [
             {
                 question: "Q31. How much does OnlyOptions cost?",
-                answer: "Basic plan: $60 per month. Pro plan: $99 per month. Annual plan: $600 per year (equivalent to $50 per month — all Pro features included). All plans start with a 7-day free trial with no credit card required."
+                answer: "Basic plan: $60 per month. Pro plan: $99 per month. Annual plan: $600 per year (equivalent to $50 per month — all Pro features included). All plans start with a 7-day access period with no credit card required."
             },
             {
-                question: "Q32. What is included in the free trial?",
-                answer: "The 7-day free trial includes full access to everything in your chosen plan — live signals via the app, the performance dashboard, the education library, and all plan-specific features. No credit card is required. We do not auto-charge at trial end — you must actively choose to subscribe by entering payment details."
+                question: "Q32. What is included in the 7-day access period?",
+                answer: "The 7-day access period includes full access to everything in your chosen plan — live signals via the app, the performance dashboard, the education library, and all plan-specific features. No credit card is required. We do not auto-charge at the end — you must actively choose to subscribe by entering payment details."
             },
             {
                 question: "Q33. Can I cancel anytime?",
@@ -162,7 +162,7 @@ export const faqData: FAQCategory[] = [
             },
             {
                 question: "Q34. Is there a money-back guarantee?",
-                answer: "Yes. New subscribers receive a 7-day money-back guarantee on their first payment. If you are not satisfied within 7 days of your first charge, email support@onlyoptions.us for a full refund — no conditions. This applies to the first payment only. The 7-day free trial (no credit card required) also gives you full access before any payment is made."
+                answer: "Yes. New subscribers receive a 7-day money-back guarantee on their first payment. If you are not satisfied within 7 days of your first charge, email support@onlyoptions.us for a full refund — no conditions. This applies to the first payment only. The 7-day access period (no credit card required) also gives you full access before any payment is made."
             },
             {
                 question: "Q35. What is the difference between Basic and Pro?",

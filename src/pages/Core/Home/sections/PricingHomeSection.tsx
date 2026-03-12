@@ -11,7 +11,7 @@ const basicFeatures = [
     'Performance dashboard',
     'Education library',
     'Email support (24hr response)',
-    '7-day free trial (no credit card)',
+    '7-day access (no credit card)',
 ];
 
 const proFeatures = [
@@ -19,7 +19,7 @@ const proFeatures = [
     'Priority support (1hr response)',
     'Weekly live Q&A sessions',
     'Advanced analyst notes',
-    '7-day free trial (no credit card)',
+    '7-day access (no credit card)',
 ];
 
 const PricingHomeSection = () => (
@@ -27,7 +27,7 @@ const PricingHomeSection = () => (
         <SectionHeader
             label="Pricing"
             title={<>Simple, <span className="text-brand-500">Transparent</span> Pricing</>}
-            description="Two plans. No hidden fees, no long-term contracts, no auto-charge after trial."
+            description="Two plans. No hidden fees, no long-term contracts, no auto-charge after signup."
             align="center"
             className="mb-20"
         />
@@ -48,7 +48,7 @@ const PricingHomeSection = () => (
                     ))}
                 </ul>
                 <Button href="/free-trial" variant="outline" className="w-full h-auto min-h-[3.5rem] py-4 rounded-2xl font-black uppercase tracking-widest border-brand-500/30 hover:bg-brand-500/10 text-xs">
-                    Start Free Trial
+                    Get Access
                 </Button>
             </Card>
 
@@ -71,7 +71,7 @@ const PricingHomeSection = () => (
                     ))}
                 </ul>
                 <Button href="/free-trial" variant="primary" className="w-full h-auto min-h-[3.5rem] py-4 rounded-2xl font-black uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.4)] text-xs">
-                    Start Pro Trial
+                    Get Pro Access
                 </Button>
             </Card>
         </div>

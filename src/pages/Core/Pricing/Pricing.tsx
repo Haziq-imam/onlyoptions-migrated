@@ -15,7 +15,7 @@ const Pricing = () => {
     <div className="bg-black text-gray-200 font-sans selection:bg-brand-500/30">
       <Helmet>
         <title>OnlyOptions Pricing Options Signal Plans Starting at $60/Month</title>
-        <meta name="description" content="OnlyOptions plans start at $60/month. 7-day free trial, no credit card required. Compare Basic, Pro, and Annual plans. 70.3% win rate. 1,247+ active members. Cancel anytime." />
+        <meta name="description" content="OnlyOptions plans start at $60/month. 7-day access, no credit card required. Compare Basic, Pro, and Annual plans. 70.3% win rate. 1,247+ active members. Cancel anytime." />
       </Helmet>
 
       <PricingHeroSection />

@@ -15,7 +15,7 @@ const ProofAndStats = () => {
     const testimonials = [
         {
             rating: 5,
-            text: "I was extremely skeptical about options signals services after being burned before. The free trial let me verify every claim they made. I watched them send a SPY call that went up 84% in 3 hours. Subscribed on Day 3 of my trial.",
+            text: "I was extremely skeptical about options signals services after being burned before. The access period let me verify every claim they made. I watched them send a SPY call that went up 84% in 3 hours. Subscribed on Day 3 of my access.",
             author: "Marcus J.",
             role: "Software Engineer",
             date: "Subscribed February 2025"
@@ -29,7 +29,7 @@ const ProofAndStats = () => {
         },
         {
             rating: 5,
-            text: "I joined the free trial not planning to subscribe. I just wanted to see what professional options signals looked like. By Day 2 I realized the education library alone was worth the subscription price. The signals are the cherry on top.",
+            text: "I joined the access period not planning to subscribe. I just wanted to see what professional options signals looked like. By Day 2 I realized the education library alone was worth the subscription price. The signals are the cherry on top.",
             author: "Raj P.",
             role: "IT Manager",
             date: "Subscribed March 2024"
@@ -42,7 +42,7 @@ const ProofAndStats = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-8">
                     <SectionHeader
-                        title="Why We Offer a No-Credit-Card Free Trial"
+                        title="Why We Offer a No-Credit-Card Access Period"
                         description="Because We Have Nothing to Hide"
                         align="left"
                     />
@@ -55,7 +55,7 @@ const ProofAndStats = () => {
 
                 <div className="space-y-6">
                     <SectionHeader
-                        title="Free Trial Success Statistics"
+                        title="Access Period Success Statistics"
                         align="left"
                         className="mb-8"
                     />
@@ -84,7 +84,7 @@ const ProofAndStats = () => {
             {/* Testimonials Section */}
             <div className="space-y-12">
                 <SectionHeader
-                    title="What Free Trial Members Say"
+                    title="What New Members Say"
                     description="Real Feedback From Skeptics Who Became Subscribers"
                     align="center"
                 />

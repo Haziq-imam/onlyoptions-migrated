@@ -17,7 +17,7 @@ const FreeTrialFaq = () => {
         },
         {
             question: "Can I trial multiple plans?",
-            answer: "No. The free trial gives you Basic plan access ($60/month tier). To try Pro features (SMS alerts, weekly live sessions), upgrade to Pro during the trial — the trial period extends to Pro as well. You cannot trial all three plans separately."
+            answer: "No. The access period gives you Basic plan access ($60/month tier). To try Pro features (SMS alerts, weekly live sessions), upgrade to Pro during this time — it extends to Pro as well. You cannot test all three plans separately."
         },
         {
             question: "What if I want to subscribe before the 7 days end?",
@@ -32,15 +32,15 @@ const FreeTrialFaq = () => {
             answer: "If you do not subscribe, Discord access is revoked automatically when the trial expires. You lose access to #signals, #performance-log, and all member channels. You can re-join immediately by subscribing."
         },
         {
-            question: "Can I use the free trial if I previously subscribed and cancelled?",
-            answer: "No. Free trials are for new members only. If you were previously a paying subscriber, contact support@onlyoptions.us — we occasionally offer win-back promotions for returning members."
+            question: "Can I use the access period if I previously subscribed and cancelled?",
+            answer: "No. Initial access periods are for new members only. If you were previously a paying subscriber, contact support@onlyoptions.us — we occasionally offer win-back promotions for returning members."
         },
         {
             question: "Do I get the 7-day money-back guarantee on top of the trial?",
-            answer: "Yes. If you subscribe after your trial, you still get our standard 7-day money-back guarantee from the date of your first payment. This means up to 14 days of risk-free access total (7-day trial + 7-day refund window)."
+            answer: "Yes. If you subscribe after your access period, you still get our standard 7-day money-back guarantee from the date of your first payment. This means up to 14 days of risk-free access total (7-day access + 7-day refund window)."
         },
         {
-            question: "Can I refer friends for another free trial?",
+            question: "Can I refer friends for another access period?",
             answer: "Yes. Our affiliate program rewards members who refer paying subscribers. However, each person gets only one trial per email address. Attempts to game the system with fake emails are detected and blocked."
         }
     ];
@@ -48,8 +48,8 @@ const FreeTrialFaq = () => {
     return (
         <div className="py-24 max-w-4xl mx-auto space-y-12">
             <SectionHeader
-                title="Free Trial FAQ"
-                description="Questions About the Free Trial"
+                title="Access Period FAQ"
+                description="Questions About the Access Period"
                 align="left"
             />
 

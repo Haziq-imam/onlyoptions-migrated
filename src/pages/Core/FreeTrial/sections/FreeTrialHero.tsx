@@ -25,7 +25,7 @@ const FreeTrialHero = () => {
                 </div>
 
                 <SectionHeader
-                    title={<>Start Your 7-Day Free Trial — <span className="text-brand-500">No Credit Card Required</span></>}
+                    title={<>Start Your 7-Day Access Period — <span className="text-brand-500">No Credit Card Required</span></>}
                     description="Get full access to our professional options signals, performance dashboard, Discord community, and education library. See our 70.3% win rate in action before paying a dollar."
                     align="center"
                     className="max-w-3xl mx-auto"
@@ -47,7 +47,7 @@ const FreeTrialHero = () => {
                         href="/signup"
                         className="px-16 h-20 rounded-2xl font-black text-xl shadow-[0_0_60px_rgba(32,109,254,0.3)] min-w-[300px]"
                     >
-                        START YOUR FREE TRIAL
+                        GET ACCESS NOW
                     </Button>
                     <div className="flex items-center gap-4 text-gray-500 text-xs font-bold uppercase tracking-widest leading-none">
                         <span>No credit card</span>

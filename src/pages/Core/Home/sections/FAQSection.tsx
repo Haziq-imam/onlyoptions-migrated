@@ -14,8 +14,8 @@ const faqs = [
         answer: "The 70.3% win rate is calculated from 1,847 closed signals published between January 2023 and February 2026. A signal is recorded as a win when it is closed at or above the entry price. A signal is recorded as a loss when it is closed at or below the stop-loss level. Results use mid-prices (midpoint of bid and ask spread) at signal and exit times. Every result — wins and losses — is published on the Performance Dashboard with dates, tickers, prices, and percentage returns. No results are removed or reclassified."
     },
     {
-        question: "Do I need a credit card for the free trial?",
-        answer: "No. The 7-day free trial for OnlyOptions requires no credit card and no payment information. You receive full access to all features during the trial — live signals via the app, performance dashboard access, and the education library. At the end of 7 days you can choose to subscribe. If you do nothing, your trial simply ends. We do not auto-charge you."
+        question: "Do I need a credit card for the access period?",
+        answer: "No. The 7-day access period for OnlyOptions requires no credit card and no payment information. You receive full access to all features during this period — live signals via the app, performance dashboard access, and the education library. At the end of 7 days you can choose to subscribe. If you do nothing, your access simply ends. We do not auto-charge you."
     },
     {
         question: "How do I receive the options signals?",
@@ -35,7 +35,7 @@ const faqs = [
     },
     {
         question: "What is the difference between the Basic and Pro plans?",
-        answer: "The Basic plan ($60/month) includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan ($99/month) includes everything in Basic plus SMS text message delivery of every signal, priority email support with a 1-hour response during market hours, and access to weekly live Q&A sessions with the analyst team. Both plans include the 7-day free trial with no credit card required."
+        answer: "The Basic plan ($60/month) includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan ($99/month) includes everything in Basic plus SMS text message delivery of every signal, priority email support with a 1-hour response during market hours, and access to weekly live Q&A sessions with the analyst team. Both plans include the 7-day access period with no credit card required."
     },
     {
         question: "Can I cancel my OnlyOptions subscription anytime?",

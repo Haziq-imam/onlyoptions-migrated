@@ -41,7 +41,7 @@ const Signup = () => {
 
             <CardHeader className="text-center mb-8">
               <CardTitle className="text-3xl font-bold mb-2">Create Account</CardTitle>
-              <p className="text-gray-500">Free 7-day trial on all monthly plans.</p>
+              <p className="text-gray-500">7-day access period on all monthly plans.</p>
             </CardHeader>
 
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>

@@ -40,7 +40,7 @@ const FeatureComparisonSection = () => {
                                 { f: "Advanced analyst notes", b: false, p: true, a: true },
                                 { f: "Annual savings", b: "—", p: "—", a: "Save $120/yr" },
                                 { f: "Price lock guarantee", b: "Month-to-month", p: "Month-to-month", a: "✅ Locked in" },
-                                { f: "Free trial", b: "7 days", p: "7 days", a: "7 days" },
+                                { f: "7-Day Access Period", b: "7 days", p: "7 days", a: "7 days" },
                                 { f: "Money-back guarantee", b: "7 days", p: "7 days", a: "7 days" },
                                 { f: "Cancel anytime", b: true, p: true, a: true }
                             ].map((row, i) => (

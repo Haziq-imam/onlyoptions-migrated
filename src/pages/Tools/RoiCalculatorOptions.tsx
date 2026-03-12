@@ -29,7 +29,7 @@ const linksData = [
     { title: "Win rate calculator", path: "/win-rate-calculator" },
     { title: "Performance dashboard", path: "/performance" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Free trial", path: "/free-trial" },
+    { title: "Get access", path: "/free-trial" },
     { title: "Risk management", path: "/options-signals-risk-management" },
     { title: "FAQ", path: "/faq" }
 ];

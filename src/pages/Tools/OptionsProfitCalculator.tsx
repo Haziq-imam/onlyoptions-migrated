@@ -32,7 +32,7 @@ const linksData = [
     { title: "Risk-reward calculator", path: "/risk-reward-calculator" },
     { title: "Win rate calculator", path: "/win-rate-calculator" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Free trial", path: "/free-trial" },
+    { title: "Get access", path: "/free-trial" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "Risk management", path: "/options-signals-risk-management" },
     { title: "Best brokers", path: "/best-brokers-for-options-trading" },

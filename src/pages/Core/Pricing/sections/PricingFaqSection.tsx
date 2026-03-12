@@ -38,11 +38,11 @@ const PricingFaqSection = () => {
     const faqData = [
         {
             q: "How much does OnlyOptions cost?",
-            a: "OnlyOptions has three plans. The Basic plan costs $60 per month and includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan costs $99 per month and adds SMS text message signal delivery, priority email support with a 1-hour response during market hours, and weekly live Q&A sessions. The Annual plan costs $600 per year (equivalent to $50 per month) and includes all Pro features billed once annually. Every plan starts with a 7-day free trial with no credit card required."
+            a: "OnlyOptions has three plans. The Basic plan costs $60 per month and includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan costs $99 per month and adds SMS text message signal delivery, priority email support with a 1-hour response during market hours, and weekly live Q&A sessions. The Annual plan costs $600 per year (equivalent to $50 per month) and includes all Pro features billed once annually. Every plan starts with a 7-day access period with no credit card required."
         },
         {
-            q: "Is there a free trial for OnlyOptions?",
-            a: "Yes. Every new subscriber receives a 7-day free trial with no credit card required. You get full access to your chosen plan during the trial live signals, app access, performance dashboard, and education library. At the end of 7 days, nothing happens automatically. You choose whether to subscribe by entering your payment details. If you do nothing, your trial ends with no charge."
+            q: "Is there a risk-free access period for OnlyOptions?",
+            a: "Yes. Every new subscriber receives a 7-day access period with no credit card required. You get full access to your chosen plan during this period — live signals, app access, performance dashboard, and education library. At the end of 7 days, nothing happens automatically. You choose whether to subscribe by entering your payment details. If you do nothing, your access ends with no charge."
         },
         {
             q: "Can I cancel my OnlyOptions subscription anytime?",
@@ -50,7 +50,7 @@ const PricingFaqSection = () => {
         },
         {
             q: "Is there a money-back guarantee?",
-            a: "Yes. New subscribers receive a 7-day money-back guarantee on their first payment. If you subscribe and are not satisfied within 7 days of your first charge, contact support@onlyoptions.us for a full refund no conditions, no questions asked. This applies to your first payment only. Renewal payments (month 2 onward for monthly plans, or year 2 for annual) are not eligible for refunds. Note that the 7-day free trial already gives you full access before any payment is required."
+            a: "Yes. New subscribers receive a 7-day money-back guarantee on their first payment. If you subscribe and are not satisfied within 7 days of your first charge, contact support@onlyoptions.us for a full refund — no conditions, no questions asked. This applies to your first payment only. Renewal payments (month 2 onward for monthly plans, or year 2 for annual) are not eligible for refunds. Note that the 7-day access period already gives you full access before any payment is required."
         },
         {
             q: "What is the difference between Basic and Pro?",
@@ -58,7 +58,7 @@ const PricingFaqSection = () => {
         },
         {
             q: "Is the Annual plan worth it?",
-            a: "The Annual plan costs $600 per year, which is equivalent to $50 per month a saving of $49 per month compared to Pro monthly ($99), or $120 per year in total. It includes all Pro features. The Annual plan makes sense if you have completed the free trial and are confident you want to use the service long-term. It also locks in your current price for 12 months regardless of any future price changes. We recommend starting with the monthly trial first, then switching to Annual once you are satisfied with the signal quality."
+            a: "The Annual plan costs $600 per year, which is equivalent to $50 per month — a saving of $49 per month compared to Pro monthly ($99), or $120 per year in total. It includes all Pro features. The Annual plan makes sense if you have completed your initial access period and are confident you want to use the service long-term. It also locks in your current price for 12 months regardless of any future price changes. We recommend starting with the monthly plan first, then switching to Annual once you are satisfied with the signal quality."
         },
         {
             q: "Are there any hidden fees?",

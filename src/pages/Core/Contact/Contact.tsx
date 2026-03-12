@@ -54,7 +54,7 @@ const Contact = () => {
         title={<>Contact <span className="text-brand-500">OnlyOptions</span></>}
         subtitle="Whether you have a question about a signal, your account, or the service in general — we respond to every message. Use the guide below to reach the right team for your question."
         badgeText="Support Center"
-        primaryCtaText="Start Free Trial"
+        primaryCtaText="Get Access Now"
         primaryCtaLink="/free-trial"
       />
 
@@ -93,7 +93,7 @@ const Contact = () => {
                         <option value="basic" className="bg-black">Basic Plan</option>
                         <option value="pro" className="bg-black">Pro Plan</option>
                         <option value="annual" className="bg-black">Annual Plan</option>
-                        <option value="trial" className="bg-black">Free Trial</option>
+                        <option value="trial" className="bg-black">Get Access</option>
                       </select>
                     </div>
 
@@ -127,9 +127,9 @@ const Contact = () => {
       </StandardSection>
 
       <StandardCTA
-        title="Start Your Free 7-Day Trial"
+        title="Join OnlyOptions Today"
         subtitle="No credit card. No auto-charge. Full signal access from day one."
-        buttonText="Start Free Trial — No Credit Card Required"
+        buttonText="Get Access Now — No Credit Card Required"
       />
     </div>
   );

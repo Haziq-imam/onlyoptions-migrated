@@ -28,7 +28,7 @@ const linksData = [
     { title: "Profit calculator", path: "/options-profit-calculator" },
     { title: "Risk-reward calculator", path: "/risk-reward-calculator" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Free trial", path: "/free-trial" },
+    { title: "Get access", path: "/free-trial" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "0DTE strategy", path: "/0dte-options-strategy-complete-guide" },
     { title: "FAQ", path: "/faq" }

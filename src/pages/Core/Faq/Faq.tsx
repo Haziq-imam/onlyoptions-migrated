@@ -79,8 +79,8 @@ const Faq = () => {
 
       <StandardCTA
         title="Ready to Start?"
-        subtitle="Try OnlyOptions Free for 7 Days. No credit card required. Full access. Cancel anytime."
-        buttonText="Start Free Trial"
+        subtitle="Try OnlyOptions risk-free for 7 Days. No credit card required. Full access. Cancel anytime."
+        buttonText="Get Instant Access"
       />
     </div>
   );

@@ -37,7 +37,7 @@ const AfterTrialTable = () => {
 
             <div className="bg-brand-500/5 border-l-4 border-brand-500 p-6 rounded-r-xl">
                 <p className="text-white text-sm leading-relaxed">
-                    We do <span className="text-brand-400 font-black italic">NOT</span> auto-charge you after the trial. This is not one of those "free trial but we secretly bill you" scams. If you do nothing, you pay nothing. Period.
+                    We do <span className="text-brand-400 font-black italic">NOT</span> auto-charge you after the period. This is not one of those "access period but we secretly bill you" scams. If you do nothing, you pay nothing. Period.
                 </p>
             </div>
 
@@ -76,7 +76,7 @@ const AfterTrialTable = () => {
                         <ul className="space-y-3 text-gray-400 text-sm">
                             <li className="flex items-start gap-3">
                                 <span className="text-red-500 shrink-0">•</span>
-                                Run multiple free trials using different email addresses
+                                Run multiple access periods using different email addresses
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-red-500 shrink-0">•</span>

@@ -9,7 +9,7 @@ const TrialProcessSteps = () => {
             number: "01",
             title: "Enter Your Email",
             badge: "No Credit Card Required",
-            description: "Click \"Start Free Trial\" above and enter your email address. That is it. No payment method. No credit card verification. No auto-billing after 7 days unless you choose to subscribe.",
+            description: "Click \"Get Access Now\" above and enter your email address. That is it. No payment method. No credit card verification. No auto-billing after 7 days unless you choose to subscribe.",
             image: step1Img,
             alt: "Signup Form"
         },

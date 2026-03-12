@@ -17,13 +17,13 @@ const PricingHeroSection = () => {
 
                     <SectionHeader
                         title={<>OnlyOptions Pricing <br /> <span className="text-brand-500">Simple Plans, No Hidden Fees</span></>}
-                        description="Three plans. One signal service. No long-term contracts, no automatic charges after your free trial, and no hidden fees. Every plan includes the same live options signals delivered to your phone."
+                        description="Three plans. One signal service. No long-term contracts, no automatic charges, and no hidden fees. Every plan includes the same live options signals delivered to your phone."
                         align="left"
                     />
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {[
-                            { text: '7-Day Free Trial', sub: 'No credit card' },
+                            { text: '7-Day Access', sub: 'No credit card' },
                             { text: 'Cancel Anytime', sub: 'No hidden fees' },
                             { text: '1,247+ Active Members', sub: '70.3% win rate' },
                             { text: 'Verified Trades', sub: 'Full history logs' }

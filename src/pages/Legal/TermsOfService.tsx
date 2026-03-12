@@ -253,7 +253,7 @@ const TermsOfService: React.FC = () => {
                                                 'Keep your password secure and confidential',
                                                 'Notify us immediately of any unauthorized use of your account',
                                                 'Not share your Discord invite link or account access with third parties',
-                                                'Not create multiple accounts to circumvent limitations or obtain multiple free trials'
+                                                'Not create multiple accounts to circumvent limitations or obtain multiple access periods'
                                             ].map((rule, i) => (
                                                 <div key={i} className="flex items-center gap-3 text-[11px] font-bold text-gray-300">
                                                     <div className="w-2 h-2 rounded-full bg-brand-500" />
@@ -284,8 +284,8 @@ const TermsOfService: React.FC = () => {
                                             <p className="text-xs font-medium text-gray-400 leading-relaxed">We offer multiple subscription tiers (Basic, Pro, Annual) as described on our pricing page. Each plan includes specific features and pricing.</p>
                                         </div>
                                         <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
-                                            <p className="text-xs font-black text-brand-500 uppercase tracking-widest mb-4">4.2 Free Trial</p>
-                                            <p className="text-xs font-medium text-gray-400 leading-relaxed">New users may be eligible for a 7-day free trial with no credit card required. Free trials are limited to one per person and may not be combined with other offers.</p>
+                                            <p className="text-xs font-black text-brand-500 uppercase tracking-widest mb-4">4.2 Access Period</p>
+                                            <p className="text-xs font-medium text-gray-400 leading-relaxed">New users may be eligible for a 7-day access period with no credit card required. Access periods are limited to one per person and may not be combined with other offers.</p>
                                         </div>
                                     </div>
                                     <div className="p-8 rounded-3xl bg-brand-500/5 border border-brand-500/10">

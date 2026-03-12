@@ -8,15 +8,15 @@ const TrialProcessSection = () => {
             <div className="max-w-4xl mx-auto">
                 <SectionHeader
                     label="Process"
-                    title="The 7-Day Free Trial How It Works"
-                    description="Every new subscriber starts with a 7-day free trial. Here is exactly what happens:"
+                    title="How Your 7-Day Access Works"
+                    description="Every new subscriber starts with a 7-day access period. Here is exactly what happens:"
                     align="center"
                     className="mb-20"
                 />
 
                 <div className="space-y-6">
                     {[
-                        { title: "No credit card required", desc: "You sign up with just your email address. We do not ask for payment information during the free trial." },
+                        { title: "No credit card required", desc: "You sign up with just your email address. We do not ask for payment information during your 7-day access period." },
                         { title: "Full access from day one", desc: "Your trial includes everything in your chosen plan live signals, app access, performance dashboard, and education library." },
                         { title: "Signals start within 24 hours", desc: "You receive your first live signal on the next market trading day after signup." },
                         { title: "7 calendar days", desc: "The trial runs for exactly 7 days from your signup date and time." },
@@ -38,7 +38,7 @@ const TrialProcessSection = () => {
 
                 <div className="flex justify-center mt-16">
                     <Button href="/free-trial" variant="primary" className="px-12 h-16 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl">
-                        Start Free Trial
+                        Get Access Now
                     </Button>
                 </div>
             </div>

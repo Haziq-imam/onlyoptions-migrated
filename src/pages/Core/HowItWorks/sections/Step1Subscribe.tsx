@@ -91,7 +91,7 @@ const Step1Subscribe = () => {
                         </ul>
                         <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-4">
                             <a href="/free-trial" className="text-brand-400 font-bold hover:text-brand-300 transition-colors flex items-center gap-2">
-                                Start free trial <ArrowRight className="w-4 h-4" />
+                                Get access now <ArrowRight className="w-4 h-4" />
                             </a>
                             <a href="/blog" className="text-gray-400 font-bold hover:text-white transition-colors flex items-center gap-2">
                                 Best brokers guide <ArrowRight className="w-4 h-4" />

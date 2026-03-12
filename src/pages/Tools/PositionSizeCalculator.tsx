@@ -30,7 +30,7 @@ const linksData = [
     { title: "Risk management guide", path: "/options-signals-risk-management" },
     { title: "Position sizing guide", path: "/options-signals-position-sizing" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Free trial", path: "/free-trial" },
+    { title: "Get access", path: "/free-trial" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "Risk disclaimer", path: "/risk-disclaimer" },
     { title: "0DTE strategy", path: "/0dte-options-strategy-complete-guide" },

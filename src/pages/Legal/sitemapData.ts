@@ -28,7 +28,7 @@ export const sitemapData = [
                     { name: "What Are Trading Signals", path: "/what-are-options-trading-signals" },
                     { name: "How to Read Signals", path: "/how-to-read-options-signals" },
                     { name: "Best Services 2026", path: "/best-options-signals-services-2026" },
-                    { name: "Free vs Paid Signals", path: "/free-options-signals-vs-paid" },
+                    { name: "Unpaid vs Paid Signals", path: "/free-options-signals-vs-paid" },
                     { name: "Options Discord Servers", path: "/options-discord-servers-list" },
                     { name: "Telegram Alerts", path: "/options-telegram-alerts" },
                     { name: "SMS Alerts", path: "/options-sms-alerts" },
@@ -180,7 +180,7 @@ export const sitemapData = [
                 links: [
                     { name: "Service Comparison", path: "/best-options-signals-services-comparison-2026" },
                     { name: "Pricing Comparison", path: "/options-signals-pricing-comparison" },
-                    { name: "Free vs Paid", path: "/free-vs-paid-options-signals" },
+                    { name: "Unpaid vs Paid", path: "/free-vs-paid-options-signals" },
                     { name: "Discord vs Telegram", path: "/discord-vs-telegram-options-alerts" },
                     { name: "Signals vs Courses", path: "/options-signals-vs-trading-course" },
                     { name: "Cheap Signals (<$100)", path: "/best-cheap-options-signals-under-100" },

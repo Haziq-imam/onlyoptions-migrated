@@ -25,7 +25,7 @@ const TestimonialsGrid = () => {
             name: "Diana S.",
             location: "Phoenix, AZ",
             role: "Pro Member since September 2023",
-            text: "I was skeptical of options signal services after a bad experience elsewhere. What made me try OnlyOptions was the public Performance Dashboard — I spent two weeks reading through historical signals before subscribing. When I finally started the free trial, the quality was exactly what the record promised. SMS delivery on the Pro plan has been essential for me. I am in meetings during market hours and the text arrives before I even see the push notification."
+            text: "I was skeptical of options signal services after a bad experience elsewhere. What made me try OnlyOptions was the public Performance Dashboard — I spent two weeks reading through historical signals before subscribing. When I finally started the access period, the quality was exactly what the record promised. SMS delivery on the Pro plan has been essential for me. I am in meetings during market hours and the text arrives before I even see the push notification."
         },
         {
             name: "Carlos M.",

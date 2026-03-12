@@ -492,7 +492,7 @@ const RefundPolicy: React.FC = () => {
                                         { s: 'Trading losses', val: 'Ineligible', ok: false },
                                         { s: '8+ days elapsed', val: 'Ineligible', ok: false },
                                         { s: 'Duplicate charges', val: 'Eligible', ok: true },
-                                        { s: 'Free Trial use', val: 'Eligible (w/ 7d)', ok: true },
+                                        { s: 'Access Period use', val: 'Eligible (w/ 7d)', ok: true },
                                         { s: 'Account violations', val: 'Ineligible', ok: false },
                                     ].map((item, i) => (
                                         <div key={i} className="p-6 rounded-2xl bg-white/[0.01] border border-white/5 flex flex-col gap-3">

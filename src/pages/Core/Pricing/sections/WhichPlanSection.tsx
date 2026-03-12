@@ -10,7 +10,7 @@ const WhichPlanSection = () => {
                 <SectionHeader
                     label="Guide"
                     title="Which Plan Is Right for You?"
-                    description="Start with the Basic plan free trial if you are unsure. You can upgrade to Pro or Annual at any time."
+                    description="Start with the Basic plan if you are unsure. You can upgrade to Pro or Annual at any time."
                     align="center"
                     className="mb-20"
                 />
@@ -47,7 +47,7 @@ const WhichPlanSection = () => {
                     </Table>
                 </Card>
                 <p className="mt-8 text-[11px] text-gray-500 text-center font-medium">
-                    Not sure? Start with the Basic plan free trial. You can upgrade to Pro or Annual at any time from your account dashboard.
+                    Not sure? Start with the Basic plan. You can upgrade to Pro or Annual at any time from your account dashboard.
                 </p>
             </div>
         </StandardSection>

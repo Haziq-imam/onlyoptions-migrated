@@ -18,7 +18,7 @@ const HowItWorks = () => {
       <HeroSection
         title={<>How OnlyOptions <br /><span className="text-brand-500">Works</span></>}
         subtitle="You do not need to read charts, calculate Greeks, or spot patterns. Our FINRA-licensed analysts do all the analysis. You receive a clear, specific alert ready to execute in under 60 seconds."
-        primaryCtaText="Start Free Trial"
+        primaryCtaText="Get Access Now"
         primaryCtaLink="/signup"
         image={appMockup}
         badgeText="From Signal to Profit in 4 Steps"
@@ -76,7 +76,7 @@ const HowItWorks = () => {
       {/* Bottom CTA */}
       <StandardCTA
         title="Ready to Put This Into Practice?"
-        subtitle="Join 1,247 traders receiving daily signals with a verified 70.3% win rate. Start your 7-day free trial—no credit card required."
+        subtitle="Join 1,247 traders receiving daily signals with a verified 70.3% win rate. Get instant access — no credit card required."
       />
     </div>
   );

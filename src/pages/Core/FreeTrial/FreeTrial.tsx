@@ -15,8 +15,8 @@ const FreeTrial = () => {
   const schemaOffer = {
     "@context": "https://schema.org",
     "@type": "Offer",
-    "name": "OnlyOptions.us 7-Day Free Trial",
-    "description": "7-day free trial of professional options trading signals with no credit card required",
+    "name": "OnlyOptions.us 7-Day Access",
+    "description": "7-day access to professional options trading signals with no credit card required",
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
@@ -44,7 +44,7 @@ const FreeTrial = () => {
     },
     {
       q: "Can I trial multiple plans?",
-      a: "No. The free trial gives you Basic plan access ($60/month tier)."
+      a: "No. The access period gives you Basic plan access ($60/month tier)."
     },
     {
       q: "What if I want to subscribe before the 7 days end?",
@@ -59,16 +59,16 @@ const FreeTrial = () => {
       a: "If you do not subscribe, Discord access is revoked automatically when the trial expires."
     },
     {
-      q: "Can I use the free trial if I previously subscribed and cancelled?",
-      a: "No. Free trials are for new members only."
+      q: "Can I use the access period if I previously subscribed and cancelled?",
+      a: "No. Initial access periods are for new members only."
     },
     {
       q: "Do I get the 7-day money-back guarantee on top of the trial?",
       a: "Yes. If you subscribe after your trial, you still get our standard 7-day money-back guarantee from the date of your first payment."
     },
     {
-      q: "Can I refer friends for another free trial?",
-      a: "Yes. Each person gets only one trial per email address."
+      q: "Can I refer friends for another access period?",
+      a: "Yes. Each person gets only one access period per email address."
     }
   ];
 
@@ -88,8 +88,8 @@ const FreeTrial = () => {
   return (
     <div className="bg-black">
       <Helmet>
-        <title>Start Free 7-Day Trial | Options Signals | OnlyOptions.us</title>
-        <meta name="description" content="Get 7 days of professional options signals free. No credit card required. Full access to SPY, QQQ, NVDA signals + performance dashboard + Discord. Cancel anytime." />
+        <title>Get 7-Day Access | Options Signals | OnlyOptions.us</title>
+        <meta name="description" content="Get 7 days of professional options signals with no credit card required. Full access to SPY, QQQ, NVDA signals + performance dashboard + Discord. Cancel anytime." />
         <script type="application/ld+json">{JSON.stringify(schemaOffer)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
@@ -143,8 +143,8 @@ const FreeTrial = () => {
 
       <StandardCTA
         title="Ready to See What 1,247 Members Already Know?"
-        subtitle="Join the traders who are already profiting with OnlyOptions.us. Start your free 7-day trial now — no credit card, no commitment, no risk."
-        buttonText="START YOUR FREE TRIAL NOW"
+        subtitle="Join the traders who are already profiting with OnlyOptions.us. Get instant access — no credit card, no commitment, no risk."
+        buttonText="GET ACCESS NOW — NO CREDIT CARD"
       />
 
       <div className="bg-black pb-24 text-center">
