@@ -8,6 +8,22 @@ import Button from "../../components/ui/Button/Button";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "../../components/ui/Table/Table";
 import { FiAlertCircle, FiTrendingUp, FiCheckCircle, FiPieChart, FiInfo, FiTrendingDown, FiTarget, FiZap } from "react-icons/fi";
 
+const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
+    return (
+        <details className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-white uppercase tracking-wider text-sm transition-colors hover:bg-white/[0.02]">
+                {question}
+                <span className="text-brand-500 transition-transform group-open:rotate-180">
+                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div className="p-6 pt-0 text-gray-400 text-sm leading-relaxed">
+                {answer}
+            </div>
+        </details>
+    );
+};
+
 const faqData = [
     { q: "Does breakeven change as the option price changes?", a: "No. Breakeven is set when you enter the trade. It equals your strike plus the premium you paid (for calls) or strike minus premium (for puts). It does not change even if the option price rises or falls." },
     { q: "Do I include commissions in the breakeven calculation?", a: "The calculator shows pure breakeven (strike + premium). To account for commissions, add them to premium. Example: $2.40 premium + $1.30 round-trip commission = $2.53 effective premium. Real breakeven: $575 + $2.53 = $577.53." },
@@ -485,20 +501,10 @@ export default function OptionsBreakevenCalculator() {
 
                     {/* FAQ */}
                     <section>
-                        <SectionHeader title="Breakeven Calculator — FAQ" align="left" className="mb-8" />
+                        <SectionHeader label="Knowledge Base" title={<>Breakeven Calculator <span className="text-brand-500">FAQ</span></>} align="center" className="mb-20" />
                         <div className="space-y-4">
                             {faqData.map((faq, i) => (
-                                <details key={i} className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                                    <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-white uppercase tracking-wider text-sm transition-colors hover:bg-white/[0.02]">
-                                        {faq.q}
-                                        <span className="text-brand-500 transition-transform group-open:rotate-180">
-                                            <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                                        </span>
-                                    </summary>
-                                    <div className="p-6 pt-0 text-gray-400 text-sm leading-relaxed border-t border-white/5 mt-4 pt-6">
-                                        {faq.a}
-                                    </div>
-                                </details>
+                                <FaqItem key={i} question={faq.q} answer={faq.a} />
                             ))}
                         </div>
                     </section>

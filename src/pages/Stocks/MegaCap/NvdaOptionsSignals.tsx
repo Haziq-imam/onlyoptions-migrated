@@ -50,17 +50,17 @@ const NvdaOptionsSignals = () => {
                 </div>
 
                 {/* Key Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 mb-24 py-8 border-y border-white/5 bg-white/[0.02]">
                     {[
                         { label: "Win Rate", value: "66.1%" },
                         { label: "Avg Winner", value: "+112%" },
                         { label: "R/R Ratio", value: "2.9:1" },
                         { label: "Beta", value: "1.8" }
                     ].map((stat, i) => (
-                        <Card key={i} variant="glass" className="p-6 text-center border-white/5 bg-gray-950/40 hover:border-brand-500/30 transition-all">
-                            <h4 className="text-brand-500 font-black mb-2 text-2xl tracking-tight">{stat.value}</h4>
+                        <div key={i} className="text-center">
+                            <h4 className="text-brand-500 font-black mb-1 text-2xl tracking-tight">{stat.value}</h4>
                             <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">{stat.label}</p>
-                        </Card>
+                        </div>
                     ))}
                 </div>
             </StandardSection>
@@ -377,17 +377,17 @@ const NvdaOptionsSignals = () => {
                     <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-500 mb-8">Trading Ecosystem</p>
                     <div className="flex flex-wrap gap-3 justify-center">
                          {[
-                             { n: "SPY Signals", p: "/spy-options-signals" },
-                             { n: "QQQ Signals", p: "/qqq-options-signals" },
-                             { n: "Earnings Strategies", p: "/options-earnings-plays-strategy" },
-                             { n: "Understanding IV", p: "/understanding-implied-volatility-options" },
-                             { n: "Risk Management", p: "/options-signals-risk-management" },
-                             { n: "Position Sizing", p: "/position-sizing-guide-options" },
-                             { n: "Options Greeks", p: "/options-greeks-explained" },
-                             { n: "Performance", p: "/performance" }
+                             { title: "SPY Signals", path: "/spy-options-signals" },
+                             { title: "QQQ Signals", path: "/qqq-options-signals" },
+                             { title: "Earnings Strategies", path: "/options-earnings-plays-strategy" },
+                             { title: "Understanding IV", path: "/understanding-implied-volatility-options" },
+                             { title: "Risk Management", path: "/options-signals-risk-management" },
+                             { title: "Position Sizing", path: "/position-sizing-guide-options" },
+                             { title: "Options Greeks", path: "/options-greeks-explained" },
+                             { title: "Performance", path: "/performance" }
                          ].map((link, i) => (
-                             <Link key={i} to={link.p} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all">
-                                 {link.n}
+                             <Link key={i} to={link.path} className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all uppercase tracking-widest">
+                                 {link.title}
                              </Link>
                          ))}
                     </div>

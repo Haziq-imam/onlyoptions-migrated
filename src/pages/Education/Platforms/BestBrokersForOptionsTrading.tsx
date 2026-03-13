@@ -11,13 +11,13 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '.
 const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
     return (
         <details className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-            <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-white uppercase tracking-wider text-sm">
+            <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-white uppercase tracking-wider text-sm transition-colors hover:bg-white/[0.02]">
                 {question}
                 <span className="text-brand-500 transition-transform group-open:rotate-180">
                     <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                 </span>
             </summary>
-            <div className="p-6 pt-0 text-gray-400 text-sm leading-relaxed whitespace-pre-line">
+            <div className="p-6 pt-0 text-gray-400 text-sm leading-relaxed whitespace-pre-line border-t border-white/5 mt-4 pt-6">
                 {answer}
             </div>
         </details>
@@ -581,7 +581,7 @@ const BestBrokersForOptionsTrading = () => {
                         <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-500 mb-8 text-center">Resources</p>
                         <div className="flex flex-wrap gap-3 justify-center">
                             {linksData.map((link, i) => (
-                                <Link key={i} to={link.path} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all">
+                                <Link key={i} to={link.path} className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all uppercase tracking-widest">
                                     {link.title}
                                 </Link>
                             ))}

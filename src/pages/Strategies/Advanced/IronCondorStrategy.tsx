@@ -43,17 +43,17 @@ const IronCondorStrategy = () => {
                     className="mb-12"
                 />
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 mb-20 py-8 border-y border-white/5 bg-white/[0.02]">
                     {[
                         { label: "Win Rate", value: "71.4%" },
                         { label: "Avg Monthly Income", value: "+4.2%" },
                         { label: "Trade Structure", value: "4 Legs" },
                         { label: "Ideal Expiration", value: "30-45 DTE" }
                     ].map((stat, i) => (
-                        <Card key={i} variant="glass" className="p-6 text-center border-white/5 bg-gray-950/40 hover:border-brand-500/30 transition-all">
-                            <h4 className="text-brand-500 font-black mb-2 text-2xl tracking-tight">{stat.value}</h4>
+                        <div key={i} className="text-center">
+                            <h4 className="text-brand-500 font-black mb-1 text-2xl tracking-tight">{stat.value}</h4>
                             <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">{stat.label}</p>
-                        </Card>
+                        </div>
                     ))}
                 </div>
 
@@ -647,17 +647,17 @@ const IronCondorStrategy = () => {
                         <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-500 mb-8">Related Strategy Guides</p>
                         <div className="flex flex-wrap gap-3 justify-center">
                             {[
-                                { n: "Credit Spreads", p: "/strategies/credit-spreads" },
-                                { n: "Butterfly Spreads", p: "/strategies/butterfly-spreads" },
-                                { n: "Calendar Spreads", p: "/strategies/calendar-spreads" },
-                                { n: "Ratio Spreads", p: "/strategies/ratio-spreads" },
-                                { n: "Options Greeks", p: "/options-greeks-explained" },
-                                { n: "Implied Volatility", p: "/understanding-implied-volatility" },
-                                { n: "Position Sizing", p: "/position-sizing-guide-options" },
-                                { n: "Performance", p: "/performance" }
+                                { title: "Credit Spreads", path: "/strategies/credit-spreads" },
+                                { title: "Butterfly Spreads", path: "/strategies/butterfly-spreads" },
+                                { title: "Calendar Spreads", path: "/strategies/calendar-spreads" },
+                                { title: "Ratio Spreads", path: "/strategies/ratio-spreads" },
+                                { title: "Options Greeks", path: "/options-greeks-explained" },
+                                { title: "Implied Volatility", path: "/understanding-implied-volatility" },
+                                { title: "Position Sizing", path: "/position-sizing-guide-options" },
+                                { title: "Performance", path: "/performance" }
                             ].map((link, i) => (
-                                <Link key={i} to={link.p} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all">
-                                    {link.n}
+                                <Link key={i} to={link.path} className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all uppercase tracking-widest">
+                                    {link.title}
                                 </Link>
                             ))}
                         </div>

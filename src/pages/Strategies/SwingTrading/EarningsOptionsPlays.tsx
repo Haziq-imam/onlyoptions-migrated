@@ -549,17 +549,17 @@ const EarningsOptionsPlays = () => {
                     <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-500 mb-8">Related Resources</p>
                     <div className="flex flex-wrap gap-3 justify-center">
                          {[
-                             { n: "Performance Dashboard", p: "/performance" },
-                             { n: "Understanding IV", p: "/implied-volatility-explained" },
-                             { n: "Options Calculator", p: "/options-profit-calculator" },
-                             { n: "NVDA Earnings Play", p: "/nvda-earnings-guide" },
-                             { n: "META Earnings Guide", p: "/meta-earnings-guide" },
-                             { n: "AAPL Strategy", p: "/aapl-earnings-guide" },
-                             { n: "Swing Trading Guide", p: "/weekly-options-swing-trading" },
-                             { n: "Risk Disclaimer", p: "/risk-disclaimer" }
+                             { title: "Performance Dashboard", path: "/performance" },
+                             { title: "Understanding IV", path: "/implied-volatility-explained" },
+                             { title: "Options Calculator", path: "/options-profit-calculator" },
+                             { title: "NVDA Earnings Play", path: "/nvda-earnings-guide" },
+                             { title: "META Earnings Guide", path: "/meta-earnings-guide" },
+                             { title: "AAPL Strategy", path: "/aapl-earnings-guide" },
+                             { title: "Swing Trading Guide", path: "/weekly-options-swing-trading" },
+                             { title: "Risk Disclaimer", path: "/risk-disclaimer" }
                          ].map((link, i) => (
-                             <Link key={i} to={link.p} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all">
-                                 {link.n}
+                             <Link key={i} to={link.path} className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all uppercase tracking-widest">
+                                 {link.title}
                              </Link>
                          ))}
                     </div>
