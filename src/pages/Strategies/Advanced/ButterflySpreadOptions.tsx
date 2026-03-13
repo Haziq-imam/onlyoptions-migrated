@@ -8,6 +8,22 @@ import { Card } from '../../../components/ui/Card/Card';
 import StandardCTA from '../../../components/ui/CTA/StandardCTA';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '../../../components/ui/Table/Table';
 
+const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
+    return (
+        <details className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-white uppercase tracking-wider text-sm">
+                {question}
+                <span className="text-brand-500 transition-transform group-open:rotate-180">
+                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                </span>
+            </summary>
+            <div className="p-6 pt-0 text-gray-400 text-sm leading-relaxed">
+                {answer}
+            </div>
+        </details>
+    );
+};
+
 const ButterflySpreadOptions = () => {
     return (
         <div className="bg-black min-h-screen text-white pt-20">
@@ -544,6 +560,42 @@ const ButterflySpreadOptions = () => {
                 <div className="mt-20 pt-10 border-t border-white/5 text-center text-xs text-gray-600 max-w-4xl mx-auto space-y-4">
                     <p className="font-bold uppercase tracking-widest">Find the Pin. Place the Butterfly. Collect the Win.</p>
                     <p>DISCLAIMER: Options trading involves substantial risk of loss. Butterfly spreads can result in loss of the full debit paid. Iron butterflies carry risk of loss up to the spread width minus credit received. Past performance does not guarantee future results. OnlyOptions signals are for educational purposes only. Always consult a qualified financial advisor before trading.</p>
+                </div>
+
+                {/* FAQ */}
+                <div className="max-w-4xl mx-auto py-24">
+                    <SectionHeader label="Knowledge Base" title="Butterfly Spreads FAQ" align="center" className="mb-20" />
+                    <div className="space-y-4">
+                        {[
+                            { q: "What is the maximum risk of a butterfly spread?", a: "For a long butterfly (call or put), the maximum risk is the net debit paid upfront. For an iron butterfly, the maximum risk is the width of the spread minus the credit received." },
+                            { q: "Should I hold a butterfly until expiration?", a: "No. The 'pin' is very hard to hit exactly at the closing bell. We recommend exiting when the spread reaches 50-70% of its maximum potential profit, typically on the Thursday or early Friday of expiration week." },
+                            { q: "What happens if the stock moves past my 'wings'?", a: "The spread will lose value. If the stock is far above or below your wings at expiration, the butterfly will expire worthless, resulting in a loss of the full debit paid." },
+                            { q: "Why use butterflies instead of Iron Condors?", a: "Butterflies have a much higher potential return on risk (reward-to-risk ratio). While iron condors have a higher win rate, a single winning butterfly can offset many small losses." }
+                        ].map((faq, i) => (
+                            <FaqItem key={i} question={faq.q} answer={faq.a} />
+                        ))}
+                    </div>
+                </div>
+
+                {/* Internal Links Grid */}
+                <div className="max-w-6xl mx-auto py-20 border-t border-white/5 text-center">
+                    <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-500 mb-8">Related Strategy Guides</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                        {[
+                            { n: "Credit Spreads", p: "/strategies/credit-spreads" },
+                            { n: "Iron Condors", p: "/strategies/iron-condor" },
+                            { n: "Calendar Spreads", p: "/strategies/calendar-spread-strategy" },
+                            { n: "0DTE Strategy", p: "/strategies/0dte-options-trading" },
+                            { n: "Options Greeks", p: "/options-greeks-explained" },
+                            { n: "Implied Volatility", p: "/understanding-implied-volatility" },
+                            { n: "Earnings Trading", p: "/strategies/earnings-trading" },
+                            { n: "Performance", p: "/performance" }
+                        ].map((link, i) => (
+                            <Link key={i} to={link.p} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all">
+                                {link.n}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </StandardSection>
 

@@ -30,7 +30,15 @@ import OptionsSignalsForBeginners from './pages/Education/Signals/OptionsSignals
 import OptionsSignalsRiskManagement from './pages/Education/Signals/OptionsSignalsRiskManagement';
 import BestBrokersForOptionsTrading from './pages/Education/Platforms/BestBrokersForOptionsTrading';
 import Page0dteOptionsStrategyCompleteGuide from './pages/Strategies/DayTrading/Page0dteOptionsStrategyCompleteGuide';
+import CreditSpreadsStrategy from './pages/Strategies/Advanced/CreditSpreadsStrategy';
 import ButterflySpreadOptions from './pages/Strategies/Advanced/ButterflySpreadOptions';
+import RatioSpreadOptions from './pages/Strategies/Advanced/RatioSpreadOptions';
+import CalendarSpreadStrategy from './pages/Strategies/Advanced/CalendarSpreadStrategy';
+import ProtectivePutStrategy from './pages/Strategies/Advanced/ProtectivePutStrategy';
+import CoveredCallStrategy from './pages/Strategies/Advanced/CoveredCallStrategy';
+import IronCondorStrategy from './pages/Strategies/Advanced/IronCondorStrategy';
+import EarningsOptionsPlays from './pages/Strategies/SwingTrading/EarningsOptionsPlays';
+import NvdaOptionsSignals from './pages/Stocks/MegaCap/NvdaOptionsSignals';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -69,7 +77,15 @@ function App() {
           <Route path="/options-signals-risk-management" element={<OptionsSignalsRiskManagement />} />
           <Route path="/best-brokers-for-options-trading" element={<BestBrokersForOptionsTrading />} />
           <Route path="/0dte-options-strategy-complete-guide" element={<Page0dteOptionsStrategyCompleteGuide />} />
+          <Route path="/credit-spreads-strategy" element={<CreditSpreadsStrategy />} />
           <Route path="/butterfly-spread-options" element={<ButterflySpreadOptions />} />
+          <Route path="/ratio-spread-options" element={<RatioSpreadOptions />} />
+          <Route path="/calendar-spread-strategy" element={<CalendarSpreadStrategy />} />
+          <Route path="/protective-put-strategy" element={<ProtectivePutStrategy />} />
+          <Route path="/covered-call-strategy" element={<CoveredCallStrategy />} />
+          <Route path="/iron-condor-strategy" element={<IronCondorStrategy />} />
+          <Route path="/strategies/earnings-trading" element={<EarningsOptionsPlays />} />
+          <Route path="/nvda-options-signals" element={<NvdaOptionsSignals />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />

@@ -18,9 +18,17 @@ const DynamicPages = () => {
         '/options-signals-risk-management',
         '/best-brokers-for-options-trading',
         '/0dte-options-strategy-complete-guide',
+        '/credit-spreads-strategy',
         '/roi-calculator',
         '/breakeven-calculator',
-        '/butterfly-spread-options'
+        '/butterfly-spread-options',
+        '/ratio-spread-options',
+        '/calendar-spread-strategy',
+        '/protective-put-strategy',
+        '/covered-call-strategy',
+        '/iron-condor-strategy',
+        '/strategies/earnings-trading',
+        '/nvda-options-signals'
     ];
 
     if (excludedPaths.includes(currentPath)) {

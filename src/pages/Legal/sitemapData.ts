@@ -87,7 +87,7 @@ export const sitemapData = [
                 links: [
                     { name: "Weekly Swing Trading", path: "/weekly-options-swing-trading" },
                     { name: "Monthly Strategy", path: "/monthly-options-strategy" },
-                    { name: "Earnings Plays", path: "/earnings-options-plays" },
+                    { name: "Earnings Plays", path: "/strategies/earnings-trading" },
                     { name: "Fed Announcement", path: "/fed-announcement-options-strategy" },
                     { name: "Economic Data Trading", path: "/economic-data-options-trading" },
                     { name: "Support & Resistance", path: "/support-resistance-options" },
