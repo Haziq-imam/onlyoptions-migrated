@@ -36,7 +36,7 @@ const StandardCTA: React.FC<StandardCTAProps> = ({
                     <Button
                         href="/free-trial"
                         variant="secondary"
-                        className="w-full max-w-md px-8 md:px-12 h-16 md:h-20 rounded-2xl font-black text-sm md:text-base uppercase tracking-widest shadow-2xl bg-black text-white hover:bg-black/90 border-none"
+                        className="w-full max-w-md px-4 md:px-12 h-auto min-h-[4rem] md:h-20 py-3 md:py-0 rounded-2xl font-black text-xs sm:text-sm md:text-base uppercase tracking-wider sm:tracking-widest shadow-2xl bg-black text-white hover:bg-black/90 border-none whitespace-normal text-center flex-col sm:flex-row leading-snug"
                     >
                         {buttonText}
                     </Button>

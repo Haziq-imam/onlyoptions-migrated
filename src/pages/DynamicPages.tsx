@@ -19,7 +19,8 @@ const DynamicPages = () => {
         '/best-brokers-for-options-trading',
         '/0dte-options-strategy-complete-guide',
         '/roi-calculator',
-        '/breakeven-calculator'
+        '/breakeven-calculator',
+        '/butterfly-spread-options'
     ];
 
     if (excludedPaths.includes(currentPath)) {

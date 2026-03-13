@@ -30,6 +30,7 @@ import OptionsSignalsForBeginners from './pages/Education/Signals/OptionsSignals
 import OptionsSignalsRiskManagement from './pages/Education/Signals/OptionsSignalsRiskManagement';
 import BestBrokersForOptionsTrading from './pages/Education/Platforms/BestBrokersForOptionsTrading';
 import Page0dteOptionsStrategyCompleteGuide from './pages/Strategies/DayTrading/Page0dteOptionsStrategyCompleteGuide';
+import ButterflySpreadOptions from './pages/Strategies/Advanced/ButterflySpreadOptions';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
           <Route path="/options-signals-risk-management" element={<OptionsSignalsRiskManagement />} />
           <Route path="/best-brokers-for-options-trading" element={<BestBrokersForOptionsTrading />} />
           <Route path="/0dte-options-strategy-complete-guide" element={<Page0dteOptionsStrategyCompleteGuide />} />
+          <Route path="/butterfly-spread-options" element={<ButterflySpreadOptions />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />
