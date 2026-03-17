@@ -28,10 +28,40 @@ const DynamicPages = () => {
         '/covered-call-strategy',
         '/iron-condor-strategy',
         '/strategies/earnings-trading',
-        '/nvda-options-signals'
+        '/nvda-options-signals',
+        '/aapl-options-signals',
+        '/tsla-options-trading-guide',
+        '/msft-options-strategy',
+        '/msft-options-signals',
+        '/amzn-options-trading',
+        '/amzn-options-signals',
+        '/meta-options-trading',
+        '/meta-options-signals',
+        '/googl-options-signals',
+        '/amd-options-signals',
+        '/nflx-options-strategy',
+        '/nflx-options-signals',
+        '/iwm-options-signals',
+        '/iwm-qqq-coin-pltr-options-signals',
+        '/options-trading-101',
+        '/spy-options-signals',
+        '/spy-options-trading-guide',
+        '/spy-0dte-strategy',
+        '/qqq-options-signals',
+        '/qqq-options-trading-strategy',
+        '/qqq-0dte-trading',
+        '/how-to-get-approved-for-options-trading',
+        '/position-sizing-guide-options',
+        '/options-signals-position-sizing',
+        '/understanding-options-premium-pricing',
+        '/options-premium-explained'
     ];
 
-    if (excludedPaths.includes(currentPath)) {
+    // Normalize path by removing trailing slash for matching
+    const normalizedPath = currentPath.replace(/\/$/, "");
+    const pathToMatch = normalizedPath === "" ? "/" : normalizedPath;
+
+    if (excludedPaths.includes(pathToMatch)) {
         return null; // Let the specific Route handle it
     }
 
@@ -41,7 +71,11 @@ const DynamicPages = () => {
 
     for (const cat of sitemapData) {
         for (const section of cat.sections) {
-            const link = section.links.find(l => l.path === currentPath);
+            const link = section.links.find(l => {
+                const normalizedLinkPath = l.path.replace(/\/$/, "");
+                const linkPathToMatch = normalizedLinkPath === "" ? "/" : normalizedLinkPath;
+                return linkPathToMatch === pathToMatch;
+            });
             if (link) {
                 foundLink = link;
                 foundCategory = section.title;

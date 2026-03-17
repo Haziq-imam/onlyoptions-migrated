@@ -39,6 +39,21 @@ import CoveredCallStrategy from './pages/Strategies/Advanced/CoveredCallStrategy
 import IronCondorStrategy from './pages/Strategies/Advanced/IronCondorStrategy';
 import EarningsOptionsPlays from './pages/Strategies/SwingTrading/EarningsOptionsPlays';
 import NvdaOptionsSignals from './pages/Stocks/MegaCap/NvdaOptionsSignals';
+import AaplOptionsSignals from './pages/Stocks/MegaCap/AaplOptionsSignals';
+import TslaOptionsTradingGuide from './pages/Stocks/MegaCap/TslaOptionsTradingGuide';
+import MsftOptionsStrategy from './pages/Stocks/MegaCap/MsftOptionsStrategy';
+import AmznOptionsTrading from './pages/Stocks/MegaCap/AmznOptionsTrading';
+import MetaOptionsTrading from './pages/Stocks/MegaCap/MetaOptionsTrading';
+import GooglOptionsSignals from './pages/Stocks/MegaCap/GooglOptionsSignals';
+import AmdOptionsSignals from './pages/Stocks/MegaCap/AmdOptionsSignals';
+import NflxOptionsStrategy from './pages/Stocks/MegaCap/NflxOptionsStrategy';
+import IwmOptionsSignals from './pages/Stocks/Indices/IwmOptionsSignals';
+import OptionsTrading101 from './pages/Education/Basics/OptionsTrading101';
+import HowToGetApprovedForOptionsTrading from './pages/Education/Platforms/HowToGetApprovedForOptionsTrading';
+import OptionsSignalsPositionSizing from './pages/Education/Signals/OptionsSignalsPositionSizing';
+import OptionsPremiumExplained from './pages/Education/Basics/OptionsPremiumExplained';
+import Spy0dteStrategy from './pages/Strategies/DayTrading/Spy0dteStrategy';
+import Qqq0dteTrading from './pages/Strategies/DayTrading/Qqq0dteTrading';
 import DynamicPages from './pages/DynamicPages';
 
 function App() {
@@ -86,6 +101,32 @@ function App() {
           <Route path="/iron-condor-strategy" element={<IronCondorStrategy />} />
           <Route path="/strategies/earnings-trading" element={<EarningsOptionsPlays />} />
           <Route path="/nvda-options-signals" element={<NvdaOptionsSignals />} />
+          <Route path="/aapl-options-signals" element={<AaplOptionsSignals />} />
+          <Route path="/tsla-options-trading-guide" element={<TslaOptionsTradingGuide />} />
+          <Route path="/msft-options-strategy" element={<MsftOptionsStrategy />} />
+          <Route path="/msft-options-signals" element={<MsftOptionsStrategy />} />
+          <Route path="/amzn-options-trading" element={<AmznOptionsTrading />} />
+          <Route path="/amzn-options-signals" element={<AmznOptionsTrading />} />
+          <Route path="/meta-options-trading" element={<MetaOptionsTrading />} />
+          <Route path="/meta-options-signals" element={<MetaOptionsTrading />} />
+          <Route path="/googl-options-signals" element={<GooglOptionsSignals />} />
+          <Route path="/amd-options-signals" element={<AmdOptionsSignals />} />
+          <Route path="/nflx-options-strategy" element={<NflxOptionsStrategy />} />
+          <Route path="/nflx-options-signals" element={<NflxOptionsStrategy />} />
+          <Route path="/iwm-options-signals" element={<IwmOptionsSignals />} />
+          <Route path="/iwm-qqq-coin-pltr-options-signals" element={<IwmOptionsSignals />} />
+          <Route path="/options-trading-101" element={<OptionsTrading101 />} />
+          <Route path="/spy-options-signals" element={<Spy0dteStrategy />} />
+          <Route path="/spy-options-trading-guide" element={<Spy0dteStrategy />} />
+          <Route path="/spy-0dte-strategy" element={<Spy0dteStrategy />} />
+          <Route path="/qqq-options-signals" element={<Qqq0dteTrading />} />
+          <Route path="/qqq-options-trading-strategy" element={<Qqq0dteTrading />} />
+          <Route path="/qqq-0dte-trading" element={<Qqq0dteTrading />} />
+          <Route path="/how-to-get-approved-for-options-trading" element={<HowToGetApprovedForOptionsTrading />} />
+          <Route path="/position-sizing-guide-options" element={<OptionsSignalsPositionSizing />} />
+          <Route path="/options-signals-position-sizing" element={<OptionsSignalsPositionSizing />} />
+          <Route path="/understanding-options-premium-pricing" element={<OptionsPremiumExplained />} />
+          <Route path="/options-premium-explained" element={<OptionsPremiumExplained />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />
