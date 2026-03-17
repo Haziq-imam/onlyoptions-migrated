@@ -19,6 +19,7 @@ const DynamicPages = () => {
         '/best-brokers-for-options-trading',
         '/0dte-options-strategy-complete-guide',
         '/credit-spreads-strategy',
+        '/debit-spreads-guide',
         '/roi-calculator',
         '/breakeven-calculator',
         '/butterfly-spread-options',
@@ -54,7 +55,12 @@ const DynamicPages = () => {
         '/position-sizing-guide-options',
         '/options-signals-position-sizing',
         '/understanding-options-premium-pricing',
-        '/options-premium-explained'
+        '/options-premium-explained',
+        '/common-options-trading-mistakes',
+        '/understanding-implied-volatility-options',
+        '/implied-volatility-explained',
+        '/how-to-read-options-chain',
+        '/how-to-read-options-chains'
     ];
 
     // Normalize path by removing trailing slash for matching

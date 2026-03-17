@@ -31,6 +31,7 @@ import OptionsSignalsRiskManagement from './pages/Education/Signals/OptionsSigna
 import BestBrokersForOptionsTrading from './pages/Education/Platforms/BestBrokersForOptionsTrading';
 import Page0dteOptionsStrategyCompleteGuide from './pages/Strategies/DayTrading/Page0dteOptionsStrategyCompleteGuide';
 import CreditSpreadsStrategy from './pages/Strategies/Advanced/CreditSpreadsStrategy';
+import DebitSpreadsGuide from './pages/Strategies/Advanced/DebitSpreadsGuide';
 import ButterflySpreadOptions from './pages/Strategies/Advanced/ButterflySpreadOptions';
 import RatioSpreadOptions from './pages/Strategies/Advanced/RatioSpreadOptions';
 import CalendarSpreadStrategy from './pages/Strategies/Advanced/CalendarSpreadStrategy';
@@ -52,6 +53,9 @@ import OptionsTrading101 from './pages/Education/Basics/OptionsTrading101';
 import HowToGetApprovedForOptionsTrading from './pages/Education/Platforms/HowToGetApprovedForOptionsTrading';
 import OptionsSignalsPositionSizing from './pages/Education/Signals/OptionsSignalsPositionSizing';
 import OptionsPremiumExplained from './pages/Education/Basics/OptionsPremiumExplained';
+import CommonOptionsTradingMistakes from './pages/Education/Basics/CommonOptionsTradingMistakes';
+import ImpliedVolatilityExplained from './pages/Education/Basics/ImpliedVolatilityExplained';
+import HowToReadOptionsChains from './pages/Education/Basics/HowToReadOptionsChains';
 import Spy0dteStrategy from './pages/Strategies/DayTrading/Spy0dteStrategy';
 import Qqq0dteTrading from './pages/Strategies/DayTrading/Qqq0dteTrading';
 import DynamicPages from './pages/DynamicPages';
@@ -99,6 +103,7 @@ function App() {
           <Route path="/protective-put-strategy" element={<ProtectivePutStrategy />} />
           <Route path="/covered-call-strategy" element={<CoveredCallStrategy />} />
           <Route path="/iron-condor-strategy" element={<IronCondorStrategy />} />
+          <Route path="/debit-spreads-guide" element={<DebitSpreadsGuide />} />
           <Route path="/strategies/earnings-trading" element={<EarningsOptionsPlays />} />
           <Route path="/nvda-options-signals" element={<NvdaOptionsSignals />} />
           <Route path="/aapl-options-signals" element={<AaplOptionsSignals />} />
@@ -127,6 +132,11 @@ function App() {
           <Route path="/options-signals-position-sizing" element={<OptionsSignalsPositionSizing />} />
           <Route path="/understanding-options-premium-pricing" element={<OptionsPremiumExplained />} />
           <Route path="/options-premium-explained" element={<OptionsPremiumExplained />} />
+          <Route path="/common-options-trading-mistakes" element={<CommonOptionsTradingMistakes />} />
+          <Route path="/understanding-implied-volatility-options" element={<ImpliedVolatilityExplained />} />
+          <Route path="/implied-volatility-explained" element={<ImpliedVolatilityExplained />} />
+          <Route path="/how-to-read-options-chain" element={<HowToReadOptionsChains />} />
+          <Route path="/how-to-read-options-chains" element={<HowToReadOptionsChains />} />
 
           {/* Smart catch-all for placeholder pages */}
           <Route path="*" element={<DynamicPages />} />
