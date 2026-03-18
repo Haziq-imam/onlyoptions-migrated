@@ -85,6 +85,7 @@ function App() {
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/risk-disclaimer" element={<RiskDisclaimer />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/affiliate-program" element={<AffiliateProgram />} />

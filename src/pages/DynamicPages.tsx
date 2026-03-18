@@ -12,6 +12,7 @@ const DynamicPages = () => {
         '/sitemap',
         '/terms-of-service',
         '/privacy-policy',
+        '/privacy',
         '/risk-disclaimer',
         '/refund-policy',
         '/options-signals-for-beginners',
