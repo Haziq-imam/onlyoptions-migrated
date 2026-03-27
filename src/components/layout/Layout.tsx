@@ -166,7 +166,7 @@ const Layout = () => {
                                 <h5 className="font-black text-white uppercase tracking-[0.2em] text-[10px]">Legal</h5>
                                 <ul className="space-y-4 text-xs font-bold text-gray-500">
                                     <li><a href="/terms-of-service" className="hover:text-brand-400 transition-colors">Terms</a></li>
-                                    <li><a href="/privacy-policy" className="hover:text-brand-400 transition-colors">Privacy</a></li>
+                                    <li><a href="/privacy" className="hover:text-brand-400 transition-colors">Privacy</a></li>
                                     <li><a href="/risk-disclaimer" className="hover:text-brand-400 transition-colors">Risks</a></li>
                                     <li><a href="/refund-policy" className="hover:text-brand-400 transition-colors">Refunds</a></li>
                                     <li><a href="/sitemap" className="hover:text-white transition-colors underline decoration-brand-500/50 underline-offset-4">Sitemap</a></li>

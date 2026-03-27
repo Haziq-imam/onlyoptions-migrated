@@ -232,7 +232,7 @@ export const sitemapData = [
                 title: "Information",
                 links: [
                     { name: "Terms of Service", path: "/terms-of-service" },
-                    { name: "Privacy Policy", path: "/privacy-policy" },
+                    { name: "Privacy Policy", path: "/privacy" },
                     { name: "Risk Disclaimer", path: "/risk-disclaimer" },
                     { name: "Refund Policy", path: "/refund-policy" },
                     { name: "Affiliate Program", path: "/affiliate-program" },
