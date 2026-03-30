@@ -34,7 +34,7 @@ const StandardCTA: React.FC<StandardCTAProps> = ({
 
                 <div className="flex flex-col items-center gap-6 md:gap-8">
                     <Button
-                        href="/membership"
+                        onClick={() => window.dispatchEvent(new CustomEvent('open-app-modal'))}
                         variant="secondary"
                         className="w-full max-w-md px-4 md:px-12 h-auto min-h-[4rem] md:h-20 py-3 md:py-0 rounded-2xl font-black text-xs sm:text-sm md:text-base uppercase tracking-wider sm:tracking-widest shadow-2xl bg-black text-white hover:bg-black/90 border-none whitespace-normal text-center flex-col sm:flex-row leading-snug"
                     >

@@ -41,7 +41,11 @@ const PricingCardsSection = () => {
                         </ul>
 
                         <div className="mt-auto w-full">
-                            <Button href="/membership" variant="secondary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <Button 
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-app-modal'))}
+                                variant="secondary" 
+                                className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all"
+                            >
                                 Get Access
                             </Button>
                         </div>
@@ -81,7 +85,11 @@ const PricingCardsSection = () => {
                         </ul>
 
                         <div className="mt-auto w-full">
-                            <Button href="/membership" variant="primary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest shadow-[0_20px_40px_rgba(32,109,254,0.3)]">
+                            <Button 
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-app-modal'))}
+                                variant="primary" 
+                                className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest shadow-[0_20px_40px_rgba(32,109,254,0.3)]"
+                            >
                                 Get Pro Access
                             </Button>
                         </div>
@@ -117,7 +125,11 @@ const PricingCardsSection = () => {
                         </ul>
 
                         <div className="mt-auto w-full">
-                            <Button href="/membership" variant="secondary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <Button 
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-app-modal'))}
+                                variant="secondary" 
+                                className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all"
+                            >
                                 Get Annual Plan
                             </Button>
                         </div>

@@ -11,10 +11,7 @@ import HowItWorks from './pages/Core/HowItWorks/HowItWorks';
 import Testimonials from './pages/Core/Testimonials/Testimonials';
 import Faq from './pages/Core/Faq/Faq';
 import Contact from './pages/Core/Contact/Contact';
-import Signup from './pages/Core/Signup/Signup';
-import Login from './pages/Core/Login/Login';
 import Blog from './pages/Core/Blog/Blog';
-import FreeTrial from './pages/Core/FreeTrial/FreeTrial';
 
 import Sitemap from './pages/Legal/Sitemap';
 import TermsOfService from './pages/Legal/TermsOfService';
@@ -78,10 +75,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/membership" element={<FreeTrial />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

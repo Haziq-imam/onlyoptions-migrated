@@ -3,10 +3,36 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import Button from '../ui/Button/Button';
 import { Menu, X } from 'lucide-react';
+import DownloadAppModal from '../ui/AppRedirect/DownloadAppModal';
+
+const triggerAppStoreAction = (openModal: () => void) => {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    const iosUrl = "https://apps.apple.com/us/app/onlyoptions-options-signals/id6760183640";
+    const androidUrl = "https://play.google.com/store/apps/details?id=co.diy.xaohx&pcampaignid=web_share";
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+        window.location.href = iosUrl;
+    } else if (/android/i.test(userAgent)) {
+        window.location.href = androidUrl;
+    } else {
+        openModal();
+    }
+};
 
 const Layout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const location = useLocation();
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
+    // Provide a global way to open the modal (optional but handy)
+    useEffect(() => {
+        const handleEvent = () => triggerAppStoreAction(openModal);
+        window.addEventListener('open-app-modal', handleEvent);
+        return () => window.removeEventListener('open-app-modal', handleEvent);
+    }, []);
 
     // Close menu when route changes
     useEffect(() => {
@@ -64,8 +90,11 @@ const Layout = () => {
                     </nav>
 
                     <div className="flex items-center gap-2 md:gap-4 shrink-0">
-                        <a href="/login" className="text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-brand-400 transition-colors hidden md:block whitespace-nowrap">Log In</a>
-                        <Button href="/membership" size="sm" className="px-4 md:px-6 py-2 rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow whitespace-nowrap">
+                        <Button 
+                            onClick={() => triggerAppStoreAction(openModal)}
+                            size="sm" 
+                            className="px-4 md:px-6 py-2 rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow whitespace-nowrap"
+                        >
                             <span className="relative z-10">Get Access</span>
                         </Button>
                         <button
@@ -91,13 +120,6 @@ const Layout = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <a
-                                href="/login"
-                                className="text-white hover:text-brand-400 transition-colors md:hidden py-2 border-b border-white/5"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Log In
-                            </a>
                         </nav>
                     </div>
                 </div>
@@ -208,6 +230,8 @@ const Layout = () => {
                     </div>
                 </div>
             </footer>
+
+            <DownloadAppModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 };
