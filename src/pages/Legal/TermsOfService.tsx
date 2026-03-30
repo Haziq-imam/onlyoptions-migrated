@@ -285,7 +285,7 @@ const TermsOfService: React.FC = () => {
                                         </div>
                                         <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
                                             <p className="text-xs font-black text-brand-500 uppercase tracking-widest mb-4">4.2 Access Period</p>
-                                            <p className="text-xs font-medium text-gray-400 leading-relaxed">New users may be eligible for a 7-day access period with no credit card required. Access periods are limited to one per person and may not be combined with other offers.</p>
+                                            <p className="text-xs font-medium text-gray-400 leading-relaxed">New users may be eligible for a Premium Membership with Full Flexibility. Access periods are limited to one per person and may not be combined with other offers.</p>
                                         </div>
                                     </div>
                                     <div className="p-8 rounded-3xl bg-brand-500/5 border border-brand-500/10">

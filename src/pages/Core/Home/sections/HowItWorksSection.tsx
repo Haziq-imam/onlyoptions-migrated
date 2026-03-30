@@ -5,7 +5,7 @@ import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 import { Card } from '../../../../components/ui/Card/Card';
 
 const steps = [
-    { icon: <MdDownload className="w-6 h-6 text-brand-500" />, num: '01', title: 'Create your account', desc: 'Choose a plan and complete signup in under 60 seconds. No credit card required for the 7-day access period.' },
+    { icon: <MdDownload className="w-6 h-6 text-brand-500" />, num: '01', title: 'Create your account', desc: 'Choose a plan and complete signup in under 60 seconds. Satisfaction Guarantee with our Premium Membership.' },
     { icon: <MdDownload className="w-6 h-6 text-brand-500" />, num: '02', title: 'Download the OnlyOptions app', desc: 'Available on the Apple App Store (iOS) and Google Play Store (Android). You will receive a link in your confirmation email.' },
     { icon: <MdNotificationsActive className="w-6 h-6 text-brand-500" />, num: '03', title: 'Enable push notifications', desc: 'Turn on notifications for the app so signals reach you the instant they are sent. Pro plan members can also opt in to SMS delivery.' },
     { icon: <MdSignalCellularAlt className="w-6 h-6 text-brand-500" />, num: '04', title: 'Receive the signal', desc: 'Each alert shows ticker, option type, strike price, expiry, entry range, profit target, stop-loss, and the full analyst rationale. Everything you need is in the notification.' },

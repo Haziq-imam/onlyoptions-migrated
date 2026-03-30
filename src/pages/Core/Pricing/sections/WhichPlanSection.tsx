@@ -35,7 +35,7 @@ const WhichPlanSection = () => {
                                 },
                                 {
                                     tier: "Annual $600/year",
-                                    desc: "Confident in the service after your trial or first month and want to lock in the lowest per-month rate ($50/month). Prefer one annual payment over monthly billing. Want to guarantee your current price for 12 months regardless of any future price changes."
+                                    desc: "Confident in the service and want to lock in the lowest per-month rate ($50/month) based on consistent performance. Prefer one annual payment over monthly billing. Want to guarantee your current price for 12 months regardless of any future price changes."
                                 }
                             ].map((item, i) => (
                                 <TableRow key={i}>

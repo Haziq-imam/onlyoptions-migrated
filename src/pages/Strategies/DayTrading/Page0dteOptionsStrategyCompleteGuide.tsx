@@ -30,7 +30,7 @@ const linksData = [
     { title: "Risk management", path: "/options-signals-risk-management" },
     { title: "Position sizing", path: "/position-size-calculator" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Get access", path: "/free-trial" },
+    { title: "Get Access", path: "/membership" },
     { title: "Performance", path: "/performance" },
     { title: "Best brokers", path: "/best-brokers-for-options-trading" },
     { title: "Beginners guide", path: "/options-signals-for-beginners" },

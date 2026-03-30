@@ -449,7 +449,7 @@ const Spy0dteStrategy = () => {
                             { title: "Best Brokers", path: "/best-brokers-for-options-trading" },
                             { title: "Beginner Guide", path: "/options-signals-for-beginners" },
                             { title: "How It Works", path: "/how-it-works" },
-                            { title: "Free Trial", path: "/free-trial" }
+                            { title: "Membership", path: "/membership" }
                         ].map((link, i) => (
                             <Link key={i} to={link.path} className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all uppercase tracking-widest">
                                 {link.title}

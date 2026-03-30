@@ -11,14 +11,14 @@ const WhatYouGetTable = () => {
         { item: "Trade Follow-Ups", meaning: "Exit alerts, partial profit recommendations, stop-loss adjustments during active trades" },
         { item: "Post-Trade Analysis", meaning: "Detailed debrief on every closed signal — what worked, what didn't, lessons learned" },
         { item: "Mobile Notifications", meaning: "Discord push alerts to your phone — never miss a signal" },
-        { item: "Email Support", meaning: "24-hour response time for all trial members (same as paid)" },
+        { item: "Email Support", meaning: "24-hour response time for all members" },
     ];
 
     return (
         <div className="space-y-12">
             <SectionHeader
-                title="Full Access to Everything — No Restrictions, No Limitations"
-                description="Your 7-day trial includes every feature of our $60/month Basic plan with zero restrictions. You get the exact same experience as paying members."
+                title="Full Access to Everything — Professional Signaling Infrastructure"
+                description="Your Premium Membership includes every feature of our $60/month Basic plan. Experience our professional signaling infrastructure with complete access to all member resources."
                 align="left"
             />
 
@@ -26,7 +26,7 @@ const WhatYouGetTable = () => {
                 <Table>
                     <TableHeader>
                         <TableRow>
-                            <TableHead>Included in Your Access Period</TableHead>
+                            <TableHead>Member Privileges</TableHead>
                             <TableHead>What This Means</TableHead>
                         </TableRow>
                     </TableHeader>
@@ -42,12 +42,12 @@ const WhatYouGetTable = () => {
             </Card>
 
             <Card variant="glass" className="p-8 border-brand-500/20 bg-brand-500/5 mt-8">
-                <h4 className="text-white font-black mb-4 uppercase tracking-wider text-sm">What This Would Cost Without the Trial</h4>
+                <h4 className="text-white font-black mb-4 uppercase tracking-wider text-sm">The Value of Your Membership</h4>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                    7 days of professional signals = <span className="text-white font-bold">$14 value</span> (pro-rated from $60/month).
+                    7 days of professional signals = <span className="text-white font-bold">Included</span> ($14 pro-rated value).
                     Education library access = <span className="text-white font-bold">$97 value</span> (typical course price).
                     Performance dashboard transparency = <span className="text-brand-400 font-bold uppercase tracking-tighter">priceless</span>.
-                    <span className="block mt-2 text-brand-400 font-black">Total value: $100+ free.</span>
+                    <span className="block mt-2 text-brand-400 font-black">Total value: $100+ included in your initial membership access.</span>
                 </p>
             </Card>
         </div>

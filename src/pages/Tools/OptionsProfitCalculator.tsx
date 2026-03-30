@@ -32,7 +32,7 @@ const linksData = [
     { title: "Risk-reward calculator", path: "/risk-reward-calculator" },
     { title: "Win rate calculator", path: "/win-rate-calculator" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Get access", path: "/free-trial" },
+    { title: "Get Access", path: "/membership" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "Risk management", path: "/options-signals-risk-management" },
     { title: "Best brokers", path: "/best-brokers-for-options-trading" },
@@ -419,7 +419,7 @@ export default function OptionsProfitCalculator() {
                     {/* FINAL CTA */}
                     <div className="mt-16 text-center">
                         <p className="text-gray-400 text-sm font-bold uppercase tracking-widest mb-6">Options Profit Calculator — know your numbers before you trade</p>
-                        <Button href="/free-trial" size="lg" className="px-10 h-14 rounded-xl font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.2)]">
+                        <Button href="/membership" size="lg" className="px-10 h-14 rounded-xl font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.2)]">
                             Get Real Options Signals
                         </Button>
                     </div>

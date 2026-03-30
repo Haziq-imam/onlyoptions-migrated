@@ -29,7 +29,7 @@ const OptionsTrading101 = () => {
         <div className="bg-black min-h-screen text-white pt-20">
             <Helmet>
                 <title>Options Trading 101: Complete Beginner's Guide | OnlyOptions</title>
-                <meta name="description" content="Learn options trading from scratch. Understand calls, puts, strikes, expiration, how options work, and how to start trading. Free comprehensive guide for beginners." />
+                <meta name="description" content="Learn options trading from scratch. Understand calls, puts, strikes, expiration, how options work, and how to start trading. Comprehensive guide for beginners." />
                 <link rel="canonical" href="https://onlyoptions.us/options-trading-101" />
             </Helmet>
 
@@ -315,7 +315,7 @@ const OptionsTrading101 = () => {
                         <p className="text-gray-300 text-sm leading-relaxed mb-6">
                             Get 2-4 professional options signals daily with exact entry, target, and stop-loss metrics. Our verified 70.3% win rate provides a proven foundational edge while you learn.
                         </p>
-                        <Link to="/free-trial" className="px-6 py-3 bg-brand-500 text-black font-black uppercase tracking-widest text-xs rounded-xl hover:bg-brand-400 transition-colors inline-block text-center border border-brand-400/50">
+                        <Link to="/membership" className="px-6 py-3 bg-brand-500 text-black font-black uppercase tracking-widest text-xs rounded-xl hover:bg-brand-400 transition-colors inline-block text-center border border-brand-400/50">
                             Start Learning Now
                         </Link>
                     </Card>
@@ -349,7 +349,7 @@ const OptionsTrading101 = () => {
                             { title: "Position Size Calculator", path: "/position-size-calculator" },
                             { title: "Greeks Explained", path: "/options-greeks-explained" },
                             { title: "SPY Signals", path: "/spy-options-signals" },
-                            { title: "Get Access", path: "/free-trial" },
+                            { title: "Get Access", path: "/membership" },
                             { title: "How It Works", path: "/how-it-works" },
                             { title: "Best Brokers", path: "/best-brokers-for-options-trading" },
                             { title: "Options Approval", path: "/how-to-get-approved-for-options-trading" },

@@ -7,9 +7,9 @@ const TrialProcessSteps = () => {
     const steps = [
         {
             number: "01",
-            title: "Enter Your Email",
-            badge: "No Credit Card Required",
-            description: "Click \"Get Access Now\" above and enter your email address. That is it. No payment method. No credit card verification. No auto-billing after 7 days unless you choose to subscribe.",
+            title: "Instant Activation",
+            badge: "Flexible Membership",
+            description: "Click \"Get Access Now\" above and join our community immediately. We provide institutional platform access with complete transparency, allowing you to experience our signals first-hand.",
             image: step1Img,
             alt: "Signup Form"
         },

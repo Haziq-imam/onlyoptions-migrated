@@ -6,8 +6,8 @@ const Step1Subscribe = () => {
     return (
         <div className="space-y-12">
             <SectionHeader
-                title="Step 1: Subscribe & Join Discord in 5 Minutes"
-                description="After subscribing, an automated welcome email arrives within 60 seconds with your private Discord invite link. Click it, log in or create a free Discord account, and you are inside. The whole process takes under five minutes."
+                title="Step 1: Join & Access Our Infrastructure"
+                description="Upon starting your membership, an automated welcome email arrives with your private Discord access link. Connect your account to enter our professional environment immediately. The whole process takes under five minutes."
                 align="left"
             />
 
@@ -90,7 +90,7 @@ const Step1Subscribe = () => {
                             </li>
                         </ul>
                         <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-4">
-                            <a href="/free-trial" className="text-brand-400 font-bold hover:text-brand-300 transition-colors flex items-center gap-2">
+                            <a href="/membership" className="text-brand-400 font-bold hover:text-brand-300 transition-colors flex items-center gap-2">
                                 Get access now <ArrowRight className="w-4 h-4" />
                             </a>
                             <a href="/blog" className="text-gray-400 font-bold hover:text-white transition-colors flex items-center gap-2">

@@ -81,7 +81,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/free-trial" element={<FreeTrial />} />
+          <Route path="/membership" element={<FreeTrial />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

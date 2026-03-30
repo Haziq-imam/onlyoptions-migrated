@@ -30,7 +30,7 @@ const linksData = [
     { title: "Risk management guide", path: "/options-signals-risk-management" },
     { title: "Position sizing guide", path: "/options-signals-position-sizing" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Get access", path: "/free-trial" },
+    { title: "Get Access", path: "/membership" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "Risk disclaimer", path: "/risk-disclaimer" },
     { title: "0DTE strategy", path: "/0dte-options-strategy-complete-guide" },
@@ -480,7 +480,7 @@ export default function PositionSizeCalculator() {
                     {/* FINAL CTA */}
                     <div className="mt-16 text-center">
                         <p className="text-gray-400 text-sm font-bold uppercase tracking-widest mb-6">Position Size Calculator - protect your capital, trade professionally</p>
-                        <Button href="/free-trial" size="lg" className="px-10 h-14 rounded-xl font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.2)]">
+                        <Button href="/membership" size="lg" className="px-10 h-14 rounded-xl font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.2)]">
                             Get Professional Options Signals
                         </Button>
                     </div>

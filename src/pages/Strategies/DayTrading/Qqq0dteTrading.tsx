@@ -421,7 +421,7 @@ const Qqq0dteTrading = () => {
                         {[
                             { title: "Options 101", path: "/options-trading-101" },
                             { title: "How it works", path: "/how-it-works" },
-                            { title: "Free trial", path: "/free-trial" },
+                            { title: "Membership", path: "/membership" },
                             { title: "Performance", path: "/performance" },
                             { title: "Greeks explained", path: "/options-greeks-explained" },
                             { title: "0DTE Strategy", path: "/0dte-options-strategy-complete-guide" },

@@ -23,8 +23,8 @@ const PricingHeroSection = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {[
-                            { text: '7-Day Access', sub: 'No credit card' },
-                            { text: 'Cancel Anytime', sub: 'No hidden fees' },
+                            { text: 'Premium Membership', sub: 'Institutional Access' },
+                            { text: 'Full Flexibility', sub: 'No hidden fees' },
                             { text: '1,247+ Active Members', sub: '70.3% win rate' },
                             { text: 'Verified Trades', sub: 'Full history logs' }
                         ].map((item, i) => (

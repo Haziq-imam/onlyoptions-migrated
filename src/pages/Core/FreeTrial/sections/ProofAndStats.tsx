@@ -5,10 +5,10 @@ import { Star } from 'lucide-react';
 
 const ProofAndStats = () => {
     const stats = [
-        { metric: "Trial-to-Paid Conversion", result: "68% — more than 2 out of 3 trial members subscribe within 7 days" },
-        { metric: "Average Subscription Day", result: "Day 4.2 — most members subscribe before the trial ends" },
+        { metric: "Evaluation-to-Paid Conversion", result: "68% — more than 2 out of 3 evaluation members subscribe within 7 days" },
+        { metric: "Average Subscription Day", result: "Day 4.2 — most members subscribe before the evaluation ends" },
         { metric: "Reason for Subscribing", result: "#1: Verified track record (89%). #2: Community quality (71%). #3: Signal accuracy (68%)." },
-        { metric: "Trial Members Who Execute Trades", result: "82% execute at least one signal during trial. 34% execute all signals." },
+        { metric: "Evaluation Members Who Execute Trades", result: "82% execute at least one signal during evaluation. 34% execute all signals." },
         { metric: "First-Year Retention Rate", result: "87% (industry avg: 40–50%)" },
     ];
 
@@ -42,14 +42,14 @@ const ProofAndStats = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-8">
                     <SectionHeader
-                        title="Why We Offer a No-Credit-Card Access Period"
+                        title="Why We Offer an Institutional Access Period"
                         description="Because We Have Nothing to Hide"
                         align="left"
                     />
                     <div className="space-y-6 text-gray-400 text-sm leading-relaxed">
-                        <p>Most options signals services hide behind paywalls, fake testimonials, and cherry-picked results. We are different. We want you to verify our track record, watch our signals in real time, and experience our community before paying.</p>
-                        <p><span className="text-white font-black uppercase tracking-widest text-[10px]">Our bet:</span> If you spend 7 days seeing our 70.3% win rate in action, reading our signal rationale, and interacting with 1,200+ real members in Discord, you will subscribe. If we are wrong — if our service is not a good fit — you walk away having learned something valuable for free.</p>
-                        <p><span className="text-white font-black uppercase tracking-widest text-[10px]">Industry reality:</span> Services that require credit cards upfront are betting you will forget to cancel. We do not play that game. Our conversion rate from trial to paid (68%) proves our value speaks for itself.</p>
+                        <p>Most options signals services hide behind paywalls, fake testimonials, and cherry-picked results. We are different. We want you to verify our track record, watch our signals in real time, and experience our community before any fixed commitment.</p>
+                        <p><span className="text-white font-black uppercase tracking-widest text-[10px]">Our bet:</span> If you spend 7 days seeing our 70.3% win rate in action, reading our signal rationale, and interacting with 1,200+ real members in Discord, you will subscribe. If we are wrong — if our service is not a good fit — you walk away having learned something valuable.</p>
+                        <p><span className="text-white font-black uppercase tracking-widest text-[10px]">Industry reality:</span> Services that require upfront payments before access are betting you will forget to cancel. We do not play that game. Our conversion rate from evaluation to paid (68%) proves our value speaks for itself.</p>
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@ const ProofAndStats = () => {
                             </TableBody>
                         </Table>
                     </Card>
-                    <p className="text-[10px] text-gray-500 uppercase tracking-widest italic font-bold">*Statistics based on 2,847 trial signups from Jan 2023 to Jan 2026.</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-widest italic font-bold">*Statistics based on 2,847 evaluation signups from Jan 2023 to Jan 2026.</p>
                 </div>
             </div>
 

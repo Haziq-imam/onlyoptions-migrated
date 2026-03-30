@@ -15,8 +15,8 @@ interface StandardCTAProps {
 
 const StandardCTA: React.FC<StandardCTAProps> = ({
     title = "Join OnlyOptions Today",
-    subtitle = "No credit card. No auto-charge. Full access to live signals from day one.",
-    buttonText = "Get Instant Access — No Credit Card",
+    subtitle = "Experience the most innovative options signaling platform. Full premium membership features included immediately.",
+    buttonText = "Join OnlyOptions Premium",
     showTrustSignals = true,
     className
 }) => {
@@ -34,7 +34,7 @@ const StandardCTA: React.FC<StandardCTAProps> = ({
 
                 <div className="flex flex-col items-center gap-6 md:gap-8">
                     <Button
-                        href="/free-trial"
+                        href="/membership"
                         variant="secondary"
                         className="w-full max-w-md px-4 md:px-12 h-auto min-h-[4rem] md:h-20 py-3 md:py-0 rounded-2xl font-black text-xs sm:text-sm md:text-base uppercase tracking-wider sm:tracking-widest shadow-2xl bg-black text-white hover:bg-black/90 border-none whitespace-normal text-center flex-col sm:flex-row leading-snug"
                     >
@@ -48,8 +48,8 @@ const StandardCTA: React.FC<StandardCTAProps> = ({
                             {[
                                 "1,247+ active members",
                                 "70.3% win rate",
-                                "Cancel anytime",
-                                "7-day money-back guarantee"
+                                "Flexible Membership",
+                                "Satisfaction Guarantee"
                             ].map((text, i) => (
                                 <div key={i} className="flex items-center gap-2 text-black/100 font-black text-[11px] md:text-[12px] uppercase tracking-widest">
                                     <Check className="w-3 h-3" /> {text}

@@ -29,7 +29,7 @@ const linksData = [
     { title: "Risk-reward calculator", path: "/risk-reward-calculator" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Get access", path: "/free-trial" },
+    { title: "Get Access", path: "/membership" },
     { title: "Greeks explained", path: "/options-greeks-explained" },
     { title: "0DTE strategy", path: "/0dte-options-strategy-complete-guide" },
     { title: "Beginners guide", path: "/options-signals-for-beginners" },

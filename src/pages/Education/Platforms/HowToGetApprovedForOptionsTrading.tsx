@@ -310,7 +310,7 @@ const HowToGetApprovedForOptionsTrading = () => {
                             { title: "Best Brokers", path: "/best-brokers-for-options-trading" },
                             { title: "Beginner Guide", path: "/options-signals-for-beginners" },
                             { title: "How it works", path: "/how-it-works" },
-                            { title: "Free trial", path: "/free-trial" },
+                            { title: "Membership", path: "/membership" },
                             { title: "Risk Management", path: "/options-signals-risk-management" },
                             { title: "SPY Signals", path: "/spy-options-signals" },
                             { title: "QQQ Signals", path: "/qqq-options-signals" },

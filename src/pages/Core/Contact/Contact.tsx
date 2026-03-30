@@ -55,7 +55,7 @@ const Contact = () => {
         subtitle="Whether you have a question about a signal, your account, or the service in general — we respond to every message. Use the guide below to reach the right team for your question."
         badgeText="Support Center"
         primaryCtaText="Get Access Now"
-        primaryCtaLink="/free-trial"
+        primaryCtaLink="/membership"
       />
 
       <StandardSection spacing="lg" divider="bottom">
@@ -128,8 +128,8 @@ const Contact = () => {
 
       <StandardCTA
         title="Join OnlyOptions Today"
-        subtitle="No credit card. No auto-charge. Full signal access from day one."
-        buttonText="Get Access Now — No Credit Card Required"
+        subtitle="Institutional access. No upfront obligation. Full signals from day one."
+        buttonText="Get Access Now — Instant Activation"
       />
     </div>
   );

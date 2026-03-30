@@ -150,19 +150,19 @@ export const faqData: FAQCategory[] = [
         items: [
             {
                 question: "Q31. How much does OnlyOptions cost?",
-                answer: "Basic plan: $60 per month. Pro plan: $99 per month. Annual plan: $600 per year (equivalent to $50 per month — all Pro features included). All plans start with a 7-day access period with no credit card required."
+                answer: "Basic plan: $60 per month. Pro plan: $99 per month. Annual plan: $600 per year (equivalent to $50 per month — all Pro features included). All plans provide full Premium Access with flexible membership options."
             },
             {
-                question: "Q32. What is included in the 7-day access period?",
-                answer: "The 7-day access period includes full access to everything in your chosen plan — live signals via the app, the performance dashboard, the education library, and all plan-specific features. No credit card is required. We do not auto-charge at the end — you must actively choose to subscribe by entering payment details."
+                question: "Q32. What is included in the Premium Membership?",
+                answer: "The Premium Membership includes full access to everything in your chosen plan — live signals via the app, the performance dashboard, the education library, and all plan-specific features. Access is activated immediately upon joining. You have full control over your membership status at all times."
             },
             {
-                question: "Q33. Can I cancel anytime?",
-                answer: "Yes. Cancel at any time from your account dashboard or by emailing support@onlyoptions.us. No cancellation fees. Access continues until the end of your current billing period. Monthly subscribers retain access for the remainder of the month they paid for. Annual subscribers retain access for the remainder of their annual period."
+                question: "Q33. Is the membership flexible?",
+                answer: "Yes. You can manage your membership preferences at any time from your account dashboard or by emailing support@onlyoptions.us. There are no exit fees. Access continues until the end of your current billing period. Monthly members retain access for the remainder of the month. Annual members retain access for the remainder of their annual period."
             },
             {
                 question: "Q34. Is there a money-back guarantee?",
-                answer: "Yes. New subscribers receive a 7-day money-back guarantee on their first payment. If you are not satisfied within 7 days of your first charge, email support@onlyoptions.us for a full refund — no conditions. This applies to the first payment only. The 7-day access period (no credit card required) also gives you full access before any payment is made."
+                answer: "Yes. All new memberships include a 100% Satisfaction Guarantee. If you are not fully satisfied within the first 7 days of your membership, simply email support@onlyoptions.us for a full refund — no questions asked. This applies to your initial term. Our flexible membership structure ensures you can evaluate the service with complete peace of mind."
             },
             {
                 question: "Q35. What is the difference between Basic and Pro?",
@@ -170,7 +170,7 @@ export const faqData: FAQCategory[] = [
             },
             {
                 question: "Q36. Is the Annual plan worth it?",
-                answer: "The Annual plan costs $600/year ($50/month equivalent) — $120 less than 12 months of Pro monthly ($99 × 12 = $1,188). It includes all Pro features. If you plan to subscribe for 12 or more months, the Annual plan saves $588 compared to Basic monthly or $588 compared to Pro monthly over the year. We recommend starting with a monthly plan after the trial and upgrading to Annual once you are satisfied with the service."
+                answer: "The Annual plan costs $600/year ($50/month equivalent) — $120 less than 12 months of Pro monthly ($99 × 12 = $1,188). It includes all Pro features. If you plan to use the service for 12 or more months, the Annual plan saves $588 compared to Basic monthly or $588 compared to Pro monthly over the year. We recommend starting with a monthly plan and upgrading to Annual once you have experienced the performance of the service."
             },
             {
                 question: "Q37. Can I upgrade or downgrade my plan?",

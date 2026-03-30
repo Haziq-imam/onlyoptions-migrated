@@ -15,12 +15,12 @@ const FreeTrial = () => {
   const schemaOffer = {
     "@context": "https://schema.org",
     "@type": "Offer",
-    "name": "OnlyOptions.us 7-Day Access",
-    "description": "7-day access to professional options trading signals with no credit card required",
+    "name": "OnlyOptions.us Premium Membership",
+    "description": "Premium Membership to professional options trading signals with flexible membership options",
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "url": "https://onlyoptions.us/free-trial",
+    "url": "https://onlyoptions.us/membership-access",
     "validFrom": "2023-01-01",
     "seller": {
       "@type": "Organization",
@@ -35,40 +35,40 @@ const FreeTrial = () => {
 
   const faqs = [
     {
-      q: "Why do you not require a credit card for the trial?",
-      a: "Because we do not need to. Services that require payment details upfront are relying on friction (people forgetting to cancel) to convert trials. We convert trials by delivering obvious value."
+      q: "How do I start my membership evaluation?",
+      a: "Getting started is simple. We provide immediate access using our institutional evaluation model. We believe our service delivers obvious value from day one, allowing you to experience our signals with complete confidence."
     },
     {
-      q: "Will I be auto-charged after 7 days?",
-      a: "No. Your trial expires and access ends automatically. You must manually subscribe to continue."
+      q: "How is billing handled?",
+      a: "We prioritize transparency. No automatic charges occur without your explicit selection of a subscription plan. You have full control over when to activate your long-term membership status."
     },
     {
-      q: "Can I trial multiple plans?",
-      a: "No. The access period gives you Basic plan access ($60/month tier)."
+      q: "What access do I receive initially?",
+      a: "You receive full Basic Plan access ($60/month tier) during your initial membership evaluation period."
     },
     {
-      q: "What if I want to subscribe before the 7 days end?",
-      a: "Great! Click the subscribe link in your welcome email or visit onlyoptions.us/pricing. Your trial access converts to paid immediately."
+      q: "What if I want to select a plan before 7 days?",
+      a: "Great! You can upgrade your status at any time by visiting onlyoptions.us/pricing or through the link in your welcome communication. Your chosen plan will activate immediately."
     },
     {
-      q: "Can I get a trial extension?",
-      a: "No. Seven days is sufficient to evaluate signal quality, verify our track record, and experience the community."
+      q: "Is the 7-day period sufficient?",
+      a: "Yes. Seven days provides ample time to evaluate our signal quality, verify our track record, and experience the performance of the service."
     },
     {
-      q: "What happens to my Discord access after the trial?",
-      a: "If you do not subscribe, Discord access is revoked automatically when the trial expires."
+      q: "What happens to my access if I do not select a plan?",
+      a: "If you do not choose to extend your membership, your access will expire automatically at the end of the evaluation period with no further obligation."
     },
     {
-      q: "Can I use the access period if I previously subscribed and cancelled?",
-      a: "No. Initial access periods are for new members only."
+      q: "Is this available if I have held a membership before?",
+      a: "Initial evaluation periods are reserved for new members to experience the platform for the first time."
     },
     {
-      q: "Do I get the 7-day money-back guarantee on top of the trial?",
-      a: "Yes. If you subscribe after your trial, you still get our standard 7-day money-back guarantee from the date of your first payment."
+      q: "Do I get a money-back guarantee?",
+      a: "Yes. All new memberships include our standard 7-day Satisfaction Guarantee from the date of your first subscription payment."
     },
     {
-      q: "Can I refer friends for another access period?",
-      a: "Yes. Each person gets only one access period per email address."
+      q: "Can I refer others to the platform?",
+      a: "Absolutely. We encourage sharing the performance of OnlyOptions with fellow traders."
     }
   ];
 
@@ -88,8 +88,8 @@ const FreeTrial = () => {
   return (
     <div className="bg-black">
       <Helmet>
-        <title>Get 7-Day Access | Options Signals | OnlyOptions.us</title>
-        <meta name="description" content="Get 7 days of professional options signals with no credit card required. Full access to SPY, QQQ, NVDA signals + performance dashboard + Discord. Cancel anytime." />
+        <title>Join OnlyOptions Premium | Professional Options Signals</title>
+        <meta name="description" content="Experience professional options signals with full access to SPY, QQQ, and NVDA alerts. Includes performance dashboard and real-time alerts with flexible membership options." />
         <script type="application/ld+json">{JSON.stringify(schemaOffer)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
@@ -107,34 +107,34 @@ const FreeTrial = () => {
           <div className="pt-20">
             <Card variant="glass" className="p-12 border-brand-500/20 bg-brand-500/5 relative overflow-hidden text-center max-w-4xl mx-auto">
               <SectionHeader
-                title="Zero Risk Guarantee"
-                description="You Literally Cannot Lose"
+                title="Satisfaction Guarantee"
+                description="Join With Complete Confidence"
                 align="center"
                 className="mb-12"
               />
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                 <div className="space-y-1">
-                  <div className="text-white font-black text-xl">$0</div>
-                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Risk</div>
+                  <div className="text-white font-black text-xl">Total</div>
+                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Confidence</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-white font-black text-xl">7 Days</div>
-                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Full Access</div>
+                  <div className="text-white font-black text-xl">Full</div>
+                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Access</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-white font-black text-xl">No CC</div>
-                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Required</div>
+                  <div className="text-white font-black text-xl">Instant</div>
+                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Activation</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-white font-black text-xl">Zero</div>
-                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Exposure</div>
+                  <div className="text-white font-black text-xl">Flexible</div>
+                  <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest leading-none">Membership</div>
                 </div>
               </div>
 
               <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto">
-                Even if you subscribe after the trial, you still get a 7-day money-back guarantee.
-                That is <span className="text-white font-bold">14 days total</span> to evaluate the service with ZERO financial risk.
+                We are confident in our performance. All new memberships include a 7-day Satisfaction Guarantee.
+                Experience everything we offer with <span className="text-white font-bold">zero hidden commitments</span> or risks.
               </p>
             </Card>
           </div>
@@ -143,8 +143,8 @@ const FreeTrial = () => {
 
       <StandardCTA
         title="Ready to See What 1,247 Members Already Know?"
-        subtitle="Join the traders who are already profiting with OnlyOptions.us. Get instant access — no credit card, no commitment, no risk."
-        buttonText="GET ACCESS NOW — NO CREDIT CARD"
+        subtitle="Join the traders who are already profiting with OnlyOptions.us. Get instant access to professional signaling with no long-term commitment."
+        buttonText="START PREMIUM MEMBERSHIP — INSTANT ACTIVATION"
       />
 
       <div className="bg-black pb-24 text-center">

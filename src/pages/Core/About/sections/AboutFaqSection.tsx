@@ -73,7 +73,7 @@ export const faqData = [
     },
     {
         q: "What happens if I am not satisfied with the service?",
-        a: "New subscribers receive a 7-day money-back guarantee on their first payment. If you subscribe and are not satisfied within 7 days of your first charge, contact support@onlyoptions.us for a full refund — no questions asked. The 7-day access period (no credit card required) also gives you complete access to the service before any payment is made, so you can evaluate the signal quality and format before committing to a subscription."
+        a: "New subscribers receive a 7-day money-back guarantee on their first payment. If you subscribe and are not satisfied within 7 days of your first charge, contact support@onlyoptions.us for a full refund — no questions asked. Our Premium Membership period also gives you complete access to the service before any payment is made, so you can evaluate the signal quality and format before committing to a subscription."
     }
 ];
 

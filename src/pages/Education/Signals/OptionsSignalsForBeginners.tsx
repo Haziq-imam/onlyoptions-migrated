@@ -29,7 +29,7 @@ const linksData = [
     { title: "Risk-reward calculator", path: "/risk-reward-calculator" },
     { title: "Win rate calculator", path: "/win-rate-calculator" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Get access", path: "/free-trial" },
+    { title: "Get Access", path: "/membership" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "Risk management", path: "/options-signals-risk-management" },
     { title: "Best brokers", path: "/best-brokers-for-options-trading" },
@@ -102,7 +102,7 @@ const OptionsSignalsForBeginners = () => {
                         <p className="text-gray-400 text-sm leading-relaxed mb-8">
                             If you checked all 6 boxes, you are ready. If not, complete the missing requirements before trading real money. Risking capital without these foundations is high-risk gambling.
                         </p>
-                        <a href="/free-trial" className="text-gray-400 text-[10px] font-black uppercase tracking-widest hover:text-brand-500 transition-all underline decoration-white/10 underline-offset-8">
+                        <a href="/membership" className="text-gray-400 text-[10px] font-black uppercase tracking-widest hover:text-brand-500 transition-all underline decoration-white/10 underline-offset-8">
                             Get Access Now <FiArrowRight className="inline ml-1" />
                         </a>
                     </Card>
@@ -275,7 +275,7 @@ const OptionsSignalsForBeginners = () => {
                         <section className="space-y-8">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase text-white tracking-tight">Step 4: Subscription</h2>
-                                <p className="text-brand-500 text-[10px] font-black uppercase tracking-widest">Start Your 7-Day Access</p>
+                                <p className="text-brand-500 text-[10px] font-black uppercase tracking-widest">Start Your Premium Membership</p>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <Card variant="glass" className="p-10 border-white/5 bg-gray-950/40">
@@ -614,7 +614,7 @@ const OptionsSignalsForBeginners = () => {
                                     { t: "Read Options Trading 101 if you have not already", p: "/options-trading-101" },
                                     { t: "Open a broker account (Robinhood or Webull recommended for beginners)", p: "/best-brokers-for-options-trading" },
                                     { t: "Paper trade for 1-2 weeks using Thinkorswim", p: "" },
-                                    { t: "Start your OnlyOptions 7-day access period", p: "/free-trial" },
+                                    { t: "Start your OnlyOptions Premium Membership", p: "/membership" },
                                     { t: "Execute your first 5 trades with 1 contract each", p: "" },
                                     { t: "Join our community and ask questions", p: "/contact" }
                                 ].map((step, i) => (

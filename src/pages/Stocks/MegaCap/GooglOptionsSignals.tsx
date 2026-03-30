@@ -482,7 +482,7 @@ const GooglOptionsSignals = () => {
                             { title: "Understanding IV", path: "/understanding-implied-volatility-options" },
                             { title: "Risk Management", path: "/options-signals-risk-management" },
                             { title: "How It Works", path: "/how-it-works" },
-                            { title: "Get Access", path: "/free-trial" },
+                            { title: "Get Access", path: "/membership" },
                             { title: "FAQ", path: "/faq" }
                         ].map((link, i) => (
                             <Link key={i} to={link.path} className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-brand-500/10 hover:text-brand-400 hover:border-brand-500/30 transition-all uppercase tracking-widest">

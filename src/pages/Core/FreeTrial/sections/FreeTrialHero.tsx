@@ -4,8 +4,8 @@ import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 
 const FreeTrialHero = () => {
     const badges = [
-        { icon: <ShieldCheck className="w-5 h-5 text-brand-400" />, text: "No Credit Card" },
-        { icon: <Zap className="w-5 h-5 text-brand-400" />, text: "Cancel Anytime" },
+        { icon: <ShieldCheck className="w-5 h-5 text-brand-400" />, text: "Instant Activation" },
+        { icon: <Zap className="w-5 h-5 text-brand-400" />, text: "Flexible Membership" },
         { icon: <CheckCircle2 className="w-5 h-5 text-brand-400" />, text: "Full Access" },
         { icon: <Users className="w-5 h-5 text-brand-400" />, text: "1,247 Active Members" },
     ];
@@ -25,8 +25,8 @@ const FreeTrialHero = () => {
                 </div>
 
                 <SectionHeader
-                    title={<>Start Your 7-Day Access Period — <span className="text-brand-500">No Credit Card Required</span></>}
-                    description="Get full access to our professional options signals, performance dashboard, Discord community, and education library. See our 70.3% win rate in action before paying a dollar."
+                    title={<>Start Your Premium Membership — <span className="text-brand-500">Flexible Options</span></>}
+                    description="Get full access to our professional options signals, performance dashboard, and education library. Experience our verified 70.3% win rate with complete transparency."
                     align="center"
                     className="max-w-3xl mx-auto"
                 />
@@ -50,11 +50,11 @@ const FreeTrialHero = () => {
                         GET ACCESS NOW
                     </Button>
                     <div className="flex items-center gap-4 text-gray-500 text-xs font-bold uppercase tracking-widest leading-none">
-                        <span>No credit card</span>
+                        <span>Instant Activation</span>
                         <span className="w-1 h-1 rounded-full bg-gray-700" />
-                        <span>No commitment</span>
+                        <span>Maximum Flexibility</span>
                         <span className="w-1 h-1 rounded-full bg-gray-700" />
-                        <span>No risk</span>
+                        <span>No Risk</span>
                     </div>
                 </div>
             </div>

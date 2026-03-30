@@ -76,7 +76,7 @@ const HowItWorks = () => {
       {/* Bottom CTA */}
       <StandardCTA
         title="Ready to Put This Into Practice?"
-        subtitle="Join 1,247 traders receiving daily signals with a verified 70.3% win rate. Get instant access — no credit card required."
+        subtitle="Join 1,247 traders receiving daily signals with a verified 70.3% win rate. Get instant access to our premium signals."
       />
     </div>
   );

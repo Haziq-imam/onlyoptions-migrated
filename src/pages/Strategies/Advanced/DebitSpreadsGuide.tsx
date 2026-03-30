@@ -515,7 +515,7 @@ const DebitSpreadsGuide = () => {
                             { title: "SPY Signals", path: "/spy-options-signals" },
                             { title: "Position Sizing", path: "/position-sizing-guide-options" },
                             { title: "Common Mistakes", path: "/common-options-trading-mistakes" },
-                            { title: "Free Trial", path: "/free-trial" },
+                            { title: "Membership", path: "/membership" },
                             { title: "Performance", path: "/performance" },
                             { title: "FAQ", path: "/faq" },
                         ].map((link, i) => (

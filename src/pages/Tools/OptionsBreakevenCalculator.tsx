@@ -44,7 +44,7 @@ const linksData = [
     { title: "Profit calculator", path: "/options-profit-calculator" },
     { title: "Risk-reward calculator", path: "/risk-reward-calculator" },
     { title: "How it works", path: "/how-it-works" },
-    { title: "Get access", path: "/free-trial" },
+    { title: "Get Access", path: "/membership" },
     { title: "Options 101", path: "/options-trading-101" },
     { title: "0DTE strategy", path: "/0dte-options-strategy-complete-guide" },
     { title: "FAQ", path: "/faq" }
@@ -524,7 +524,7 @@ export default function OptionsBreakevenCalculator() {
                     {/* FINAL CTA */}
                     <div className="mt-16 text-center">
                         <p className="text-gray-400 text-sm font-bold uppercase tracking-widest mb-6 px-4">Breakeven Calculator — know your numbers before you trade</p>
-                        <Button href="/free-trial" size="lg" className="px-10 h-14 rounded-xl font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.2)]">
+                        <Button href="/membership" size="lg" className="px-10 h-14 rounded-xl font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(32,109,254,0.2)]">
                             Start Profit Trading
                         </Button>
                     </div>

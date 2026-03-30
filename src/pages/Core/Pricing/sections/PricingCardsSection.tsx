@@ -32,7 +32,7 @@ const PricingCardsSection = () => {
                                 "Performance dashboard",
                                 "Education library",
                                 "Email support (24hr)",
-                                "7-day access period"
+                                "Premium Membership"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-center justify-center gap-3 text-xs text-gray-300">
                                     <Check className="w-4 h-4 text-brand-500 shrink-0" /> {item}
@@ -41,7 +41,7 @@ const PricingCardsSection = () => {
                         </ul>
 
                         <div className="mt-auto w-full">
-                            <Button href="/free-trial" variant="secondary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <Button href="/membership" variant="secondary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all">
                                 Get Access
                             </Button>
                         </div>
@@ -72,7 +72,7 @@ const PricingCardsSection = () => {
                                 "Priority support (1hr)",
                                 "Weekly live Q&A sessions",
                                 "Advanced analyst notes",
-                                "7-day access period"
+                                "Premium Membership"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-center justify-center gap-3 text-xs text-white font-bold">
                                     <Check className="w-4 h-4 text-brand-500 shrink-0" /> {item}
@@ -81,7 +81,7 @@ const PricingCardsSection = () => {
                         </ul>
 
                         <div className="mt-auto w-full">
-                            <Button href="/free-trial" variant="primary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest shadow-[0_20px_40px_rgba(32,109,254,0.3)]">
+                            <Button href="/membership" variant="primary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest shadow-[0_20px_40px_rgba(32,109,254,0.3)]">
                                 Get Pro Access
                             </Button>
                         </div>
@@ -108,7 +108,7 @@ const PricingCardsSection = () => {
                                 "Billed once annually",
                                 "Lock in current price",
                                 "Best value for committed traders",
-                                "7-day access period"
+                                "Premium Membership"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-center justify-center gap-3 text-xs text-gray-300">
                                     <Check className="w-4 h-4 text-brand-500 shrink-0" /> {item}
@@ -117,7 +117,7 @@ const PricingCardsSection = () => {
                         </ul>
 
                         <div className="mt-auto w-full">
-                            <Button href="/free-trial" variant="secondary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <Button href="/membership" variant="secondary" className="w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest group-hover:bg-brand-500 group-hover:text-white transition-all">
                                 Get Annual Plan
                             </Button>
                         </div>
@@ -125,7 +125,7 @@ const PricingCardsSection = () => {
                 </div>
 
                 <p className="text-center text-gray-500 text-[11px] leading-relaxed max-w-2xl mx-auto mt-16 italic">
-                    All plans include a 7-day access period with no credit card required. We do not auto-charge at the end — you must actively choose to subscribe. 7-day money-back guarantee on first payment.
+                    All plans include full Premium Membership with flexible membership options. We prioritize value and transparency in our billing as part of our service promise. 7-day satisfaction guarantee on initial term.
                 </p>
             </div>
         </StandardSection>

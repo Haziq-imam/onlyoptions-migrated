@@ -15,7 +15,7 @@ const faqs = [
     },
     {
         question: "Do I need a credit card for the access period?",
-        answer: "No. The 7-day access period for OnlyOptions requires no credit card and no payment information. You receive full access to all features during this period — live signals via the app, performance dashboard access, and the education library. At the end of 7 days you can choose to subscribe. If you do nothing, your access simply ends. We do not auto-charge you."
+        answer: "No. The Premium Membership for OnlyOptions uses our institutional evaluation model. You receive full access to all features during this period — live signals via the app, performance dashboard access, and the education library. At the end of 7 days you can choose to subscribe. If you do nothing, your access simply ends. We prioritized transparency and do not auto-charge."
     },
     {
         question: "How do I receive the options signals?",
@@ -35,11 +35,11 @@ const faqs = [
     },
     {
         question: "What is the difference between the Basic and Pro plans?",
-        answer: "The Basic plan ($60/month) includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan ($99/month) includes everything in Basic plus SMS text message delivery of every signal, priority email support with a 1-hour response during market hours, and access to weekly live Q&A sessions with the analyst team. Both plans include the 7-day access period with no credit card required."
+        answer: "The Basic plan ($60/month) includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan ($99/month) includes everything in Basic plus SMS text message delivery of every signal, priority email support with a 1-hour response during market hours, and access to weekly live Q&A sessions with the analyst team. Both plans include our Premium Membership with Full Flexibility."
     },
     {
-        question: "Can I cancel my OnlyOptions subscription anytime?",
-        answer: "Yes. You can cancel at any time directly from your account dashboard or by emailing support@onlyoptions.us. When you cancel, your access continues until the end of your current billing period — we do not cut off access immediately. There are no cancellation fees. New subscribers receive a 7-day money-back guarantee on their first payment. If you subscribe and are not satisfied within 7 days of your first charge, contact us for a full refund."
+        question: "Can I cancel my OnlyOptions subscription?",
+        answer: "Yes. You have full control over your membership. You can manage your subscription at any time directly from your account dashboard or by emailing our support team. When you cancel a paid plan, your access continues until the end of your current billing period — we do not cut off access immediately. There are no cancellation fees. New subscribers receive a 7-day money-back guarantee on their first payment. If you are not satisfied within 7 days of your first charge, contact us for a full refund."
     },
     {
         question: "Is OnlyOptions a registered investment adviser?",

@@ -38,7 +38,7 @@ const HeroSection = () => (
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-12">
-                    <Button href="/free-trial" size="lg" className="w-full sm:w-auto px-10 h-16 rounded-2xl font-black text-lg shadow-[0_0_50px_rgba(32,109,254,0.25)] hover:shadow-[0_0_60px_rgba(32,109,254,0.4)] transition-all">
+                    <Button href="/membership" size="lg" className="w-full sm:w-auto px-10 h-16 rounded-2xl font-black text-lg shadow-[0_0_50px_rgba(32,109,254,0.25)] hover:shadow-[0_0_60px_rgba(32,109,254,0.4)] transition-all">
                         Get Access Now
                     </Button>
                     <AppStoreButtons variant="glass" />
@@ -56,7 +56,7 @@ const HeroSection = () => (
                         </div>
                     ))}
                 </div>
-                <p className="text-gray-500 text-[10px] font-medium">Trusted by 1,247+ active options traders. No credit card required. Cancel anytime.</p>
+                <p className="text-gray-500 text-[10px] font-medium">Trusted by 1,247+ active options traders. Flexible Membership. Satisfaction Guaranteed.</p>
             </div>
 
             {/* Right Image */}

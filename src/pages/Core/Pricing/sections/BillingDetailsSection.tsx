@@ -28,8 +28,8 @@ const BillingDetailsSection = () => {
                                 { t: "Billing cycle", d: "Monthly plans: billed on the same date each month. Annual plan: billed once per year." },
                                 { t: "Payment methods", d: "All major credit and debit cards (Visa, Mastercard, Amex, Discover). Processed securely via Stripe." },
                                 { t: "Automatic renewal", d: "Monthly and annual plans renew automatically. You will receive a reminder email 3 days before each renewal." },
-                                { t: "Cancellation", d: "Cancel anytime from your account dashboard or by emailing support@onlyoptions.us. Access continues until the end of your current billing period. No cancellation fees." },
-                                { t: "7-day money-back guarantee", d: "First payment only. If you subscribe and are unsatisfied within 7 days of your first charge, email support@onlyoptions.us for a full refund. Renewal payments are not eligible for refunds." },
+                                { t: "Membership Flexibility", d: "Manage your membership status at any time from your account dashboard or by contacting support at support@onlyoptions.us. Access continues until the end of your current term. No hidden commitments or fees." },
+                                { t: "Satisfaction Guarantee", d: "Your initial membership term includes a 7-day Satisfaction Guarantee. If you are unsatisfied within the first 7 days, contact support@onlyoptions.us for a full, no-questions-asked refund." },
                                 { t: "Upgrading plans", d: "You can upgrade from Basic to Pro or Annual at any time. Billing adjusts pro-rata for the remainder of your current period." },
                                 { t: "Downgrading plans", d: "You can downgrade at the end of your current billing period. Changes take effect on your next renewal date." },
                                 { t: "Price changes", d: "We will notify you by email at least 30 days before any price change. Your current price is guaranteed until notification." }

@@ -17,7 +17,7 @@ const Home = () => {
         <div className="bg-black min-h-screen relative overflow-hidden text-white font-sans selection:bg-[rgb(32,109,254)]/30">
             <Helmet>
                 <title>Options Trading Signals App | 70.3% Win Rate | OnlyOptions.us</title>
-                <meta name="description" content="Get real-time options trading signals on iOS and Android. Verified 70.3% win rate across 1,847 trades. SPY, QQQ, NVDA, AAPL and more. $60/month — 7-day access." />
+                <meta name="description" content="Get real-time options trading signals on iOS and Android. Verified 70.3% win rate across 1,847 trades. SPY, QQQ, NVDA, AAPL and more. $60/month — Premium Membership." />
                 <link rel="canonical" href="https://onlyoptions.us/" />
             </Helmet>
 

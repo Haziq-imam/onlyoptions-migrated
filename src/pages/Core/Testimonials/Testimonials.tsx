@@ -62,8 +62,8 @@ const Testimonials = () => {
 
       <StandardCTA
         title="Join 1,247+ Members Today"
-        subtitle="No credit card required. Full access to live signals from day one."
-        buttonText="Get Access Now — No Credit Card Required"
+        subtitle="Satisfaction Guaranteed. Full access to live signals from day one."
+        buttonText="Get Access Now — Instant Activation"
       />
     </div>
   );

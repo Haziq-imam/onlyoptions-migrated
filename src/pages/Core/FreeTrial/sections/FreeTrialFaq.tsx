@@ -8,40 +8,40 @@ const FreeTrialFaq = () => {
 
     const faqs = [
         {
-            question: "Why do you not require a credit card for the trial?",
-            answer: "Because we do not need to. Services that require payment details upfront are relying on friction (people forgetting to cancel) to convert trials. We convert trials by delivering obvious value. If our signals are not worth $60/month to you after 7 days of full access, we do not deserve your money."
+            question: "How do I start my membership evaluation?",
+            answer: "Getting started is simple. We provide immediate access via our institutional evaluation model. We believe our service delivers obvious value from day one, allowing you to experience our signals with complete confidence. If our signals are not adding professional value to your trading after 7 days of full access, we prioritize your satisfaction."
         },
         {
-            question: "Will I be auto-charged after 7 days?",
-            answer: "No. Your trial expires and access ends automatically. You must manually subscribe to continue. We email you on Day 6 with a subscribe link, but clicking it is optional. If you ignore it, nothing happens — no charges, no continued access."
+            question: "How is billing handled?",
+            answer: "We prioritize transparency. No automatic charges occur without your explicit selection of a subscription plan. You have full control over when to activate your long-term membership status. We provide reminders towards the end of your evaluation period, but any next steps are entirely at your discretion."
         },
         {
-            question: "Can I trial multiple plans?",
-            answer: "No. The access period gives you Basic plan access ($60/month tier). To try Pro features (SMS alerts, weekly live sessions), upgrade to Pro during this time — it extends to Pro as well. You cannot test all three plans separately."
+            question: "What access do I receive initially?",
+            answer: "You receive full Basic Plan access ($60/month tier) during your initial membership evaluation period. This includes all signals, dashboard tools, and educational resources. To experience Pro features like SMS alerts and live sessions, you can select that tier at any time."
         },
         {
-            question: "What if I want to subscribe before the 7 days end?",
-            answer: "Great! Click the subscribe link in your welcome email or visit onlyoptions.us/pricing. Your trial access converts to paid immediately and billing starts. You do not lose any days — your first billing cycle starts from the day you subscribe."
+            question: "What if I want to select a plan before 7 days?",
+            answer: "Great! You can activate your full membership status at any time through your account dashboard or by visiting onlyoptions.us/pricing. Your chosen plan will activate immediately, and your first billing cycle will begin from that date."
         },
         {
-            question: "Can I get a trial extension?",
-            answer: "No. Seven days is sufficient to evaluate signal quality, verify our track record, and experience the community. Trial extensions create perverse incentives (endless free access). If 7 days is not enough, our service may not be right for you."
+            question: "Is the evaluation period sufficient?",
+            answer: "Yes. Seven days provides ample time to evaluate our signal quality, verify our track record, and experience the performance of the service. We believe this period is ideal for new members to align our signaling with their trading workflow."
         },
         {
-            question: "What happens to my Discord access after the trial?",
-            answer: "If you do not subscribe, Discord access is revoked automatically when the trial expires. You lose access to #signals, #performance-log, and all member channels. You can re-join immediately by subscribing."
+            question: "What happens to my access if I do not select a plan?",
+            answer: "If you do not choose to extend your membership, your access will expire automatically at the end of the evaluation period with no further obligation. You can re-activate your status at any time by selecting a plan."
         },
         {
-            question: "Can I use the access period if I previously subscribed and cancelled?",
-            answer: "No. Initial access periods are for new members only. If you were previously a paying subscriber, contact support@onlyoptions.us — we occasionally offer win-back promotions for returning members."
+            question: "Is this available if I have held a membership before?",
+            answer: "Initial evaluation periods are reserved for new members to experience the platform for the first time. If you are a returning member, please contact support@onlyoptions.us to discuss your membership options."
         },
         {
-            question: "Do I get the 7-day money-back guarantee on top of the trial?",
-            answer: "Yes. If you subscribe after your access period, you still get our standard 7-day money-back guarantee from the date of your first payment. This means up to 14 days of risk-free access total (7-day access + 7-day refund window)."
+            question: "Do I get a money-back guarantee?",
+            answer: "Yes. All new memberships include our standard 7-day Satisfaction Guarantee from the date of your first subscription payment. This ensures you have complete confidence as you transition to a full membership."
         },
         {
-            question: "Can I refer friends for another access period?",
-            answer: "Yes. Our affiliate program rewards members who refer paying subscribers. However, each person gets only one trial per email address. Attempts to game the system with fake emails are detected and blocked."
+            question: "Can I refer others to the platform?",
+            answer: "Absolutely. We encourage members to share their experience. Our membership systems are designed to detect authentic interest and maintain the integrity of our community."
         }
     ];
 
