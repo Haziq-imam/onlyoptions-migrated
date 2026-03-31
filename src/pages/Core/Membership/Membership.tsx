@@ -152,15 +152,15 @@ const Membership = () => {
                         ].map((tier, i) => (
                             <Card key={i} className={`relative p-10 flex flex-col items-center text-center border-white/10 ${tier.popular ? "bg-gray-900 border-brand-500/40 shadow-2xl z-10" : "bg-gray-950/40 hover:border-brand-500/30"} transition-all rounded-[2.5rem] group`}>
                                 {tier.popular && (
-                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-2 rounded-full shadow-2xl">
+                                    <div className="absolute top-0 right-0 bg-brand-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-2.5 rounded-bl-[2rem] shadow-xl">
                                         Best Value
                                     </div>
                                 )}
                                 <div className="mb-8">
                                     <h3 className="text-sm font-black text-brand-400 uppercase tracking-[0.3em] mb-4">{tier.name}</h3>
-                                    <div className="flex items-baseline gap-1 justify-center">
-                                        <span className="text-6xl font-black text-white">${tier.price}</span>
-                                        <span className="text-gray-500 font-bold">/{tier.period}</span>
+                                    <div className="flex items-baseline gap-1 justify-center whitespace-nowrap overflow-hidden">
+                                        <span className="text-5xl sm:text-6xl font-black text-white">${tier.price}</span>
+                                        <span className="text-gray-500 font-bold text-sm">/{tier.period}</span>
                                     </div>
                                 </div>
                                 <ul className="space-y-4 mb-10 w-full text-center">

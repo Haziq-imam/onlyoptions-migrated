@@ -53,7 +53,7 @@ const PricingCardsSection = () => {
 
                     {/* Annual Plan */}
                     <Card variant="institutional" className="relative p-10 flex flex-col items-center text-center border-brand-500/40 bg-gray-900/60 shadow-[0_0_80px_rgba(32,109,254,0.15)] z-10 group rounded-[2.5rem]">
-                        <div className="absolute top-4 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-2 rounded-full shadow-2xl">
+                        <div className="absolute top-0 right-0 bg-brand-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-2.5 rounded-bl-[2rem] shadow-xl">
                             Best Value
                         </div>
 

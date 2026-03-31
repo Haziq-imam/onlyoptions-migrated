@@ -54,8 +54,8 @@ const PricingHomeSection = () => (
             </Card>
 
             {/* Annual */}
-            <Card variant="institutional" className="p-10 border-brand-500/30 shadow-[0_0_60px_rgba(32,109,254,0.1)] relative group rounded-3xl">
-                <div className="absolute top- 1 right-0 px-6 py-2.5 bg-brand-500 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-2xl">
+            <Card variant="institutional" className="p-10 border-brand-500/30 shadow-[0_0_60px_rgba(32,109,254,0.1)] relative group rounded-3xl overflow-hidden">
+                <div className="absolute top-0 right-0 px-6 py-2.5 bg-brand-500 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-3xl shadow-xl">
                     Best Value
                 </div>
                 <h4 className="text-xl font-black text-brand-500 mb-2 uppercase tracking-tight">Annual Plan</h4>
