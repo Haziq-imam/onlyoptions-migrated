@@ -168,6 +168,7 @@ const Layout = () => {
                             <div className="space-y-6">
                                 <h5 className="font-black text-white uppercase tracking-[0.2em] text-[10px]">Platform</h5>
                                 <ul className="space-y-4 text-xs font-bold text-gray-500">
+                                    <li><a href="/membership" className="hover:text-brand-400 transition-colors">Join Premium</a></li>
                                     <li><a href="/performance" className="hover:text-brand-400 transition-colors">Track Performance</a></li>
                                     <li><a href="/pricing" className="hover:text-brand-400 transition-colors">Pricing Plans</a></li>
                                     <li><a href="/how-it-works" className="hover:text-brand-400 transition-colors">How It Works</a></li>

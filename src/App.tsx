@@ -12,6 +12,7 @@ import Testimonials from './pages/Core/Testimonials/Testimonials';
 import Faq from './pages/Core/Faq/Faq';
 import Contact from './pages/Core/Contact/Contact';
 import Blog from './pages/Core/Blog/Blog';
+import Membership from './pages/Core/Membership/Membership';
 
 import Sitemap from './pages/Legal/Sitemap';
 import TermsOfService from './pages/Legal/TermsOfService';
@@ -76,6 +77,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/membership" element={<Membership />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
