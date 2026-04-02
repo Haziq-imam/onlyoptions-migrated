@@ -1,5 +1,7 @@
+"use client";
+
 import { useState, useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 import Logo from '../../assets/logo.png';
 import Button from '../ui/Button/Button';
 import { Menu, X } from 'lucide-react';
@@ -19,10 +21,10 @@ const triggerAppStoreAction = (openModal: () => void) => {
     }
 };
 
-const Layout = () => {
+const Layout = ({ children }: { children?: React.ReactNode }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const location = useLocation();
+    const pathname = usePathname();
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
@@ -37,7 +39,7 @@ const Layout = () => {
     // Close menu when route changes
     useEffect(() => {
         setIsMenuOpen(false);
-    }, [location]);
+    }, [pathname]);
 
     // Close menu on resize if above mobile breakpoint
     useEffect(() => {
@@ -90,9 +92,9 @@ const Layout = () => {
                     </nav>
 
                     <div className="flex items-center gap-2 md:gap-4 shrink-0">
-                        <Button 
+                        <Button
                             onClick={() => triggerAppStoreAction(openModal)}
-                            size="sm" 
+                            size="sm"
                             className="px-4 md:px-6 py-2 rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-wider relative overflow-hidden group border-0 bg-brand-500 animate-glow whitespace-nowrap"
                         >
                             <span className="relative z-10">Get Access</span>
@@ -126,7 +128,7 @@ const Layout = () => {
             </div>
 
             <main className="flex-1">
-                <Outlet />
+                {children}
             </main>
 
             <footer className="border-t border-white/5 py-12 px-6 md:px-12 bg-gray-950/80 relative overflow-hidden">
@@ -161,7 +163,7 @@ const Layout = () => {
                                 <ul className="space-y-4 text-xs font-bold text-gray-500">
                                     <li><a href="/options-trading-101" className="hover:text-brand-400 transition-colors">Options 101</a></li>
                                     <li><a href="/0dte-options-strategy-complete-guide" className="hover:text-brand-400 transition-colors">0DTE Guide</a></li>
-                                    <li><a href="/what-are-options-trading-signals" className="hover:text-brand-400 transition-colors">Trading Signals</a></li>
+                                    <li><a href="/options-signals-for-beginners" className="hover:text-brand-400 transition-colors">Trading Signals</a></li>
                                     <li><a href="/best-brokers-for-options-trading" className="hover:text-brand-400 transition-colors">Brokers</a></li>
                                 </ul>
                             </div>
