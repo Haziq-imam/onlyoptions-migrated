@@ -25,7 +25,7 @@ const AppStoreButtons = ({ variant = 'solid', className = "" }: AppStoreButtonsP
                     <p className="text-base font-black leading-tight">App Store</p>
                 </div>
             </a>
-            <a href="https://play.google.com/store/apps/details?id=co.diy.xaohx&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className={`${baseStyle} ${style}`}>
+            <a href="https://play.google.com/store/apps/details?id=us.onlyoptions.android&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className={`${baseStyle} ${style}`}>
                 <img src={PlayIcon} alt="Google Play Store" className={iconClass} />
                 <div className="text-left">
                     <p className="text-[10px] uppercase font-bold leading-none opacity-60">Get it on</p>

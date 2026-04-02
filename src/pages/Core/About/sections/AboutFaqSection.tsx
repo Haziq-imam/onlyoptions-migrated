@@ -69,7 +69,7 @@ export const faqData = [
     },
     {
         q: "How do I contact OnlyOptions?",
-        a: "For account and billing questions, email support@onlyoptions.us. For questions about signals or market analysis, email analysts@onlyoptions.us. Our support team responds within 24 hours on business days. Pro plan subscribers receive priority support with a 1-hour response window during market hours (9:00 AM to 4:30 PM ET, Monday through Friday)."
+        a: "For account and billing questions, email support@onlyoptions.us. For questions about signals or market analysis, email analysts@onlyoptions.us. Our support team responds within 24 hours on business days. Annual plan subscribers receive priority support with a 1-hour response window during market hours (9:00 AM to 4:30 PM ET, Monday through Friday)."
     },
     {
         q: "What happens if I am not satisfied with the service?",

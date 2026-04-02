@@ -300,7 +300,7 @@ const OptionsSignalsForBeginners = () => {
                                         {[
                                             { t: "Email", d: "Arrives instantly to inbox" },
                                             { t: "Mobile Push Notifications", d: "Download our mobile app or enable browser notifications" },
-                                            { t: "SMS (Pro plan only)", d: "Text messages for fastest delivery" }
+                                            { t: "SMS (Annual plan only)", d: "Text messages for fastest delivery" }
                                         ].map((alert, i) => (
                                             <div key={i} className="flex items-center gap-4 group">
                                                 <div className="w-2 h-2 rounded-full bg-brand-500 group-hover:scale-125 transition-transform" />
@@ -597,7 +597,7 @@ const OptionsSignalsForBeginners = () => {
                                 { q: "Can I start with $500?", a: "Not recommended. With $500 and 2% rule, you can only risk $10 per trade. This limits you to very cheap options or fractional contracts (not possible). Save up to $2,000 minimum before starting." },
                                 { q: "How long until I am profitable?", a: "Most beginners are breakeven or slightly profitable within 3-6 months if they follow rules strictly. Some take 12 months. A few never become profitable (usually due to ignoring stop-losses). Your timeline depends on discipline, not intelligence." },
                                 { q: "Should I quit my job to trade full-time?", a: "No. Never quit your job to trade. OnlyOptions signals work perfectly for people with full-time jobs — you check your phone 2-3 times per day, execute trades during lunch breaks, and manage via mobile. Trading is a side income, not a career replacement." },
-                                { q: "What if I do not understand a signal?", a: "Ask in our support email. We respond within 24 hours (1 hour for Pro members). Never trade a signal you do not understand. Skipping trades is smart risk management." },
+                                { q: "What if I do not understand a signal?", a: "Ask in our support email. We respond within 24 hours (1 hour for Annual members). Never trade a signal you do not understand. Skipping trades is smart risk management." },
                                 { q: "Can I use a retirement account (IRA) to follow signals?", a: "Yes, if your IRA has options approval. Most brokers allow Level 1 options (buying calls/puts) in IRAs. Tax advantages: gains are tax-deferred. Downside: Cannot withdraw until retirement age without penalty. Checking 2-3 times per day is sufficient." }
                             ].map((faq, i) => (
                                 <FaqItem key={i} question={faq.q} answer={faq.a} />

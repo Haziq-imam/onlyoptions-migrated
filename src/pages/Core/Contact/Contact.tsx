@@ -46,7 +46,7 @@ const Contact = () => {
     <div className="bg-black">
       <Helmet>
         <title>Contact OnlyOptions — Options Signal Support & Analyst Questions</title>
-        <meta name="description" content="Contact OnlyOptions for support, billing questions, and signal inquiries. Basic plan: 24hr response. Pro plan: 1hr priority support during market hours. Email support@onlyoptions.us." />
+        <meta name="description" content="Contact OnlyOptions for support, billing questions, and signal inquiries. Basic plan: 24hr response. Annual plan: 1hr priority support during market hours. Email support@onlyoptions.us." />
         <script type="application/ld+json">{JSON.stringify(schemaContact)}</script>
       </Helmet>
 
@@ -91,7 +91,6 @@ const Contact = () => {
                       <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Plan Type</label>
                       <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-brand-500 transition-all font-bold appearance-none cursor-pointer">
                         <option value="basic" className="bg-black">Basic Plan</option>
-                        <option value="pro" className="bg-black">Pro Plan</option>
                         <option value="annual" className="bg-black">Annual Plan</option>
                         <option value="trial" className="bg-black">Get Access</option>
                       </select>

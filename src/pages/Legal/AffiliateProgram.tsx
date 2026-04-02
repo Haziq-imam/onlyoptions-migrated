@@ -113,8 +113,7 @@ const AffiliateProgram: React.FC = () => {
                                 <TableBody>
                                     {[
                                         { plan: 'Basic ($60/month)', commission: '$18/month', type: 'Recurring monthly', highlight: false },
-                                        { plan: 'Pro ($99/month)', commission: '$30/month', type: 'Recurring monthly', highlight: true },
-                                        { plan: 'Annual ($600/year)', commission: '$180 upfront', type: 'One-time payment', highlight: false },
+                                        { plan: 'Annual ($499.99/year)', commission: '$150 upfront', type: 'One-time payment', highlight: true },
                                     ].map((row, i) => (
                                         <TableRow key={i} className={cn(
                                             "hover:bg-white/[0.02]",
@@ -191,8 +190,7 @@ const AffiliateProgram: React.FC = () => {
                                         <div className="space-y-3 mt-4">
                                             {[
                                                 { plan: 'Basic Plan ($60/month)', earn: 'You earn $18/month for as long as the customer remains subscribed' },
-                                                { plan: 'Pro Plan ($99/month)', earn: 'You earn $30/month for as long as the customer remains subscribed' },
-                                                { plan: 'Annual Plan ($600/year)', earn: 'You earn $180 as a one-time upfront payment' },
+                                                { plan: 'Annual Plan ($499.99/year)', earn: 'You earn $150 as a one-time upfront payment' },
                                             ].map((item, i) => (
                                                 <div key={i} className="flex gap-4 p-4 rounded-2xl bg-black/40 border border-white/5">
                                                     <FiDollarSign className="text-brand-500 mt-1 flex-shrink-0" />

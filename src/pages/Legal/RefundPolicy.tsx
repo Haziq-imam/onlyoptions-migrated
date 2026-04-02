@@ -187,7 +187,7 @@ const RefundPolicy: React.FC = () => {
                                 <div className="space-y-8">
                                     <div className="p-8 rounded-3xl bg-white/[0.01] border border-white/5">
                                         <p className="text-brand-500 font-black text-xs uppercase tracking-[0.2em] mb-4">1.1 Eligibility</p>
-                                        <p className="text-sm font-bold text-white mb-6 leading-relaxed">We offer a no-questions-asked 7-day money-back guarantee on all subscription plans (Basic, Pro, and Annual).</p>
+                                        <p className="text-sm font-bold text-white mb-6 leading-relaxed">We offer a no-questions-asked 7-day money-back guarantee on all subscription plans (Basic and Annual).</p>
                                         <div className="space-y-4">
                                             {[
                                                 'You are a NEW subscriber making your FIRST payment to OnlyOptions.us',
@@ -431,7 +431,7 @@ const RefundPolicy: React.FC = () => {
                                             <FiInfo className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h4 className="text-lg font-black text-white uppercase mb-2">Window applies to Annual ($600)</h4>
+                                            <h4 className="text-lg font-black text-white uppercase mb-2">Window applies to Annual ($499.99)</h4>
                                             <p className="text-xs text-gray-400 font-bold uppercase tracking-widest italic decoration-brand-500 decoration-2 underline underline-offset-4">
                                                 NO PRO-RATED REFUNDS FOR ANNUAL PLANS AFTER 7 DAYS.
                                             </p>

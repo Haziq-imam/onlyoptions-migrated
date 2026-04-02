@@ -8,7 +8,7 @@ import DownloadAppModal from '../ui/AppRedirect/DownloadAppModal';
 const triggerAppStoreAction = (openModal: () => void) => {
     const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
     const iosUrl = "https://apps.apple.com/us/app/onlyoptions-options-signals/id6760183640";
-    const androidUrl = "https://play.google.com/store/apps/details?id=co.diy.xaohx&pcampaignid=web_share";
+    const androidUrl = "https://play.google.com/store/apps/details?id=us.onlyoptions.android&pcampaignid=web_share";
 
     if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
         window.location.href = iosUrl;

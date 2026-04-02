@@ -148,7 +148,7 @@ const Membership = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-12 max-w-5xl mx-auto">
                         {[
                             { name: "Basic", price: "60", period: "month", f: ["2-4 Daily Signals", "Mobile Push Delivery", "Full Education", "Email Support"] },
-                            { name: "Annual", price: "600", period: "year", f: ["Full Premium Access", "Price Lock Guarantee", "Save Over $120", "Annual Exclusive Perks"], popular: true }
+                            { name: "Annual", price: "499.99", period: "year", f: ["Full Premium Access", "SMS Text Alerts", "Priority Support", "Save Over $220"], popular: true }
                         ].map((tier, i) => (
                             <Card key={i} className={`relative p-10 flex flex-col items-center text-center border-white/10 ${tier.popular ? "bg-gray-900 border-brand-500/40 shadow-2xl z-10" : "bg-gray-950/40 hover:border-brand-500/30"} transition-all rounded-[2.5rem] group`}>
                                 {tier.popular && (

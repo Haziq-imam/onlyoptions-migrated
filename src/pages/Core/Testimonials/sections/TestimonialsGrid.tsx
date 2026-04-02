@@ -6,7 +6,7 @@ const TestimonialsGrid = () => {
         {
             name: "James K.",
             location: "Chicago, IL",
-            role: "Pro Member since March 2023",
+            role: "Annual Member since March 2023",
             text: "I had tried other signal services before and always hit the same wall — vague alerts and no transparency on what actually happened to the trade. OnlyOptions publishes every result, wins and losses both. That told me the track record was real before I spent a dollar. The signal format gives me everything I need to execute within 90 seconds of receiving the notification. My personal win rate following the signals closely has been right in line with what they publish."
         },
         {
@@ -24,8 +24,8 @@ const TestimonialsGrid = () => {
         {
             name: "Diana S.",
             location: "Phoenix, AZ",
-            role: "Pro Member since September 2023",
-            text: "I was skeptical of options signal services after a bad experience elsewhere. What made me try OnlyOptions was the public Performance Dashboard — I spent two weeks reading through historical signals before subscribing. When I finally started the access period, the quality was exactly what the record promised. SMS delivery on the Pro plan has been essential for me. I am in meetings during market hours and the text arrives before I even see the push notification."
+            role: "Annual Member since September 2023",
+            text: "I was skeptical of options signal services after a bad experience elsewhere. What made me try OnlyOptions was the public Performance Dashboard — I spent two weeks reading through historical signals before subscribing. When I finally started the access period, the quality was exactly what the record promised. SMS delivery on the Annual plan has been essential for me. I am in meetings during market hours and the text arrives before I even see the push notification."
         },
         {
             name: "Carlos M.",
@@ -42,8 +42,8 @@ const TestimonialsGrid = () => {
         {
             name: "Priya N.",
             location: "San Jose, CA",
-            role: "Pro Member since November 2023",
-            text: "The weekly live Q&A on the Pro plan is something I did not think I would use much. Turns out it is one of the most valuable parts of my subscription. Being able to ask about signal rationale, market conditions, and positioning directly has helped me understand not just what signals to take but how to think about the setups behind them. My execution has improved significantly because of those sessions."
+            role: "Annual Member since November 2023",
+            text: "The weekly live Q&A on the Annual plan is something I did not think I would use much. Turns out it is one of the most valuable parts of my subscription. Being able to ask about signal rationale, market conditions, and positioning directly has helped me understand not just what signals to take but how to think about the setups behind them. My execution has improved significantly because of those sessions."
         },
         {
             name: "Derek J.",
@@ -54,7 +54,7 @@ const TestimonialsGrid = () => {
         {
             name: "Linda C.",
             location: "Denver, CO",
-            role: "Pro Member since May 2023",
+            role: "Annual Member since May 2023",
             text: "Retired and managing my own portfolio. I had been trading options for years on my own before joining this service. What I get from OnlyOptions is a disciplined second opinion from professionals who look at setups I might miss or avoid. The two-analyst review process they describe on the About page is reflected in the signal quality — you can tell these are not rushed calls. I do not take every signal but I have not missed a month of subscription since I started."
         },
         {
@@ -72,7 +72,7 @@ const TestimonialsGrid = () => {
         {
             name: "Frank V.",
             location: "Portland, OR",
-            role: "Pro Member since August 2023",
+            role: "Annual Member since August 2023",
             text: "The exit alerts are the feature that makes this service actually usable. Every other service I tried left me wondering when to exit — waiting too long, cutting too early, or just guessing. OnlyOptions sends a notification for every close. I do not have to monitor positions or make exit decisions. The profit target and stop-loss are in the original signal, and when either is hit, I get the alert to act. For someone who cannot be at a screen all day, this is the only model that works."
         },
         {
@@ -85,13 +85,13 @@ const TestimonialsGrid = () => {
             name: "Brian T.",
             location: "Las Vegas, NV",
             role: "Basic Member since June 2024",
-            text: "Eight months in. I started with the Basic plan to evaluate before committing to a higher tier. No complaints. Push notifications arrive before I could possibly react to market news myself. The signal format tells me exactly what to do. I have not had the urge to upgrade to Pro because the Basic plan delivers everything I actually need — signals, performance history, education library, and a clear exit strategy for every trade."
+            text: "Eight months in. I started with the Basic plan to evaluate before committing to the Annual plan. No complaints. Push notifications arrive before I could possibly react to market news myself. The signal format tells me exactly what to do. I have not had the urge to upgrade to the Annual plan because the Basic plan delivers everything I actually need — signals, performance history, education library, and a clear exit strategy for every trade."
         },
         {
             name: "Natasha P.",
             location: "Chicago, IL",
-            role: "Pro Member since April 2023",
-            text: "Almost two years now. I have tracked every signal I have taken — 312 trades total. My personal win rate is 71.1% which is essentially the published number. The average winner in my personal tracking is slightly higher than published because I hold some positions past the initial target when conditions support it, which the analyst notes sometimes suggest. The Pro plan level of detail in the notes has been worth every dollar of the difference from Basic."
+            role: "Annual Member since April 2023",
+            text: "Almost two years now. I have tracked every signal I have taken — 312 trades total. My personal win rate is 71.1% which is essentially the published number. The average winner in my personal tracking is slightly higher than published because I hold some positions past the initial target when conditions support it, which the analyst notes sometimes suggest. The Annual plan level of detail in the notes has been worth every dollar of the difference from Basic."
         }
     ];
 

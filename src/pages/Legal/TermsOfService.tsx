@@ -281,7 +281,7 @@ const TermsOfService: React.FC = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
                                             <p className="text-xs font-black text-brand-500 uppercase tracking-widest mb-4">4.1 Subscription Plans</p>
-                                            <p className="text-xs font-medium text-gray-400 leading-relaxed">We offer multiple subscription tiers (Basic, Pro, Annual) as described on our pricing page. Each plan includes specific features and pricing.</p>
+                                            <p className="text-xs font-medium text-gray-400 leading-relaxed">We offer multiple subscription tiers (Basic and Annual) as described on our pricing page. Each plan includes specific features and pricing.</p>
                                         </div>
                                         <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5">
                                             <p className="text-xs font-black text-brand-500 uppercase tracking-widest mb-4">4.2 Access Period</p>

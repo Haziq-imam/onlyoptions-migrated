@@ -19,7 +19,7 @@ const faqs = [
     },
     {
         question: "How do I receive the options signals?",
-        answer: "Signals are delivered through the OnlyOptions mobile app as push notifications. The app is available on the Apple App Store (iOS) and Google Play Store (Android). Each notification contains the full signal details. Pro plan subscribers also receive every signal by SMS text message. There is no other delivery method — signals are sent exclusively through the app and, for Pro members, by text."
+        answer: "Signals are delivered through the OnlyOptions mobile app as push notifications. The app is available on the Apple App Store (iOS) and Google Play Store (Android). Each notification contains the full signal details. Annual plan subscribers also receive every signal by SMS text message. There is no other delivery method — signals are sent exclusively through the app and, for Annual members, by text."
     },
     {
         question: "What options trading experience do I need to use this service?",
@@ -34,8 +34,8 @@ const faqs = [
         answer: "Our signals work with any brokerage that supports options trading at Level 2 approval or higher. We recommend Thinkorswim (TD Ameritrade/Schwab), Tastytrade, Webull, or Interactive Brokers for their options platforms, competitive pricing, and order execution quality. You will need Level 2 options approval at your broker to buy calls and puts — the approval process varies by broker and typically involves a short application about your trading experience."
     },
     {
-        question: "What is the difference between the Basic and Pro plans?",
-        answer: "The Basic plan ($60/month) includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan ($99/month) includes everything in Basic plus SMS text message delivery of every signal, priority email support with a 1-hour response during market hours, and access to weekly live Q&A sessions with the analyst team. Both plans include our Premium Membership with Full Flexibility."
+        question: "What is the difference between the Basic and Annual plans?",
+        answer: "The Basic plan ($60/month) includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Annual plan ($499.99/year) includes everything in Basic plus SMS text message delivery of every signal, priority email support with a 1-hour response during market hours, and access to weekly live Q&A sessions with the analyst team. Both plans include our Premium Membership with Full Flexibility."
     },
     {
         question: "Can I cancel my OnlyOptions subscription?",

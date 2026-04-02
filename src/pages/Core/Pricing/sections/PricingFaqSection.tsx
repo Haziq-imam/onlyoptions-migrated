@@ -38,7 +38,7 @@ const PricingFaqSection = () => {
     const faqData = [
         {
             q: "How much does OnlyOptions cost?",
-            a: "OnlyOptions has three plans. The Basic plan costs $60 per month and includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Pro plan costs $99 per month and adds SMS text message signal delivery, priority email support with a 1-hour response during market hours, and weekly live Q&A sessions. The Annual plan costs $600 per year (equivalent to $50 per month) and includes all Pro features billed once annually. Every plan provides full Premium Membership access with flexible options."
+            a: "OnlyOptions has two plans. The Basic plan costs $60 per month and includes 2–4 daily options signals, iOS and Android app access, push notification delivery, the performance dashboard, and the education library. The Annual plan costs $499.99 per year (equivalent to ~$41 per month) and includes all professional features (SMS alerts, priority support, live Q&A) billed once annually. Both plans provide full Premium Membership access with flexible options."
         },
         {
             q: "Is there a Satisfaction Guarantee for OnlyOptions?",
@@ -53,12 +53,12 @@ const PricingFaqSection = () => {
             a: "New members receive a 7-day Satisfaction Guarantee on their initial payment. If you are not satisfied within 7 days of your first charge, simply contact support@onlyoptions.us for a full refund. This applies to your initial term to ensure you are confident in our signaling quality. Renewal payments are governed by our standard billing policy, and we prioritize transparency in all our member communications."
         },
         {
-            q: "What is the difference between Basic and Pro?",
-            a: "The Basic plan ($60/month) and Pro plan ($99/month) both receive the same live options signals through the iOS and Android app. The difference is in delivery and support. Pro adds SMS text message delivery of every signal, a 1-hour priority email support response during market hours (versus 24 hours on Basic), and access to weekly live Q&A sessions with the analyst team. If push notifications through the app are sufficient for your workflow and you do not need SMS or live Q&A access, Basic is a strong choice."
+            q: "What is the difference between Basic and Annual?",
+            a: "The Basic plan ($60/month) and Annual plan ($499.99/year) both receive the same live options signals through the iOS and Android app. The difference is in delivery and support. The Annual plan adds SMS text message delivery of every signal, a 1-hour priority email support response during market hours (versus 24 hours on Basic), and access to weekly live Q&A sessions with the analyst team. If push notifications through the app are sufficient for your workflow and you do not need SMS or live Q&A access, Basic is a strong choice. For the full professional experience, the Annual plan is the best value."
         },
         {
             q: "Is the Annual plan worth it?",
-            a: "The Annual plan costs $600 per year, which is equivalent to $50 per month — a saving of $49 per month compared to Pro monthly ($99), or $120 per year in total. It includes all Pro features. The Annual plan is ideal for members who are confident in the service long-term. It also locks in your current price for 12 months regardless of any future price changes. We recommend starting with the monthly plan first, then switching to Annual once you have experienced the value of our signals."
+            a: "The Annual plan costs $499.99 per year, which is equivalent to ~$41 per month — a saving of over $220 per year compared to the Basic monthly plan ($60). It includes all premium features including SMS delivery and priority support. The Annual plan is ideal for members who are confident in the service long-term. It also locks in your current price for 12 months regardless of any future price changes. We recommend starting with the monthly plan first, then switching to Annual once you have experienced the value of our signals."
         },
         {
             q: "Are there any hidden fees?",
@@ -70,11 +70,11 @@ const PricingFaqSection = () => {
         },
         {
             q: "Can I regularize my membership status after joining?",
-            a: "Yes. You can upgrade from Basic to Pro or Annual at any time from your account dashboard. Billing adjusts pro-rata — you pay only for the difference for the remainder of your current billing period. To change to a lower tier, the change takes effect at your next renewal date. You retain your current plan's features until then."
+            a: "Yes. You can upgrade from Basic to the Annual plan at any time from your account dashboard. Billing adjusts pro-rata — you pay only for the difference for the remainder of your current billing period. To change to a lower tier, the change takes effect at your next renewal date. You retain your current plan's features until then."
         },
         {
             q: "Do you offer discounts for students or groups?",
-            a: "We do not currently offer student or academic discounts. The Annual plan at $600/year ($50/month) is our best-value option for all members. We do not offer group or team pricing at this time."
+            a: "We do not currently offer student or academic discounts. The Annual plan at $499.99/year (~$41/month) is our best-value option for all members. We do not offer group or team pricing at this time."
         }
     ];
 

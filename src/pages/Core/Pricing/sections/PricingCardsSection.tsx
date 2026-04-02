@@ -60,18 +60,19 @@ const PricingCardsSection = () => {
                         <div className="mb-8">
                             <h3 className="text-sm font-black text-brand-400 uppercase tracking-[0.3em] mb-4">Annual</h3>
                             <div className="flex items-baseline gap-1 justify-center whitespace-nowrap overflow-hidden">
-                                <span className="text-5xl sm:text-6xl font-black text-white">$600</span>
+                                <span className="text-5xl sm:text-6xl font-black text-white">$499.99</span>
                                 <span className="text-gray-500 font-bold text-sm">/ year</span>
                             </div>
-                            <p className="text-[10px] font-bold text-green-500 uppercase tracking-widest mt-2">save over $120 vs monthly</p>
+                            <p className="text-[10px] font-bold text-green-500 uppercase tracking-widest mt-2">save over $220 vs monthly</p>
                         </div>
 
                         <ul className="space-y-4 mb-10 w-full">
                             {[
                                 "Billed once annually",
+                                "SMS text delivery",
+                                "1hr priority email focus",
+                                "Weekly live Q&A access",
                                 "Lock in current price",
-                                "Priority annual support",
-                                "Best value for committed traders",
                                 "Premium Membership"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-center justify-center gap-3 text-xs text-white font-bold">

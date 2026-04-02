@@ -29,13 +29,13 @@ const ContactChannelsTable = () => {
                             <TableCell label="Available For" className="text-gray-400">Account access, billing, cancellations, technical app issues, general questions</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell label="Contact Type" className="text-white font-bold">Priority Support (Pro)</TableCell>
+                            <TableCell label="Contact Type" className="text-white font-bold">Priority Support (Annual)</TableCell>
                             <TableCell label="Email Address">
                                 <a href="mailto:support@onlyoptions.us" className="text-purple-400 hover:text-purple-300">support@onlyoptions.us</a><br />
-                                <span className="text-xs text-brand-500/50">(Pro)</span>
+                                <span className="text-xs text-brand-500/50">(Annual)</span>
                             </TableCell>
                             <TableCell label="Response Time" className="text-gray-400">Within 1 hour<br /><span className="text-xs">(9 AM – 4:30 PM ET Mon–Fri)</span></TableCell>
-                            <TableCell label="Available For" className="text-gray-400">All support issues — Pro plan subscribers receive priority queue</TableCell>
+                            <TableCell label="Available For" className="text-gray-400">All support issues — Annual plan subscribers receive priority queue</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell label="Contact Type" className="text-white font-bold">Signal & Analyst Questions</TableCell>

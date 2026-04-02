@@ -60,7 +60,7 @@ export const faqData: FAQCategory[] = [
         items: [
             {
                 question: "Q11. How do I receive signals?",
-                answer: "Signals are delivered as push notifications through the OnlyOptions iOS and Android app. Tap any notification to view the complete signal inside the app. Pro plan subscribers also receive every signal by SMS text message. There is no other delivery channel — no email-only delivery, no web-only access."
+                answer: "Signals are delivered as push notifications through the OnlyOptions iOS and Android app. Tap any notification to view the complete signal inside the app. Annual plan subscribers also receive every signal by SMS text message. There is no other delivery channel — no email-only delivery, no web-only access."
             },
             {
                 question: "Q12. What does each signal include?",
@@ -88,7 +88,7 @@ export const faqData: FAQCategory[] = [
             },
             {
                 question: "Q18. How do I know when to exit a trade?",
-                answer: "You receive a push notification (and SMS on Pro plan) every time we send an exit alert. The exit alert specifies the position to close and the reason — target reached, stop-loss hit, or early exit due to changed conditions. You do not need to monitor the position or decide on your own when to close. Simply act on the exit alert when it arrives."
+                answer: "You receive a push notification (and SMS on Annual plan) every time we send an exit alert. The exit alert specifies the position to close and the reason — target reached, stop-loss hit, or early exit due to changed conditions. You do not need to monitor the position or decide on your own when to close. Simply act on the exit alert when it arrives."
             },
             {
                 question: "Q19. What happens if I miss a signal?",
@@ -150,7 +150,7 @@ export const faqData: FAQCategory[] = [
         items: [
             {
                 question: "Q31. How much does OnlyOptions cost?",
-                answer: "Basic plan: $60 per month. Pro plan: $99 per month. Annual plan: $600 per year (equivalent to $50 per month — all Pro features included). All plans provide full Premium Access with flexible membership options."
+                answer: "Basic plan: $60 per month. Annual plan: $499.99 per year (equivalent to ~$41 per month — including all premium features). Both plans provide full Premium Access with flexible membership options."
             },
             {
                 question: "Q32. What is included in the Premium Membership?",
@@ -165,12 +165,12 @@ export const faqData: FAQCategory[] = [
                 answer: "Yes. All new memberships include a 100% Satisfaction Guarantee. If you are not fully satisfied within the first 7 days of your membership, simply email support@onlyoptions.us for a full refund — no questions asked. This applies to your initial term. Our flexible membership structure ensures you can evaluate the service with complete peace of mind."
             },
             {
-                question: "Q35. What is the difference between Basic and Pro?",
-                answer: "Both plans receive the same live signals through the app. Pro adds: SMS text message delivery of every signal, priority email support with a 1-hour response during market hours (versus 24 hours on Basic), and access to weekly live Q&A sessions with the analyst team. If app push notifications are sufficient and you do not need SMS or Q&A access, Basic is strong value."
+                question: "Q35. What is the difference between Basic and Annual?",
+                answer: "Both plans receive the same live signals through the app. The Annual plan adds: SMS text message delivery of every signal, priority email support with a 1-hour response during market hours (versus 24 hours on Basic), and access to weekly live Q&A sessions with the analyst team. If app push notifications are sufficient and you do not need SMS or Q&A access, the Basic monthly plan is strong value. For full professional delivery and support, the Annual plan is our best-value option."
             },
             {
                 question: "Q36. Is the Annual plan worth it?",
-                answer: "The Annual plan costs $600/year ($50/month equivalent) — $120 less than 12 months of Pro monthly ($99 × 12 = $1,188). It includes all Pro features. If you plan to use the service for 12 or more months, the Annual plan saves $588 compared to Basic monthly or $588 compared to Pro monthly over the year. We recommend starting with a monthly plan and upgrading to Annual once you have experienced the performance of the service."
+                answer: "The Annual plan costs $499.99/year (~$41/month equivalent) — a saving of over $220 per year compared to the Basic monthly plan ($60 × 12 = $720). It includes all professional features including SMS alerts. If you plan to use the service for 12 or more months, the Annual plan is your most cost-effective choice. We recommend starting with a monthly plan and upgrading to Annual once you have experienced the performance of the service."
             },
             {
                 question: "Q37. Can I upgrade or downgrade my plan?",
@@ -186,7 +186,7 @@ export const faqData: FAQCategory[] = [
             },
             {
                 question: "Q40. Do you offer discounts?",
-                answer: "The Annual plan ($600/year) is our best-value pricing — equivalent to $50/month versus $60 for Basic or $99 for Pro monthly. We do not offer student, group, or promotional discounts beyond the Annual plan. For affiliate or partnership inquiries, contact partnerships@onlyoptions.us."
+                answer: "The Annual plan ($499.99/year) is our best-value pricing — equivalent to ~$41/month versus $60 for Basic monthly. We do not offer student, group, or promotional discounts beyond the Annual plan. For affiliate or partnership inquiries, contact partnerships@onlyoptions.us."
             }
         ]
     },
@@ -268,7 +268,7 @@ export const faqData: FAQCategory[] = [
             },
             {
                 question: "Q58. What if I do not understand the rationale on a signal?",
-                answer: "Read the Education Library for context on the technical concepts mentioned. Pro plan members can ask questions directly in the weekly live Q&A sessions. For Basic plan members, email analysts@onlyoptions.us with specific questions about signal rationale — we aim to respond within 24 hours on business days. Understanding the rationale is valuable but not required to execute — the entry range, target, and stop-loss are sufficient to place the trade."
+                answer: "Read the Education Library for context on the technical concepts mentioned. Annual plan members can ask questions directly in the weekly live Q&A sessions. For Basic plan members, email analysts@onlyoptions.us with specific questions about signal rationale — we aim to respond within 24 hours on business days. Understanding the rationale is valuable but not required to execute — the entry range, target, and stop-loss are sufficient to place the trade."
             },
             {
                 question: "Q59. Can I use OnlyOptions signals with a small account under $2,000?",

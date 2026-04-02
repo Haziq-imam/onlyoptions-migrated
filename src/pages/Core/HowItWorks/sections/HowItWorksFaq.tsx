@@ -12,7 +12,7 @@ const HowItWorksFaq = () => {
         },
         {
             question: "Do I need to watch the market all day?",
-            answer: "No. Weekly and monthly signals can be entered in the morning with GTC stop-loss and profit-target orders already set, so you only check once or twice daily. Many members have full-time jobs and trade exclusively the weekly and monthly signals during lunch. Our 0DTE scalps (2:00–4:00 PM ET) do require active monitoring in that window. Pro plan members receive SMS alerts so no signal is ever missed away from the screen."
+            answer: "No. Weekly and monthly signals can be entered in the morning with GTC stop-loss and profit-target orders already set, so you only check once or twice daily. Many members have full-time jobs and trade exclusively the weekly and monthly signals during lunch. Our 0DTE scalps (2:00–4:00 PM ET) do require active monitoring in that window. Annual plan members receive SMS alerts so no signal is ever missed away from the screen."
         },
         {
             question: "What options experience do I need?",
