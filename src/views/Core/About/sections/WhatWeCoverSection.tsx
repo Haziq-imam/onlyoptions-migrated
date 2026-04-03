@@ -11,7 +11,7 @@ const WhatWeCoverSection = () => {
                 <div className="relative group order-2 lg:order-1 max-w-md mx-auto">
                     <div className="absolute -inset-20 bg-brand-500/5 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img
-                        src={coverMockup.src || coverMockup}
+                        src={(coverMockup.src || coverMockup) as string}
                         alt="Market Coverage"
                         className="relative w-full h-auto max-h-[500px] object-contain object-top opacity-95 group-hover:opacity-100 transition-all duration-1000 drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                     />

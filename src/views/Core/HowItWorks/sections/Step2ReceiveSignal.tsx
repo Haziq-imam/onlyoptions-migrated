@@ -21,7 +21,7 @@ const Step2ReceiveSignal = () => {
                     </h4>
 
                     <div className="relative rounded-xl overflow-hidden shadow-2xl border border-brand-500/20">
-                        <img src={SignalImage.src || SignalImage} alt="OnlyOptions Signal Format" className="w-full h-auto object-contain bg-[#313338]" />
+                        <img src={(SignalImage.src || SignalImage) as string} alt="OnlyOptions Signal Format" className="w-full h-auto object-contain bg-[#313338]" />
                     </div>
                 </div>
 

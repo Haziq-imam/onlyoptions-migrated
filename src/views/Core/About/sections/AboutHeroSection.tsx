@@ -29,7 +29,7 @@ const AboutHeroSection = () => {
                 <div className="relative group">
                     <div className="absolute -inset-20 bg-brand-500/10 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img
-                        src={storyImg.src || storyImg}
+                        src={(storyImg.src || storyImg) as string}
                         alt="OnlyOptions trading analytics"
                         className="relative w-full h-auto max-h-[500px] object-cover object-top rounded-3xl opacity-90 group-hover:opacity-100 transition-all duration-1000 drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                     />

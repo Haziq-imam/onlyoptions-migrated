@@ -45,7 +45,7 @@ const MethodologySection = () => {
                 <div className="relative group lg:ml-auto max-w-sm">
                     <div className="absolute -inset-20 bg-brand-500/5 blur-[100px] rounded-full opacity-40 group-hover:opacity-60 transition-opacity" />
                     <img
-                        src={logicMockup.src || logicMockup}
+                        src={(logicMockup.src || logicMockup) as string}
                         alt="Signal Protocol Illustration"
                         className="relative w-full h-auto max-h-[500px] object-contain object-top rounded-2xl opacity-90 transition-all duration-1000 group-hover:scale-[1.02] drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                     />

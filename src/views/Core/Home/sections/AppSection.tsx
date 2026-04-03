@@ -21,7 +21,7 @@ const AppSection = () => (
             <div className="relative group order-2 lg:order-1">
                 <div className="absolute -inset-20 bg-brand-500/5 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                 <img
-                    src={dashboardImg.src || dashboardImg}
+                    src={(dashboardImg.src || dashboardImg) as string}
                     alt="OnlyOptions app performance dashboard"
                     className="relative w-full h-auto max-h-[500px] object-contain transition-all duration-1000 ease-out group-hover:scale-[1.02] drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                 />

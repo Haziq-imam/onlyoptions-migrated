@@ -11,7 +11,7 @@ const TransparencySection = () => {
                 <div className="relative group lg:order-1 order-2 max-w-md mx-auto">
                     <div className="absolute inset-0 bg-brand-500/5 blur-[100px] rounded-full opacity-40 group-hover:opacity-60 transition-opacity" />
                     <img
-                        src={transparencyMockup.src || transparencyMockup}
+                        src={(transparencyMockup.src || transparencyMockup) as string}
                         alt="Transparency Dashboard"
                         className="relative w-full h-auto max-h-[500px] object-contain object-top opacity-95 transition-all duration-1000 group-hover:scale-[1.02] drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                     />

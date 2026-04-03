@@ -19,14 +19,14 @@ const AppStoreButtons = ({ variant = 'solid', className = "" }: AppStoreButtonsP
     return (
         <div className={`flex flex-wrap justify-center gap-4 ${className}`}>
             <a href="https://apps.apple.com/us/app/onlyoptions-options-signals/id6760183640" target="_blank" rel="noopener noreferrer" className={`${baseStyle} ${style}`}>
-                <img src={AppleIcon.src || AppleIcon} alt="Apple App Store" className={iconClass} />
+                <img src={(AppleIcon.src || AppleIcon) as string} alt="Apple App Store" className={iconClass} />
                 <div className="text-left">
                     <p className="text-[10px] uppercase font-bold leading-none opacity-60">Download on</p>
                     <p className="text-base font-black leading-tight">App Store</p>
                 </div>
             </a>
             <a href="https://play.google.com/store/apps/details?id=us.onlyoptions.android&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className={`${baseStyle} ${style}`}>
-                <img src={PlayIcon.src || PlayIcon} alt="Google Play Store" className={iconClass} />
+                <img src={(PlayIcon.src || PlayIcon) as string} alt="Google Play Store" className={iconClass} />
                 <div className="text-left">
                     <p className="text-[10px] uppercase font-bold leading-none opacity-60">Get it on</p>
                     <p className="text-base font-black leading-tight">Google Play</p>
