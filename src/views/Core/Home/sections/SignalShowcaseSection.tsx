@@ -1,5 +1,5 @@
 import { FiArrowRight } from 'react-icons/fi';
-import signalLooklikeImg from '../../../../assets/pages images/signal-looklike.png';
+import signalLooklikeImg from '../../../../assets/pages_images/signal-looklike.png';
 import StandardSection from '../../../../components/ui/Layout/StandardSection';
 import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 
@@ -27,7 +27,7 @@ const SignalShowcaseSection = () => (
             <div className="relative group lg:ml-auto">
                 <div className="absolute -inset-20 bg-brand-500/5 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                 <img
-                    src={signalLooklikeImg}
+                    src={signalLooklikeImg.src || signalLooklikeImg}
                     alt="OnlyOptions signal format example"
                     className="relative w-full h-auto max-h-[500px] object-contain transition-all duration-1000 ease-out group-hover:scale-[1.02] drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                 />

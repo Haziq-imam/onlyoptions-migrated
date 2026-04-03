@@ -4,7 +4,7 @@ import StandardSection from '../../../components/ui/Layout/StandardSection';
 import StandardCTA from '../../../components/ui/CTA/StandardCTA';
 import FaqSection from './sections/FaqSection';
 import { faqData } from './data/faqData';
-import mockupImg from '../../../assets/pages images/Modern Lotto and Stocks App-5.png';
+import mockupImg from '../../../assets/pages_images/Modern Lotto and Stocks App-5.png';
 import { Card } from '../../../components/ui/Card/Card';
 import SectionHeader from '../../../components/ui/Layout/SectionHeader';
 

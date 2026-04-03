@@ -3,7 +3,7 @@ import { MdSignalCellularAlt } from 'react-icons/md';
 import AppStoreButtons from '../../../../components/ui/AppStoreButtons/AppStoreButtons';
 import StandardSection from '../../../../components/ui/Layout/StandardSection';
 import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
-import dashboardImg from '../../../../assets/pages images/home-dashboard.webp';
+import dashboardImg from '../../../../assets/pages_images/home-dashboard.webp';
 
 const appFeatures = [
     { icon: <FiBell className="w-4 h-4 text-brand-500" />, title: 'Instant Push Notifications', desc: 'Signals reach your phone the moment they are sent — no delays, no need to refresh.' },
@@ -21,7 +21,7 @@ const AppSection = () => (
             <div className="relative group order-2 lg:order-1">
                 <div className="absolute -inset-20 bg-brand-500/5 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                 <img
-                    src={dashboardImg}
+                    src={dashboardImg.src || dashboardImg}
                     alt="OnlyOptions app performance dashboard"
                     className="relative w-full h-auto max-h-[500px] object-contain transition-all duration-1000 ease-out group-hover:scale-[1.02] drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                 />

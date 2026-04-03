@@ -41,6 +41,8 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
         setIsMenuOpen(false);
     }, [pathname]);
 
+    console.log("DEBUG: Logo is", Logo);
+
     // Close menu on resize if above mobile breakpoint
     useEffect(() => {
         const handleResize = () => {
@@ -82,7 +84,7 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
             <div className="fixed top-3 md:top-6 inset-x-0 z-50 px-3 md:px-12">
                 <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-2.5 md:py-3 px-4 md:px-6 flex items-center justify-between shadow-2xl relative z-50 border border-white/5">
                     <a href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity shrink-0">
-                        <img src={Logo} alt="OnlyOptions" className="h-10 md:h-12 w-auto object-contain shrink-0 drop-shadow-[0_0_20px_rgba(255,255,255,0.35)] brightness-110" />
+                        <img src={Logo.src || Logo} alt="OnlyOptions" className="h-10 md:h-12 w-auto object-contain shrink-0 drop-shadow-[0_0_20px_rgba(255,255,255,0.35)] brightness-110" />
                     </a>
 
                     <nav className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
@@ -139,7 +141,7 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
                         {/* Brand & Mission */}
                         <div className="lg:col-span-4 space-y-8">
                             <a href="/" className="flex items-center gap-3 hover:opacity-100 transition-opacity">
-                                <img src={Logo} alt="OnlyOptions" className="h-12 w-auto opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                                <img src={Logo.src || Logo} alt="OnlyOptions" className="h-12 w-auto opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
                             </a>
                             <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
                                 Empowering retail traders with institutional-grade options analysis and real-time signals. Your edge in the derivatives market starts here.

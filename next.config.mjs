@@ -2,19 +2,12 @@ import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        disableStaticImages: true,
+    turbopack: {
+        resolveAlias: {
+            'react-router-dom': './src/lib/react-router-dom-stub.tsx',
+        },
     },
-    webpack: (config, { isServer }) => {
-        config.module.rules.push({
-            test: /\.(png|jpe?g|gif|webp|avif|svg)$/i,
-            type: 'asset/resource',
-            generator: {
-                filename: 'static/media/[hash][ext][query]',
-                publicPath: '/_next/'
-            }
-        });
-        
+    webpack: (config) => {
         // Setup alias for seamless react-router-dom migration
         config.resolve.alias = {
             ...config.resolve.alias,

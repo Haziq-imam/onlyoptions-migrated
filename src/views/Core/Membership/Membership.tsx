@@ -8,7 +8,7 @@ import Button from '../../../components/ui/Button/Button';
 import AppStoreButtons from '../../../components/ui/AppStoreButtons/AppStoreButtons';
 import StandardCTA from '../../../components/ui/CTA/StandardCTA';
 import QrSvg from '../../../assets/qr.svg';
-import dashboardImg from '../../../assets/pages images/home-dashboard.webp';
+import dashboardImg from '../../../assets/pages_images/home-dashboard.webp';
 
 const Membership = () => {
     return (
@@ -105,7 +105,7 @@ const Membership = () => {
                     <div className="relative group lg:order-2">
                         <div className="absolute -inset-20 bg-brand-500/5 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                         <img
-                            src={dashboardImg}
+                            src={dashboardImg.src || dashboardImg}
                             alt="OnlyOptions App"
                             className="relative w-full h-auto max-h-[500px] object-contain transition-all duration-1000 ease-out group-hover:scale-[1.02] drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                         />
@@ -122,7 +122,7 @@ const Membership = () => {
                         <div className="space-y-8">
                             <div className="flex gap-4 p-8 rounded-3xl bg-white/[0.02] border border-white/5">
                                 <div className="bg-white p-4 rounded-2xl shrink-0 shadow-2xl border-4 border-brand-500/20">
-                                    <img src={QrSvg} alt="QR Code" className="w-24 h-24 sm:w-32 sm:h-32" />
+                                    <img src={QrSvg.src || QrSvg} alt="QR Code" className="w-24 h-24 sm:w-32 sm:h-32" />
                                 </div>
                                 <div className="flex flex-col justify-center gap-3">
                                     <p className="text-xs font-black uppercase text-brand-400 tracking-widest">Scan to join app</p>

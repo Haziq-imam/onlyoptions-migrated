@@ -1,7 +1,7 @@
 import StandardSection from '../../../../components/ui/Layout/StandardSection';
 import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 import { Card } from '../../../../components/ui/Card/Card';
-import storyImg from '../../../../assets/pages images/Mobile Trading Signals App-1.png';
+import storyImg from '../../../../assets/pages_images/Mobile Trading Signals App-1.png';
 
 const OurStorySection = () => {
     return (
@@ -10,7 +10,7 @@ const OurStorySection = () => {
                 <div className="relative group order-2 lg:order-1">
                     <div className="absolute -inset-20 bg-brand-500/5 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img
-                        src={storyImg}
+                        src={storyImg.src || storyImg}
                         alt="Market Analysis"
                         className="relative w-full h-auto max-h-[500px] object-cover object-top rounded-3xl opacity-90 transition-all duration-1000 drop-shadow-[0_0_50px_rgba(32,109,254,0.1)]"
                     />

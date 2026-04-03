@@ -1,7 +1,7 @@
 import HeroSection from '../../../components/ui/Hero/HeroSection';
 import StandardSection from '../../../components/ui/Layout/StandardSection';
 import StandardCTA from '../../../components/ui/CTA/StandardCTA';
-import appMockup from '../../../assets/pages images/Mobile Trading Signals App-12.png';
+import appMockup from '../../../assets/pages_images/Mobile Trading Signals App-12.png';
 
 // Import New Modular Sections
 import Step1Subscribe from './sections/Step1Subscribe';

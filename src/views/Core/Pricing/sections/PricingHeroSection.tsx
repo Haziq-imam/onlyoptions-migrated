@@ -17,7 +17,7 @@ const PricingHeroSection = () => {
 
                     <SectionHeader
                         title={<>OnlyOptions Pricing <br /> <span className="text-brand-500">Simple Plans, No Hidden Fees</span></>}
-                        description="Three plans. One signal service. No long-term contracts, no automatic charges, and no hidden fees. Every plan includes the same live options signals delivered to your phone."
+                        description="Two simple plans. One signal service. No long-term contracts, no automatic charges, and no hidden fees. Every plan includes the same live options signals delivered to your phone."
                         align="left"
                     />
 

@@ -1,5 +1,5 @@
 import { FiTrendingUp, FiDatabase, FiFileText, FiLogOut, FiBook, FiSmartphone } from 'react-icons/fi';
-import mockupImg from '../../../../assets/pages images/Modern Lotto and Stocks App-3.png';
+import mockupImg from '../../../../assets/pages_images/Modern Lotto and Stocks App-3.png';
 
 import StandardSection from '../../../../components/ui/Layout/StandardSection';
 import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
@@ -21,7 +21,7 @@ const WhatYouGetSection = () => (
             <div className="relative group order-2 lg:order-1">
                 <div className="absolute -inset-20 bg-brand-500/5 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                 <img
-                    src={mockupImg}
+                    src={mockupImg.src || mockupImg}
                     alt="OnlyOptions Mobile Experience"
                     className="relative w-full h-auto max-h-[550px] object-contain opacity-95 transition-all duration-1000 group-hover:scale-[1.02] drop-shadow-[0_0_50px_rgba(32,109,254,0.15)]"
                 />

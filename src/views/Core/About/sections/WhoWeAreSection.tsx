@@ -1,7 +1,7 @@
 import StandardSection from '../../../../components/ui/Layout/StandardSection';
 import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 import { Card } from '../../../../components/ui/Card/Card';
-import teamMockup from '../../../../assets/pages images/Modern Lotto and Stocks App-1.png';
+import teamMockup from '../../../../assets/pages_images/Modern Lotto and Stocks App-1.png';
 
 const WhoWeAreSection = () => {
     return (
@@ -48,7 +48,7 @@ const WhoWeAreSection = () => {
                 <div className="relative group lg:ml-auto max-w-sm">
                     <div className="absolute -inset-20 bg-brand-500/10 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img
-                        src={teamMockup}
+                        src={teamMockup.src || teamMockup}
                         alt="Trading Interface"
                         className="relative w-full h-auto max-h-[500px] object-contain object-top opacity-95 group-hover:opacity-100 transition-all duration-1000 drop-shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
                     />

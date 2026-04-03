@@ -1,7 +1,7 @@
 import { Card } from '../../../../components/ui/Card/Card';
 import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 import { Rocket, AlertTriangle } from 'lucide-react';
-import SignalImage from '../../../../assets/pages images/signal-looklike.png';
+import SignalImage from '../../../../assets/pages_images/signal-looklike.png';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '../../../../components/ui/Table/Table';
 
 const Step2ReceiveSignal = () => {
@@ -21,7 +21,7 @@ const Step2ReceiveSignal = () => {
                     </h4>
 
                     <div className="relative rounded-xl overflow-hidden shadow-2xl border border-brand-500/20">
-                        <img src={SignalImage} alt="OnlyOptions Signal Format" className="w-full h-auto object-contain bg-[#313338]" />
+                        <img src={SignalImage.src || SignalImage} alt="OnlyOptions Signal Format" className="w-full h-auto object-contain bg-[#313338]" />
                     </div>
                 </div>
 

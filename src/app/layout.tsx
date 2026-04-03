@@ -54,7 +54,7 @@ export default function RootLayout({
               "name": "OnlyOptions — Options Trading Signals",
               "operatingSystem": "iOS, Android",
               "applicationCategory": "FinanceApplication",
-              "offers": { "@type": "Offer", "price": "60.00", "priceCurrency": "USD" }
+              "offers": { "@type": "Offer", "price": "499.99", "priceCurrency": "USD" }
             })
           }}
         />

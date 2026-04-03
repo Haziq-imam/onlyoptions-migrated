@@ -1,6 +1,6 @@
 import HeroSection from '../../../components/ui/Hero/HeroSection';
 import StandardCTA from '../../../components/ui/CTA/StandardCTA';
-import mockupImg from '../../../assets/pages images/Modern Lotto and Stocks App-4.png';
+import mockupImg from '../../../assets/pages_images/Modern Lotto and Stocks App-4.png';
 
 import PerformanceStatsSection from './sections/PerformanceStatsSection';
 import PerformanceDataSection from './sections/PerformanceDataSection';

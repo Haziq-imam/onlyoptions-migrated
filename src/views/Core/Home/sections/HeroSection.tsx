@@ -2,7 +2,7 @@ import { FiShield, FiZap, FiSmartphone } from 'react-icons/fi';
 import { HiCheckCircle } from 'react-icons/hi';
 import Button from '../../../../components/ui/Button/Button';
 import AppStoreButtons from '../../../../components/ui/AppStoreButtons/AppStoreButtons';
-import heroImg from '../../../../assets/pages images/home-hero.webp';
+import heroImg from '../../../../assets/pages_images/home-hero.webp';
 import StandardSection from '../../../../components/ui/Layout/StandardSection';
 import SectionHeader from '../../../../components/ui/Layout/SectionHeader';
 
@@ -68,7 +68,7 @@ const HeroSection = () => (
                 <div className="absolute -inset-20 bg-brand-500/10 blur-[120px] rounded-full opacity-40 group-hover:opacity-60 transition-opacity" />
                 <div className="relative">
                     <img
-                        src={heroImg}
+                        src={heroImg.src || heroImg}
                         alt="OnlyOptions — options trading signals dashboard"
                         className="relative w-full h-auto max-h-[580px] object-contain opacity-95 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_60px_rgba(32,109,254,0.2)]"
                     />

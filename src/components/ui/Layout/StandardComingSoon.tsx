@@ -4,7 +4,7 @@ import HeroSection from '../Hero/HeroSection';
 import StandardCTA from '../CTA/StandardCTA';
 import { Card } from '../Card/Card';
 import SectionHeader from './SectionHeader';
-import mockupImg from '../../../assets/pages images/signal-looklike.png';
+import mockupImg from '../../../assets/pages_images/signal-looklike.png';
 
 interface StandardComingSoonProps {
     title: string;
