@@ -20,20 +20,16 @@ const fixFile = (filePath) => {
     // We want to change to: <img src={VariableName.src || VariableName}
     
     // Also handle markdown-like or other imports if they are used as src
-    content = content.replace(/src={(\(?)([A-Za-z0-9_\\.]+)( \|\| )?([A-Za-z0-9_\\.]+)?(\)?)}/g, (match, p1, p2, p3, p4, p5) => {
+    content = content.replace(/src={(\(?)([A-Za-z0-9_\\.]+)( \|\| )?([A-Za-z0-9_\\.]+)?(\)?)( as string)?}/g, (match, p1, p2, p3, p4, p5, p6) => {
         // Skip common non-asset names or those already fixed
         if (['item', 's', 'row', 'link', 'children', 'f', 'faq', 'user'].includes(p2)) return match;
-        if (match.includes(' as string')) return match;
         
-        let var1 = p2;
-        let var2 = p4;
-        
-        if (var1.endsWith('.src')) {
-           // We already have .src, just add the cast
-           return `src={(${var1} || ${var2}) as string}`;
+        let variableName = p2;
+        if (variableName.endsWith('.src')) {
+           variableName = variableName.replace('.src', '');
         }
-        
-        return `src={(${var1}.src || ${var1}) as string}`;
+
+        return `src={(typeof ${variableName} === 'string' ? ${variableName} : (${variableName} as any).src)}`;
     });
 
     if (content !== original) {

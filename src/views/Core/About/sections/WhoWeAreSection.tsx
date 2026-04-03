@@ -48,7 +48,7 @@ const WhoWeAreSection = () => {
                 <div className="relative group lg:ml-auto max-w-sm">
                     <div className="absolute -inset-20 bg-brand-500/10 blur-[120px] rounded-full opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img
-                        src={(teamMockup.src || teamMockup) as string}
+                        src={(typeof teamMockup === 'string' ? teamMockup : (teamMockup as any).src)}
                         alt="Trading Interface"
                         className="relative w-full h-auto max-h-[500px] object-contain object-top opacity-95 group-hover:opacity-100 transition-all duration-1000 drop-shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
                     />

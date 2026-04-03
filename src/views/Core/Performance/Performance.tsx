@@ -13,7 +13,7 @@ const Performance = () => {
         subtitle="We track every single trade. No hidden losses, no cherry-picked wins. Real results for real traders."
         primaryCtaText="Get Access Now"
         primaryCtaLink="/signup"
-        image={mockupImg}
+        image={ (typeof mockupImg === 'string' ? mockupImg : (mockupImg as any).src) }
         badgeText="Verified Results"
       />
 

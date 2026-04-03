@@ -39,7 +39,7 @@ const Faq = () => {
         subtitle="60 Questions Answered — from how signals work and what performance results mean, to execution guidance, broker selection, and how to get started."
         primaryCtaText="Join Community"
         primaryCtaLink="/signup"
-        image={mockupImg}
+        image={ (typeof mockupImg === 'string' ? mockupImg : (mockupImg as any).src) }
         badgeText="Help Center"
       />
 

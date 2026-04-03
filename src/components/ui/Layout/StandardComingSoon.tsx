@@ -26,7 +26,7 @@ const StandardComingSoon: React.FC<StandardComingSoonProps> = ({
                 subtitle={subtitle}
                 primaryCtaText="Join Waitlist"
                 primaryCtaLink="/signup"
-                image={mockupImg}
+                image={ (typeof mockupImg === 'string' ? mockupImg : (mockupImg as any).src) }
                 badgeText={badgeText}
             />
 

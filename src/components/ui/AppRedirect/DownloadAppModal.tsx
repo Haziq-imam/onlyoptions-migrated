@@ -46,7 +46,7 @@ const DownloadAppModal = ({ isOpen, onClose }: DownloadAppModalProps) => {
                                 
                                 <div className="bg-white p-4 sm:p-5 rounded-[1.5rem] shadow-xl relative z-10 border border-white/5 w-fit">
                                     <img 
-                                        src={(QrSvg.src || QrSvg) as string} 
+                                        src={(typeof QrSvg === 'string' ? QrSvg : (QrSvg as any).src)} 
                                         alt="QR Code" 
                                         className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 object-contain"
                                     />

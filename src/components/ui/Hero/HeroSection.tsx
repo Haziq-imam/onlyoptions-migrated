@@ -73,7 +73,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     <div className="relative group lg:ml-auto">
                         <div className="absolute -inset-20 bg-brand-500/10 blur-[100px] rounded-full opacity-40 group-hover:opacity-60 transition-opacity" />
                         <img
-                            src={(image.src || image) as string}
+                            src={(typeof image === 'string' ? image : (image as any).src)}
                             alt={imageAlt || "OnlyOptions"}
                             className="relative w-full h-auto max-h-[500px] object-contain object-top drop-shadow-[0_0_40px_rgba(32,109,254,0.15)]"
                         />

@@ -20,7 +20,7 @@ const HowItWorks = () => {
         subtitle="You do not need to read charts, calculate Greeks, or spot patterns. Our FINRA-licensed analysts do all the analysis. You receive a clear, specific alert ready to execute in under 60 seconds."
         primaryCtaText="Get Access Now"
         primaryCtaLink="/signup"
-        image={appMockup}
+        image={ (typeof appMockup === 'string' ? appMockup : (appMockup as any).src) }
         badgeText="From Signal to Profit in 4 Steps"
       />
 
