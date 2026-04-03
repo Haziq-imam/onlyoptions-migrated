@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 import Logo from '@/assets/logo.png';
 import Button from '../ui/Button/Button';
 import { Menu, X } from 'lucide-react';
@@ -81,13 +83,18 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
             {/* Unique Floating Header */}
             <div className="fixed top-3 md:top-6 inset-x-0 z-50 px-3 md:px-12">
                 <header className="max-w-7xl mx-auto fintech-glass rounded-2xl py-2.5 md:py-3 px-4 md:px-6 flex items-center justify-between shadow-2xl relative z-50 border border-white/5">
-                    <a href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity shrink-0">
-                        <img src={(typeof Logo === 'string' ? Logo : (Logo as any).src)} alt="OnlyOptions" className="h-10 md:h-12 w-auto object-contain shrink-0 drop-shadow-[0_0_20px_rgba(255,255,255,0.35)] brightness-110" />
-                    </a>
+                    <Link href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity shrink-0">
+                        <Image 
+                            src={Logo} 
+                            alt="OnlyOptions" 
+                            className="h-10 md:h-12 w-auto object-contain shrink-0 drop-shadow-[0_0_20px_rgba(255,255,255,0.35)] brightness-110" 
+                            priority 
+                        />
+                    </Link>
 
                     <nav className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
                         {navLinks.map((link) => (
-                            <a key={link.path} href={link.path} className="hover:text-brand-400 transition-colors">{link.name}</a>
+                            <Link key={link.path} href={link.path} className="hover:text-brand-400 transition-colors">{link.name}</Link>
                         ))}
                     </nav>
 
@@ -138,9 +145,13 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-12">
                         {/* Brand & Mission */}
                         <div className="lg:col-span-4 space-y-8">
-                            <a href="/" className="flex items-center gap-3 hover:opacity-100 transition-opacity">
-                                <img src={(typeof Logo === 'string' ? Logo : (Logo as any).src)} alt="OnlyOptions" className="h-12 w-auto opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
-                            </a>
+                            <Link href="/" className="flex items-center gap-3 hover:opacity-100 transition-opacity">
+                                <Image 
+                                    src={Logo} 
+                                    alt="OnlyOptions" 
+                                    className="h-12 w-auto opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" 
+                                />
+                            </Link>
                             <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
                                 Empowering retail traders with institutional-grade options analysis and real-time signals. Your edge in the derivatives market starts here.
                             </p>
