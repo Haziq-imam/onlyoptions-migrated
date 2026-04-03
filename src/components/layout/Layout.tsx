@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import Logo from '../../assets/logo.png';
+import Logo from '@/assets/logo.png';
 import Button from '../ui/Button/Button';
 import { Menu, X } from 'lucide-react';
 import DownloadAppModal from '../ui/AppRedirect/DownloadAppModal';
@@ -40,8 +40,6 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
     useEffect(() => {
         setIsMenuOpen(false);
     }, [pathname]);
-
-    console.log("DEBUG: Logo is", Logo);
 
     // Close menu on resize if above mobile breakpoint
     useEffect(() => {
